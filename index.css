@@ -1,4 +1,52 @@
+header#fillimi{
+    margin-top: 0%;
+    
+}
+/******************************************************************************
+                        Header
+*******************************************************************************/
 
+
+.new{
+    width:49%;
+    float:left;
+    margin-left: 2%;
+    font-size: 70px;
+    margin-top: -3%;
+    color: lightblue;
+    display:block;
+    margin-bottom: 0%;
+}
+.p1{
+    margin-top: -12.5%;
+   font-size:20px;
+   color:black;
+   margin-left: 1%;
+}
+.lista1{
+    width:16%;
+    float:left;
+    margin-top: 2%;    
+    text-decoration: none;
+}
+a:link{
+    text-decoration: none;   
+}
+a:link,a:hover{
+    color:orange;
+}
+a:link,a:active{
+    color:red;
+}
+.l1e2{
+    padding-top: 10%;
+}
+dt{
+    text-transform: uppercase;
+}
+.shkrimi{
+    margin-left:auto;   
+}
 /*******************************************************************************
                                     Contact - Start
 *******************************************************************************/
