@@ -1,0 +1,107 @@
+
+/*******************************************************************************
+                                    Contact - Start
+*******************************************************************************/
+
+.contact{
+   padding-bottom: 10px;
+}
+.contact p{
+    margin:0;
+    font-size: 130%;
+}
+.contact row{
+    padding-bottom: 25px;
+}
+.contact button{
+    width:auto;
+    height: 30px;
+    font-size:120%;
+    border-radius: 6px;
+    border-style: none;
+    border: 2px solid #DEDEDE;
+    margin-left:15px;
+}
+.contact input{
+    font-size:120%;
+    height: 25px;
+    width: 100%;
+    margin:0;
+}
+/*==============================================================================
+                                    Contact us
+==============================================================================*/
+
+
+.cntc{
+    float: left; 
+}
+.cntc p{
+    margin-top: 10px;
+}
+.cntc hr{
+    margin-top: -10px;
+}
+.cntc button{
+    margin-top:15px;
+}
+#submit{
+    margin-left:0px;
+}
+.soc{
+    padding: 22px 0px;;
+    float: left;
+}
+.cntc h2{
+    text-transform: capitalize;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 200%;
+}
+.credits, .credits p{
+    margin: 0;
+}
+.credits:last-child{
+    text-align: right;
+}
+#message{
+    width: 100%;
+    height: 150px;   
+    resize: none;
+    font-family: sans-serif;
+    font-size: 115%;
+}
+.details{
+    width: 49.2%;
+}
+
+/*==============================================================================
+                                    Social
+==============================================================================*/
+
+.soc img{
+    width:40%;
+    height:auto;
+    padding: 0 40px;
+}.soc input{
+    width:82%;
+    margin-top:-10px;
+}
+.soc p{
+    margin-top:0.5px;
+    height:30px;
+    font-weight: 300;
+    text-align: center;
+    font-size: 150%;
+    background-color: #3946c2;
+}
+
+/*******************************************************************************
+                                    Contact - End
+*******************************************************************************/
+
+
+li{
+    display:inline-block;
+}
+
