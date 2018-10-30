@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <title>My Page</title>
+        <title>Jetmir's part</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+        <link href="layout.css" rel="stylesheet">
+
     </head>
     <body>
-        Hello world
-       
-        
+        <section class="contact">
+            <div class="row">   
+                <div class="col span1-3 cntc">
+                    <h2>why not contact me today!</h2>
+                    <hr/>
+                    <form>
+                        <div class="row">
+                            <div class="col details">
+                                <p>Name:</p>
+                                <input type="text" name="First Name">
+                            </div>
+                            <div class="col details">
+                                <p>Email:</p>
+                                <input type="email" name="Email">
+                            </div>
+                        </div>
+                    <div class="row message">        
+                        <p>Message:</p>
+                        <textarea placeholder="Message" id="message" maxlength="350"></textarea><br/>
+                        <button id="submit" name="Submit">Submit</button>
+                        <button name="Reset">Reset</button>
+                    </div>
+                </form>        
+                </div>
+                <div class="col soc span2-3">
+                    <img src="images/kss.png" alt="Kss logo"/>
+                    <img src="images/twitter.png" alt="Twitter logo"/>
+                    <div class="row"> 
+                        <div class="col span1-2">
+                             <p>Enter your email to join my mailing list: </p>
+                        </div>
+                        <div class="col span1-2">
+                            <input type="email"/> 
+                            <button name="Go">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="row">
+                <div class="col span2-3 credits">
+                   <p>All right reserved &copy; for Gr31 - Internet!<p/>
+               </div>
+               <div class="col span1-3 credits">
+                   <p>2018/2019</p>
+               </div>
+            </div>    
+        </footer>
+                
     </body>
 </html>
