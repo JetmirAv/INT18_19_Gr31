@@ -1,0 +1,50 @@
+body{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer{
+    background-color: #AAAAAB;
+    height:50px;
+    font-size: 140%;
+    padding-left: 20px;
+    padding-right:20px;
+}
+section{
+    padding: 80px 10px;
+    clear: both;
+}
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+.col {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { 
+    margin-left: 0; 
+}
+.span1-2{
+    width:49.2%;
+}
+.span1-3{
+    width: 39.2%;
+}
+.span2-3{
+    width: 59.2%;
+}
+.span1-4{
+    width:24.2%;
+}
+.span2-4{
+    width:48.4%
+}
+.span3-4{
+    width:72.6%;
+}
