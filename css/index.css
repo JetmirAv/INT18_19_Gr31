@@ -1,29 +1,25 @@
 /******************************************************************************
                         Header
 *******************************************************************************/
-
-
-.new{
-    width:49%;
-    float:left;
-    margin-left: 2%;
-    font-size: 70px;
-    margin-top: -3%;
-    color: lightblue;
-    display:block;
-    margin-bottom: 0%;
+header {
+    margin:0;
+    padding: 0;
+    margin-top:-25px;
+    margin-bottom: -60px;
+    padding-bottom: -20px;
 }
-.p1{
-    margin-top: -12.5%;
-   font-size:20px;
-   color:black;
-   margin-left: 1%;
+.hcol{
+    
 }
-.lista1{
-    width:16%;
-    float:left;
-    margin-top: 2%;    
-    text-decoration: none;
+header h1{
+    font-size: 55px;
+    color:lightblue;
+    margin-top:12px;
+    padding: 0;
+    height:10px; 
+}
+p1{
+    padding-top: -15px;
 }
 a:link{
     text-decoration: none;   
@@ -35,7 +31,7 @@ a:link,a:active{
     color:red;
 }
 .l1e2{
-    padding-top: 10%;
+    padding-top: 5px;
 }
 dt{
     text-transform: uppercase;
@@ -43,6 +39,7 @@ dt{
 .shkrimi{
     margin-left:auto;   
 }
+
 
 /*******************************************************************************
                                     Work Description - Start
@@ -144,7 +141,7 @@ dt{
 ==============================================================================*/
 
 .soc img{
-    width:40%;
+    width:35%;
     height:auto;
     padding: 0 40px;
 }.soc input{
