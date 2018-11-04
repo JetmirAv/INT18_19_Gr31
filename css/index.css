@@ -1,21 +1,27 @@
 /******************************************************************************
                         Header
 *******************************************************************************/
-header {
-    margin:0;
-    padding: 0;
-    margin-top:-25px;
-    margin-bottom: -60px;
-    padding-bottom: -20px;
+header row{
+    padding-top: 20px;
+}
+.row1{
+    margin-top: -20px;
+    margin-bottom: 0;
+    padding-top: 0;
+    
 }
 .hcol{
+margin-top: -10px;
+margin-bottom: -25px;
 }
+
 header h1{
-    font-size: 55px;
+    font-size: 65px;
     color:lightblue;
-    margin-top:12px;
-    padding: 0;
-    height:10px; 
+    margin-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: -20px;
+  
 }
 p1{
     padding-top: -15px;
@@ -34,8 +40,9 @@ a:link,a:active{
 }
 dt{
     text-transform: uppercase;
+     padding-top: 7px;
 }
-.shkrimi{
+dd{
     margin-left:auto;   
 }
 
