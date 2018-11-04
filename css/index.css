@@ -54,7 +54,9 @@ dt{
 } 
 #info_text{
     font-size: 122%;
-    text-align: cover;
+}
+.box:first-child{
+    margin-left:0;
 }
 .box{
     margin-left:5px;
