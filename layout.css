@@ -1,7 +1,10 @@
 body{
-    background-color: #3333ff;
+    background: whitesmoke; 
     margin-left: 5%;
     margin-right: 5%;
+}
+header{
+    clear:both;
 }
 footer{
     background-color: #AAAAAB;
@@ -23,9 +26,9 @@ section{
     clear: both;
 }
 .col {
-	display: block;
-	float: left;
-	margin: 1% 0 1% 1.6%;
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
 }
 .col:first-child { 
     margin-left: 0; 
@@ -40,7 +43,7 @@ section{
     width: 59.2%;
 }
 .span1-4{
-    width:24.2%;
+    width:24.5%;
 }
 .span2-4{
     width:48.4%
