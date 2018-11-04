@@ -10,6 +10,7 @@ footer{
     font-size: 140%;
     padding-left: 20px;
     padding-right:20px;
+    padding-top: 0;
 }
 section{
     padding: 80px 10px;
@@ -35,7 +36,7 @@ section{
     width:49.2%;
 }
 .span1-3{
-    width: 32.9%;
+    width: 32.2%;
 }
 .span2-3{
     width: 65.8%;
