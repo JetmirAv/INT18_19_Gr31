@@ -47,19 +47,22 @@ dt{
     width:60px;
     float:left;
     margin-right: 5px;
+    border-radius:6px;
+    
 } 
 #info_text{
     font-size: 122%;
 }
 .box:first-child{
     margin-left:0;
+    padding-left:0;
 }
 .box{
-    margin-left:5px;
-    padding: 0 2px;
+    margin-left:0.3%; 
     background-color:white;
     border-radius: 10px;
 }
+
 
 /*******************************************************************************
                                     Contact - Start
