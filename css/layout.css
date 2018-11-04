@@ -1,12 +1,13 @@
 body{
     background: whitesmoke; 
+    margin-bottom: 0;
 }
-header{
-    clear:both;
-}
+
+
 footer{
+    margin:0 -10px 0 -10px;
     background-color: #AAAAAB;
-    height:50px;
+    height:30px;
     font-size: 140%;
     padding-left: 20px;
     padding-right:20px;
@@ -68,4 +69,53 @@ section{
 .span5-5{
     width:100%;
     
+}
+
+
+/******************************************************************************
+                        Header
+*******************************************************************************/
+header{
+    clear:both;
+    margin:0;
+}
+.row1{
+    margin-top: -20px;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+.hcol{
+margin-top: -10px;
+margin-bottom: -25px;
+}
+
+header h1{
+    font-size: 65px;
+    color:lightblue;
+    margin-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: -20px;
+  
+}
+p1{
+    padding-top: -15px;
+}
+a:link{
+    text-decoration: none;   
+}
+a:link,a:hover{
+    color:orange;
+}
+a:link,a:active{
+    color:red;
+}
+.l1e2{
+    padding-top: 5px;
+}
+dt{
+    text-transform: uppercase;
+     padding-top: 7px;
+}
+dd{
+    margin-left:auto;   
 }
