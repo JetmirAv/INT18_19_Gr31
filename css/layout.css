@@ -1,7 +1,5 @@
 body{
     background: whitesmoke; 
-    margin-left: 5%;
-    margin-right: 5%;
 }
 header{
     clear:both;
@@ -37,33 +35,36 @@ section{
     width:49.2%;
 }
 .span1-3{
-    width: 29.2%;
+    width: 32.9%;
 }
 .span2-3{
-    width: 59.2%;
+    width: 65.8%;
+}
+.span3-3{
+    width:98.7%;
 }
 .span1-4{
-    width:24.5%;
+    width:24.6%;
 }
 .span2-4{
-    width:48.4%
+    width:49.2%
 }
 .span3-4{
-    width:72.6%;
+    width:74.8%;
 }
 .span1-5{
-    width:18%;
+    width:19.6%;
 }
 .span2-5{
-    width:36%;
+    width:39.2%;
 }
 .span3-5{
-    width:54%;
+    width:58.8%;
 }
 .span4-5{
-    width:72%;
+    width:78.4%;
 }
 .span5-5{
-    width:90%;
+    width:100%;
     
 }
