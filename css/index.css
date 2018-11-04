@@ -53,12 +53,12 @@ dd{
 .work_description img{
     width:60px;
     float:left;
-    margin-right: 5px;
+    margin: 7px 5px 0px 5px;
     border-radius:6px;
     
 } 
 #info_text{
-    font-size: 122%;
+    font-size: 150%;
 }
 .box:first-child{
     margin-left:0;
