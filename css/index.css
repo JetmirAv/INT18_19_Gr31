@@ -144,10 +144,11 @@ dt{
 .soc img{
     width:45%;
     height:auto;
-    padding: 0 15px;
-}.soc input{
+    padding: 0 2%;
+}
+.soc input{
     width:82%;
-    margin-top:-10px;
+    margin-top:-1%
 }
 .soc p{
     margin-top:0.5px;
