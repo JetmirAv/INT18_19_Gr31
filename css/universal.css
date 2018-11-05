@@ -6,7 +6,7 @@ header{
     margin:0;
 }
 .row1{
-    margin-top: -20px;
+    margin-top: -15px;
     margin-bottom: 0;
     padding-top: 0;
 }
@@ -23,18 +23,20 @@ header h1{
     margin-bottom: -20px;
   
 }
+.elementet{
+    padding-left: 30px;
+}
 p1{
     padding-top: -15px;
 }
-a:link{
-    text-decoration: none;   
+nav a:link, nav a:visited{
+    text-decoration: none;  
+     color:orange;
 }
-a:link,a:hover{
-    color:orange;
-}
-a:link,a:active{
+nav a:hover, nav a:active{
     color:red;
 }
+
 .l1e2{
     padding-top: 5px;
 }
@@ -43,6 +45,8 @@ dt{
      padding-top: 7px;
 }
 dd{
-    margin-left:auto;   
+    margin-left:auto;  
+    font-size: 13px;
+    font-weight: 100;
 }
 
