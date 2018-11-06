@@ -1,5 +1,5 @@
 body{
-    background: whitesmoke; 
+    background: #0b2743; 
     margin: 0;
 }
 header{
@@ -7,15 +7,14 @@ header{
 }
 
 footer{ 
-    background-color: #AAAAAB;
-    height:30px;
+    background-color: #09223c;
+    height:3%;
     font-size: 140%;
-    padding-left: 20px;
-    padding-right:20px;
-    padding-top: 0;
+    padding: 0 1%;
+    color: #999999;
 }
 section{
-    padding: 80px 10px;
+    padding: 2.8% 1%;
     clear: both;
 }
 .row:before,
