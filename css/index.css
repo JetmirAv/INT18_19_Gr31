@@ -4,7 +4,7 @@
 .work_description img{
     width:60px;
     float:left;
-    margin: 7px 5px 0px 5px;
+    margin: 7px 5px 0 5px;
     border-radius:6px;
 } 
 #info_text{
@@ -68,10 +68,10 @@
     margin-top:15px;
 }
 #submit{
-    margin-left:0px;
+    margin-left:0;
 }
 .soc{
-    padding: 22px 0px;;
+    padding: 22px 0;;
     float: left;
 }
 .cntc h2{
@@ -80,12 +80,6 @@
     font-weight: 900;
     letter-spacing: 2px;
     font-size: 200%;
-}
-.credits, .credits p{
-    margin: 0;
-}
-.credits:last-child{
-    text-align: right;
 }
 #message{
     width: 100%;
