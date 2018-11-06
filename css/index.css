@@ -1,6 +1,12 @@
 /*******************************************************************************
                                     Work Description - Start
 *******************************************************************************/
+#big_txt{
+    color:#3e83bc;
+    font-size:1400%;
+    text-align: center;
+    margin: 3% auto;
+}
 .work_description img{
     width:60px;
     float:left;
@@ -16,7 +22,7 @@
 }
 .box{
     margin-left:0.3%; 
-    background-color:white;
+    background-color:#c8d9e4;
     border-radius: 10px;
 }
 
@@ -57,21 +63,22 @@
 
 .cntc{
     float: left; 
+    color:#a5cee0;
 }
 .cntc p{
     margin-top: 10px;
 }
 .cntc hr{
-    margin-top: -10px;
+    margin-top: -3%;
 }
 .cntc button{
-    margin-top:15px;
+    margin-top:4%;
 }
 #submit{
     margin-left:0;
 }
 .soc{
-    padding: 22px 0;;
+    padding: 2% 0;;
     float: left;
 }
 .cntc h2{
@@ -107,11 +114,12 @@
 }
 .soc p{
     margin-top:0.5px;
-    height:30px;
+    height:1.6%;
     font-weight: 300;
     text-align: center;
-    font-size: 170%;
-    background-color: #3946c2;
+    font-size: 168%;
+    background-color: #124170;
+    color:#999999;
 }
 
 /*******************************************************************************
