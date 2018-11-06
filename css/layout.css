@@ -2,10 +2,11 @@ body{
     background: whitesmoke; 
     margin: 0;
 }
+header{
+    font-size:140%;
+}
 
-
-footer{
-    margin:0 -10px 0 -10px;
+footer{ 
     background-color: #AAAAAB;
     height:30px;
     font-size: 140%;
