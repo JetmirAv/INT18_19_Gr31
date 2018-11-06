@@ -3,26 +3,34 @@
 *******************************************************************************/
 header h1{
     font-size: 280%;
-    color:lightblue;
     margin: 0 0 -4.5% 0;
     padding-left: 4.5%;
 }
+.hcol a:link, .hcol a:visited,
+.hcol a:hover, .hcol a:active{
+    text-decoration: none;
+    color:#bcd1de;
+}
 header p{
-    padding: 0 0 0 5%;
+    padding: 0.2% 0 0 5%;
     font-size:80%;
+    color:#999999;
 }
 nav a:link, nav a:visited{
     text-decoration: none;  
-    color:orange;
+    color:#ebecee;
 }
-nav a:hover, nav a:active{
-    color:red;
+nav a:hover, nav a:active{ 
+    color:#ff9900;
 }
 dl{
     display: inline-block;
     margin-left: 13%;
     margin-bottom: 0.5%;
     margin-top: 0;
+}
+dl:first-child{
+    margin-left:25%;
 }
 dt{
     text-transform: uppercase;
@@ -32,14 +40,20 @@ dd{
     font-size: 65%;
     font-weight: 100;
     margin-left: 0;
+    color:#999999;
 }
 .hcol{
     margin:0.1% 0 -1% 0;
 }
 .drow{
-    margin: 0.5% 0 0 0;  
+    margin: 0.5% 0 0 1%;  
+    
 }
 
+
+/******************************************************************************
+                        Footer
+*******************************************************************************/
 .credits{
     margin:0;
 }
