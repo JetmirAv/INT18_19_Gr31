@@ -1,1 +1,13 @@
-
+#big-txt{
+	font-size: 200%;
+	text-align: center;
+	margin-bottom: 0;
+}
+.services hr{
+	width: 200px;
+}
+.services .col{
+	border: 1px solid white;
+	border-radius:15px;
+	width: 
+}
