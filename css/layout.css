@@ -28,7 +28,7 @@ section{
 .col {
     display: block;
     float: left;
-    margin: 1% 0 1% 1.6%;
+    margin: 1% 0 1% 1%;
 }
 .col:first-child { 
     margin-left: 0; 
@@ -46,7 +46,7 @@ section{
     width:98.7%;
 }
 .span1-4{
-    width:24.6%;
+    width:24%;
 }
 .span2-4{
     width:49.2%
