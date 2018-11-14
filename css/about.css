@@ -3,13 +3,60 @@
     color:white;
     
 }
+#activity{
+    color:black;
+    font-size:35px;
+}
  a{text-decoration:none;}
  a:hover{background-color: yellow;}
  a{color:black;}
  
-.foto1{
+.photo1{
     float:right;
 }
 .photo2{
     float: left;
 }
+.adventure{
+    color:red;
+    font-size:22px;
+}
+.adventure p {
+    color:white;
+}
+.photo3{float:left;}
+.airactivities{
+    color:gray;
+    font-size:22px;
+}
+.airactivities p{
+    color:white;
+}
+.golf{
+    font-size:21px;
+    color:green;
+}
+.golf p{
+    color:white;
+}
+.photo5{float:left;}
+.wateractivities{
+    font-size:21px;
+    color:blue;
+}
+.wateractivities p {
+    color:blueviolet;
+}
+.photo6{float:left;}
+#holiday{
+    color:black;
+    font-size:35px;
+}
+.backpacking p{
+    color:white;
+    
+}
+.backpacking {
+    font-size:21px;
+}
+
