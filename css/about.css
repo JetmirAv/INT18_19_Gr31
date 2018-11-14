@@ -1,1 +1,15 @@
-
+ .start{
+    font-size:21px;
+    color:white;
+    
+}
+ a{text-decoration:none;}
+ a:hover{background-color: yellow;}
+ a{color:black;}
+ 
+.foto1{
+    float:right;
+}
+.photo2{
+    float: left;
+}
