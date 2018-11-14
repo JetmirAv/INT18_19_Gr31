@@ -14,7 +14,7 @@ footer{
     color: #999999;
 }
 section{
-    padding: 2.8% 1%;
+    padding: 2.8% 0.5%;
     clear: both;
 }
 .row:before,
@@ -37,7 +37,7 @@ section{
     width:49.2%;
 }
 .span1-3{
-    width: 32.2%;
+    width: 31.1%;
 }
 .span2-3{
     width: 65.8%;
