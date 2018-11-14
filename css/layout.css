@@ -1,3 +1,7 @@
+*{
+	margin:0;
+	padding:0;
+}
 body{
     background: #0b2743; 
     margin: 0;
@@ -14,7 +18,8 @@ footer{
     color: #999999;
 }
 section{
-    padding: 2.8% 0.5%;
+    padding: 0;
+	margin: 5% 1.2%;
     clear: both;
 }
 .row:before,
@@ -28,47 +33,49 @@ section{
 .col {
     display: block;
     float: left;
-    margin: 1% 0 1% 1%;
+    margin: 1% 0 1% 1.6%;
 }
 .col:first-child { 
     margin-left: 0; 
 }
 .span1-2{
-    width:49.2%;
+    width:49.5%;
 }
 .span1-3{
-    width: 31.1%;
+    width: 33%;
 }
 .span2-3{
-    width: 65.8%;
+    width: 66%;
 }
 .span3-3{
-    width:98.7%;
+    width:99%;
 }
 .span1-4{
-    width:24%;
+    width:24.76%;
 }
 .span2-4{
-    width:49.2%
+    width:49.52%
 }
 .span3-4{
-    width:74.8%;
+    width:74.28%;
+}
+.span4-4{
+	width: 99%;
 }
 .span1-5{
-    width:19.6%;
+    width:19.8%;
 }
 .span2-5{
-    width:39.2%;
+    width:39.6%;
 }
 .span3-5{
     width:58.8%;
 }
 .span4-5{
-    width:78.4%;
+    width:79.2%;
 }
 .span5-5{
-    width:100%;
-    
+    width:99%;
 }
 
 

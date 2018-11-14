@@ -69,7 +69,9 @@
     margin-top: 10px;
 }
 .cntc hr{
-    margin-top: -3%;
+	position:relative;
+	margin-left:30px;
+	width: 460px;
 }
 .cntc button{
     margin-top:4%;
