@@ -1,13 +1,51 @@
+
 #big-txt{
 	font-size: 200%;
 	text-align: center;
 	margin-bottom: 0;
 }
-.services hr{
-	width: 200px;
+.all_ser{
+	margin: 0 18%;
+	width:50%;
+	padding:7%;
+	border: 0.5px white solid;
+	border-radius: 12px;
+	text-align: center;
+	height: 380px;
+	background-color: darkcyan;
 }
-.services .col{
-	border: 1px solid white;
-	border-radius:15px;
-	width: 
+.all_ser img{
+	margin:7% 5%;
+	width:20%;
+	padding:0 30%;
+}
+
+#flights{
+	
+	Font-size:280%;
+	text-align: center;
+	font-weight: 500;
+}
+.Flights img{
+    margin:1% 12.5%;
+    width: 75%;
+    border-radius: 23px;
+}
+.des-name{
+	font-size:240%;
+        text-align: center;
+}
+.from-till{
+    font-weight:Bold;
+    font-family: sans-serif;
+    border: 0.2px solid;
+    background-color: graytext;
+}
+.c_description span{
+    font-size: 120%;
+    font-weight: 300;    
+}
+.c_description {
+    font-size: 110%;
+    font-weight:500;
 }
