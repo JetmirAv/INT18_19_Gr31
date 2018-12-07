@@ -21,24 +21,9 @@ nav a:hover, nav a:active{
     background-color: #FF3333;
     color:#FFD700;
 }
-dl{
-    display: inline-block;
-    margin-left: 10%;
-    margin-bottom: 0.5%;
-    margin-top: 0;
-}
-dl:first-child{
-    margin-left:25%;
-}
-dt{
+header li{
+    display:inline;
     text-transform: uppercase;
-    font-size:85%;
-}
-dd{
-    font-size: 65%;
-    font-weight: 100;
-    margin-left: 0;
-    color:#999999;
 }
 .hcol{
     margin:0.1% 0 -1% 0;
