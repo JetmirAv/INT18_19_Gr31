@@ -9,14 +9,17 @@ h1 ,h2, h3 ,h4, h5, h6{
     font-family: "Rokkit"
 }
 body{
+    margin:0 5%;
     background: #ECECEC;
 }
 header{
+    margin:0;
     background-color: #c9c9c9;
     font-size:140%;
 }
 
 footer{ 
+    
     background-color: #c9c9c9;
     height:3%;
     font-size: 140%;
