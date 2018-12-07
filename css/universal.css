@@ -9,38 +9,21 @@ header h1{
 .hcol a:link, .hcol a:visited,
 .hcol a:hover, .hcol a:active{
     text-decoration: none;
-    color:#bcd1de;
-}
-header p{
-    padding: 2% 0 0 5%;
-    font-size:80%;
-    color:#999999;
+    color: #FF3333;
 }
 nav a:link, nav a:visited{
     text-decoration: none;  
-    color:#ebecee;
+    color:#FF3333;
+    transform: scale(1.3);
 }
-nav a:hover, nav a:active{ 
-    color:#ff9900;
+nav a:hover, nav a:active{
+    
+    background-color: #FF3333;
+    color:#FFD700;
 }
-dl{
-    display: inline-block;
-    margin-left: 10%;
-    margin-bottom: 0.5%;
-    margin-top: 0;
-}
-dl:first-child{
-    margin-left:25%;
-}
-dt{
+header li{
+    display:inline;
     text-transform: uppercase;
-    font-size:85%;
-}
-dd{
-    font-size: 65%;
-    font-weight: 100;
-    margin-left: 0;
-    color:#999999;
 }
 .hcol{
     margin:0.1% 0 -1% 0;

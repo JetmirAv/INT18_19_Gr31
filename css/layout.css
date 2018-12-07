@@ -2,16 +2,25 @@
 	margin:0;
 	padding:0;
 	border:0;
+    color: black;
+    font-family: "Playfair Display"
+}
+h1 ,h2, h3 ,h4, h5, h6{
+    font-family: "Rokkit"
 }
 body{
-    background: #0b2743;
+    margin:0 5%;
+    background: #ECECEC;
 }
 header{
+    margin:0 -6%;
+    background-color: #c9c9c9;
     font-size:140%;
 }
 
 footer{ 
-    background-color: #09223c;
+    margin:0 -6%;
+    background-color: #c9c9c9;
     height:3%;
     font-size: 140%;
     padding: 0 1%;
@@ -63,7 +72,7 @@ section{
 	width: 100%;
 }
 .span1-5{
-    width:18.72%;
+    width:18%;
 }
 .span2-5{
     width:38.08%;
