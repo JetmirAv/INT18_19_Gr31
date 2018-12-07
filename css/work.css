@@ -31,7 +31,7 @@
 	border-radius: 4px;
 	
 }
-.flights img{/
+.flights img{
     margin:1% 12.5%;
     width: 75%;
     border-radius: 23px;
@@ -39,10 +39,6 @@
 .des-name{
 	font-size:240%;
     text-align: center;
-}
-.place-img{
-    width: 75%;
-    margin: 2% 12.5%;
 }
 .from-till{
     font-weight:Bold;
@@ -68,6 +64,9 @@
 .c_description p span{
     font-size:110%;
     margin-left:3%;
+}
+.c_description input{
+    margin-left: 2%;
 }
 .flight_id{
 	text-align:right;

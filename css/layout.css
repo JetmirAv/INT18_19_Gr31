@@ -13,13 +13,13 @@ body{
     background: #ECECEC;
 }
 header{
-    margin:0;
+    margin:0 -6%;
     background-color: #c9c9c9;
     font-size:140%;
 }
 
 footer{ 
-    
+    margin:0 -6%;
     background-color: #c9c9c9;
     height:3%;
     font-size: 140%;

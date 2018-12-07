@@ -7,55 +7,29 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rokkitt:700,900" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="fonts/ionicons.min.css">
         <link href="css/layout.css" rel="stylesheet">
         <link href="css/universal.css" rel="stylesheet">  
         <link href="css/work.css" rel="stylesheet">        
     </head>
     <body>
-        <header>
+       <header>
             <div class="row ">
-                <div class="col span1-2 hcol">
-                    <div class="row">
-                        <h1><a href="index.html">Bluefolio</a></h1>
-                    </div>
-                    <div class="row">
-                    </div>
-                </div>
                 <div class="col span1-2 drow">
                     <nav>
                         <div class="row">
-                        <dl>
-                            <dt><a href="index.html">Home</a></dt>
-                            <dd>Idet mollis eros dis</dd>
-                        </dl>
-                        <dl>
-                            <dt><a href="work.html">Work</a></dt>
-                             <dd>Idet mollis eros dis</dd>
-                        </dl>
-                        <dl>
-                             <dt><a href="offers.html">Offers</a></dt>
-                             <dd>Idet mollis eros dis</dd>
-                        </dl>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="work.html">Work</a></li>
+                                <li><a href="offers.html">Offers</a></li>
+                                <li><a href="booking.html">Booking </a></li>
+                                <li><a href="#">sign up</a></li>
+                                <li><a href="About.html">About</a></li>
+
+                            </ul>
                         </div>
-                        <div class="row">
-                        <dl>
-                           <dt><a href="booking.html">Booking </a></dt>
-                           <dd>Idet mollis eros dis</dd>
-                        </dl>
-                        <dl>
-                            <dt><a href="#">sign up</a></dt>
-                             <dd>Idet mollis eros dis</dd>
-                        </dl>
-                        <dl>
-                             <dt><a href="About.html">About</a></dt>
-                             <dd>Idet mollis eros dis</dd> 
-                        </dl>
-                            </div>
                     </nav>
                 </div>
             </div>
-			<hr>
         </header>
 		<section class="begin">
 			<div class="row services">
@@ -64,7 +38,7 @@
 					<div class="col span1-3">
 						<div class="all_ser">	
 							<h2 class="ser-text">Flights</h2>
-							<i class="ion-plane ser-icon"></i>
+							<img src="images/services/plane1.png"/>
 							<p>	We offer best flight services in region. 
 								Our offers come from economical ones to VIP.
 								Best offer of this month is only <br/><span class="price-medium">99$</span>	
@@ -84,7 +58,6 @@
 					<div class="col span1-3">
 							<div class="all_ser">
 							<h2 class="ser-text">Flights</h2>
-                            <i class="ion-ios-stopwatch-outline icon1">
 							<img src="images/services/car1.png"/>
 							<p>	We offer best flight services in region. 
 									Our offers come from economical ones to VIP.
@@ -126,21 +99,14 @@
                             </p>
                             <span>Select your Seat:</span>
                             <br/>
-                            <p>Class: 
-                                <select>
-                                    <option>VIP</option>
-                                    <option>Bussines</option>
-                                    <option>Standard</option>
-                                </select>
-                            </p>
-
-                            <p>Class: 
-                                <select required>
-                                    <option>VIP</option>
-                                    <option>Bussines</option>
-                                    <option>Standard</option>
-                                </select>
-                            </p>
+                            <div>
+                                <span>Class: </span>
+                                <input type="checkbox" value="1" name="VIP" checked> VIP
+                                <input type="checkbox" value="2" name="Business"> Business
+                                <input type="checkbox" value="3" name="Standard"> Standard 
+                            </div>
+                            
+                            
                         </div>
                         <div class="col span1-5">
                             <button type="submit">Add To Cart</button>
