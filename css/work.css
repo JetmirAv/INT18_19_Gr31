@@ -4,6 +4,9 @@
 	text-align: center;
 	margin-bottom: 0;
 }
+.services{
+    height:600px;
+}
 .all_ser{
 	margin: 0 18%;
 	width:50%;
@@ -13,14 +16,16 @@
 	text-align: center;
 	height: 380px;
     background-color: #c9c9c9;
+    -webkit-transition: all 0.5s;
+}
+.all_ser:hover{
+    margin-top:3%;
+    -webkit-transform: scale(1.1);
 }
 .all_ser img{
 	margin:7% 5%;
 	width:25%;
 	padding:0 30%;
-}
-.flight-box:first-child{
-    border-top: 0.8px solid #FF3333;
 }
 .flight-box{
 	border-bottom: 0.8px solid #FF3333;

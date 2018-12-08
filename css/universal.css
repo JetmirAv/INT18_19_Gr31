@@ -14,10 +14,9 @@ header h1{
 nav a:link, nav a:visited{
     text-decoration: none;  
     color:#FF3333;
-    transform: scale(1.3);
+    transition: all 0.5s;
 }
 nav a:hover, nav a:active{
-    
     background-color: #FF3333;
     color:#FFD700;
 }
