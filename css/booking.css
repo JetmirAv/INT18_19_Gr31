@@ -54,9 +54,7 @@ dl {
     text-align: center;
 }
 
-.fphoto {
-    margin: 0 -5%;
-}
+
 
 input[type=checkbox] + label {
     cursor: pointer;
