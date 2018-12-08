@@ -11,7 +11,7 @@ header{
     text-decoration: none;
     color: #FF3333;
 }
-nav a:link, nav a:visited{
+nav :link, nav a:visited{
     text-decoration: none;  
     color:#FF3333;
     transition: all 0.5s;
@@ -54,9 +54,6 @@ header li{
 }
 .name h3 {
     color:white;
-    
-}
-
 }
 
 
