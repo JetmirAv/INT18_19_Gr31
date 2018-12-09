@@ -85,7 +85,7 @@ button a:visited{
     font-size: 110%;
 }
 .c_description {
-    padding-top: 3.5%;
+    padding-top: 2.5%;
     font-size: 90%;
     font-weight:500;
 	text-align: justify;
@@ -133,8 +133,14 @@ button a:visited{
     height: 40px;
     font-size:120%;
     margin:45% 10%;
-    -webkit-transition: all 0.4s
+    -webkit-transition: all 0.4s;
+    font-family: Lato;
 }
 #flights button:hover{
     background-color: rgba(212, 206, 183, 0.44);
+    font-size:125%;
+}
+#flights button[name="see-more"]{
+    margin:0.8% 45% 0 45%;
+    width: 10%;
 }
