@@ -1,41 +1,76 @@
-
 #big-txt{
 	font-size: 200%;
 	text-align: center;
 	margin-bottom: 0;
+    border-bottom: 0.5px rgba(103, 103, 103, 0.65) solid;
+    width:200px;
+    margin-left:41%;
+}
+.services{
+    height:480px;
 }
 .all_ser{
-	margin: 0 18%;
-	width:50%;
+	margin: 0 7%;
+	width:70%;
 	padding:7%;
 	border: 0.5px white solid;
 	border-radius: 12px;
 	text-align: center;
 	height: 380px;
     background-color: #c9c9c9;
+    -webkit-transition: all 0.6s;
+}
+.all_ser p{
+    margin-bottom: 40%;
+}
+button a:active,
+button a:hover,
+button a:link,
+button a:visited{
+    text-decoration: none;
+}
+.all_ser button{
+    padding:0;
+    font-size: 110%;
+    font-family: Lato;
+    height: 9%;
+    width: 50%;
+    border-radius: 15px;
+    background-color:   rgba(234, 234, 234, 0.54); 
+    border: 2px rgba(103, 103, 103, 0.65) solid;
+    -webkit-transition: all 0.2s;
+}
+.all_ser button:hover{
+    background-color: rgba(234, 234, 234, 0.96);
+}
+.all_ser:hover{
+    margin-top:3%;
+    -webkit-transform: scale(1.025);
 }
 .all_ser img{
 	margin:7% 5%;
 	width:25%;
 	padding:0 30%;
 }
-.flight-box:first-child{
-    border-top: 0.8px solid #FF3333;
-}
 .flight-box{
-	border-bottom: 0.8px solid #FF3333;
+	border-bottom: 0.5px solid rgba(103, 103, 103, 0.65);
 }
-#flights{
-	
+.flight-box div:first-child{
+    margin-bottom: 0;
+}
+#title{
+    border-bottom: 0.5px rgba(103, 103, 103, 0.65) solid;
+    width:150px;
 	font-size:280%;
+    margin-left:43%;
 	text-align: center;
 	font-weight: 500;
 }
-.flights input{
+#flights input{
 	border-radius: 4px;
 	
 }
-.flights img{
+#flights img{
     margin:1% 12.5%;
     width: 75%;
     border-radius: 23px;
@@ -50,14 +85,20 @@
     font-size: 110%;
 }
 .c_description {
-    font-size: 120%;
+    padding-top: 2.5%;
+    font-size: 90%;
     font-weight:500;
 	text-align: justify;
-	margin: 3.5% 0.5%;
+	margin: 3.5% 0.5% 0 0.5%;
+}
+.break{
+    padding-right:1%;
+    border-right: 0.3px rgba(103, 103, 103, 0.65) solid;
 }
 .c_description span{
-    font-size: 150%;
-    font-weight: 300;    
+    font-size: 110%;
+    font-weight: 300;  
+    font-weight: bold;
 }
 .c_description p{
     margin-left: 2%;
@@ -72,14 +113,34 @@
 .c_description input{
     margin-left: 2%;
 }
+.desc-title{
+    margin-left:2%;
+    color: #7a745f;
+}
+.desc-title select {
+    border-radius: 5px;
+}
 .flight_id{
 	text-align:right;
 	font-size: 80%;
 	margin-top:3%;
 	margin-right:1%;
 }
-.flights button{
-    width: 50%;
-    height:10%;
-    margin:45% 25%;
+#flights button{
+    background-color: rgba(234, 232, 232, 0.65);
+    border-radius: 12px;
+    width: 90%;
+    height: 40px;
+    font-size:120%;
+    margin:45% 10%;
+    -webkit-transition: all 0.4s;
+    font-family: Lato;
+}
+#flights button:hover{
+    background-color: rgba(212, 206, 183, 0.44);
+    font-size:125%;
+}
+#flights button[name="see-more"]{
+    margin:0.8% 45% 0 45%;
+    width: 10%;
 }
