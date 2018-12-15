@@ -174,26 +174,94 @@ background-color:#999999;
                 transform: rotateX(180deg);
                 margin-bottom:16px;
 }
-.aboutcomment p{
-    padding-top:27px;
-    font-family : Georgia , sans-serif , arial ;
-    font-size : 21px;
-    color: #7a745f;
-}
 
-.comments{
-                font-size:17px;
-                padding-top:33px;
-                column-count: 4;
-                column-gap: 4px;
-                column-rule: 1px red outset;
-                column-fill:balance;
-                -webkit-column-count:4;
-                -webkit-gap : 4px;
-                -webkit-column-rule: 1px red outset;
-}
 #ourvisitor{
     font-size: 21px;
     color: #B22A19;
     font-family: Georgia , sans-serif , arial;
 }
+.comments{
+     font-size:17px;
+     font-family: Georgia , sans-serif;
+     color:black;
+}
+#ranking{
+    font-size:30px;
+}
+ .adventureRankings{
+   column-count: 3;
+   column-gap: 8px;
+   column-rule: 6px none outset;
+   column-fill:balance;
+  -webkit-column-count:4;
+  -webkit-gap : 4px;
+  -webkit-column-rule: 1px none outset;
+  background-color:lightblue;
+ }
+ .photoState{
+     padding-top:15px;   
+     padding-left:12px;
+     float:left;
+ }
+.state{
+    padding-top:13px;
+    padding-left:12px;
+    font-size:20px; 
+    font-family: Montserrat, "Helvetica Neue", Helvetica, sans-serif;
+ }
+ .photoSimboli{
+     padding-left:12px;
+ }
+ .description1{
+     font-size:17px;
+     color:red;
+     color:black;
+     font-family:Arial;
+ }
+ .description2{
+        padding-left:12px;
+        color:grey;
+        font-size:17px;
+        padding-right: 12px;    
+ }
+.paragraph p {
+    padding-left:12px;
+    font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 0.875rem;
+ }
+ .gdp{
+     padding-top:0px;
+     padding-left:12px;
+     color: rgb(136, 136, 136);
+     text-transform: uppercase;
+ }
+ .gdp1{
+     padding-left:12px;
+ }
+.population{
+    padding-left:12px;
+    color: rgb(136, 136, 136);
+    text-transform: uppercase;
+ }
+.pupulation1{
+     padding-left:12px;
+ }
+.gdpPerCapita{
+      padding-left:12px;
+    color: rgb(136, 136, 136);
+    text-transform: uppercase;
+ } 
+.gdpPerCapita1{
+     padding-left:12px;
+ }
+ 
+ #population1{
+     padding-left:12px;
+    color: rgb(136, 136, 136);
+    text-transform: uppercase;
+ }
+ .population2{
+     padding-left:12px;
+ }
+ 
+
