@@ -1,3 +1,6 @@
+/******************************************************************************
+                        All Services
+*******************************************************************************/
 #big-txt{
 	font-size: 200%;
 	text-align: center;
@@ -10,7 +13,7 @@
     height:480px;
 }
 .all_ser{
-	margin: 0 7%;
+	margin: 2% 7%;
 	width:70%;
 	padding:7%;
 	border: 0.5px white solid;
@@ -18,7 +21,10 @@
 	text-align: center;
 	height: 380px;
     background-color: #c9c9c9;
-    -webkit-transition: all 0.6s;
+    -webkit-transition: -webkit-transform 0.1s;
+}
+.all_ser:hover{
+    -webkit-transform: scale(1.025);
 }
 .all_ser p{
     margin-bottom: 40%;
@@ -43,14 +49,24 @@ button a:visited{
 .all_ser button:hover{
     background-color: rgba(234, 234, 234, 0.96);
 }
-.all_ser:hover{
-    margin-top:3%;
-    -webkit-transform: scale(1.025);
-}
 .all_ser img{
 	margin:7% 5%;
 	width:25%;
 	padding:0 30%;
+}   
+#flights{
+   
+}
+.place-form{
+    border-radius: 12px;
+    margin: 0.2% 1%;
+    background-color: rgba(230, 230, 230, 0.8);
+    transform: translateZ(0);
+    -webkit-transition: transform 0.2s, background-color 0.2s;
+}
+.place-form:hover{
+    transform: scale(1.005);
+    background-color: rgba(230, 230, 230, 0.51);
 }
 .flight-box{
 	border-bottom: 0.5px solid rgba(103, 103, 103, 0.65);

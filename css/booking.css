@@ -13,13 +13,8 @@ cite img {
 }
 
 body section {
-    margin: 1%;
+    margin:1%  5.45%;
 }
-
-fphoto {
-    margin: 0%;
-}
-
 .table1 {
     margin: 1%
 }
@@ -43,7 +38,6 @@ table {
 td {
     border: solid 1pt black;
     padding: 7pt;
-
 }
 
 th {
@@ -53,9 +47,6 @@ th {
 dl {
     text-align: center;
 }
-
-
-
 input[type=checkbox] + label {
     cursor: pointer;
 
