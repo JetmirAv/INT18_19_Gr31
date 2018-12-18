@@ -1,6 +1,9 @@
 /******************************************************************************
                         All Services
 *******************************************************************************/
+.begin{
+    margin:2% 1.2%;
+}
 #big-txt{
 	font-size: 200%;
 	text-align: center;
@@ -13,26 +16,27 @@
     height:480px;
 }
 .all_ser{
-	margin: 2% 7%;
+	margin: 2% 12%;
 	width:70%;
 	padding:7%;
-	border: 0.5px white solid;
+	border: 0.5px rgba(157, 157, 157, 0.74); solid;
 	border-radius: 12px;
 	text-align: center;
-	height: 380px;
-    background-color: #c9c9c9;
-    -webkit-transition: -webkit-transform 0.1s;
+	height: 400px;
+    background-color: rgba(226, 226, 226, 0.74);
+    font-size: 100%;
+    transition: all 0.5s;
 }
 .all_ser:hover{
-    -webkit-transform: scale(1.025);
+    margin: 2% 11.5%;
+    padding-bottom: 8%;
+    width: 71%;
+    font-size:101%;
 }
 .all_ser p{
     margin-bottom: 40%;
 }
-button a:active,
-button a:hover,
-button a:link,
-button a:visited{
+button a{
     text-decoration: none;
 }
 .all_ser button{
@@ -47,26 +51,26 @@ button a:visited{
     -webkit-transition: all 0.2s;
 }
 .all_ser button:hover{
+    margin-bottom: 42%;
     background-color: rgba(234, 234, 234, 0.96);
 }
 .all_ser img{
 	margin:7% 5%;
 	width:25%;
 	padding:0 30%;
-}   
-#flights{
-   
-}
+}  
+/******************************************************************************
+                        Ser-Forms
+*******************************************************************************/
 .place-form{
     border-radius: 12px;
-    margin: 0.2% 1%;
-    background-color: rgba(230, 230, 230, 0.8);
-    transform: translateZ(0);
+    margin: 0.5% 1%;
+    background-color: rgba(226, 226, 226, 0.74);
     -webkit-transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
 }
 .place-form:hover{
-    transform: scale(1.005);
-    background-color: rgba(230, 230, 230, 0.51);
+    background-color: rgba(244, 244, 244, 0.71);
 }
 .flight-box{
 	border-bottom: 0.5px solid rgba(103, 103, 103, 0.65);
@@ -84,7 +88,6 @@ button a:visited{
 }
 #flights input{
 	border-radius: 4px;
-	
 }
 #flights img{
     margin:1% 12.5%;
@@ -149,14 +152,15 @@ button a:visited{
     height: 40px;
     font-size:120%;
     margin:45% 10%;
-    -webkit-transition: all 0.4s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
     font-family: Lato;
 }
 #flights button:hover{
-    background-color: rgba(212, 206, 183, 0.44);
-    font-size:125%;
+    background-color: rgba(226, 226, 226, 0.74);
+    font-size:118%;
 }
 #flights button[name="see-more"]{
-    margin:0.8% 45% 0 45%;
+    margin:0% 45%;
     width: 10%;
 }
