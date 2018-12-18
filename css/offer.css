@@ -1,1 +1,44 @@
+.titulli
+{
+color:white;
+font-family:helvetica;
+font-size:3em;
+}
 
+#FLIGHTS
+{
+ background-image:url(../images/offers/PLANE.jpg) ;
+ background-attachment:scroll;
+ background-repeat:no-repeat;
+ font-family:'Century Gothic ';
+}
+
+#HOTEL
+{
+ background-image:url(../images/offers/hotel1.jpg);
+background-attachment:scroll;
+ background-repeat:no-repeat;
+}
+
+#TRAVEL
+{
+ background-image:url(../images/offers/treni.jpg);
+ background-attachment:scroll;
+ background-repeat:no-repeat;
+}
+.nentitull
+{
+color:white;
+font-family:helvetica;
+}
+
+
+#span1-4{
+border-style:line;
+border-color:black;
+    background-image:url(../images/
+ ;
+}
+ul{/*spobon*/
+ 
+  }
