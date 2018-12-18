@@ -2,20 +2,14 @@
     margin:0; 
     font-family : Georgia , sans-serif , arial ;
     font-size:21px;
-    color:white;   
-    
+    color:white;      
 }
 #activity{
     color:black;
-    font-size:35px;
+    font-size: 3.125rem;
 }
-
 .photo1{
     float:right;
-    border : 1px  solid #999999;
-}
-.photo2{
-    float: left;
     border : 1px  solid #999999;
 }
 .adventure{
@@ -26,10 +20,6 @@
     color:white;
     background-color: gray;
     padding-left:8px;
-}
-.photo3{
-    float:left;
-    border : 1px  solid #999999;
 }
 .airactivities{
     text-align: left;
@@ -52,10 +42,6 @@
     color:white;
      font-family: sans-serif , arial ;
 }
-.photo5{
-float:left;
-border : 1px  solid #999999;
-}
 .wateractivities{
     text-align: left;
     font-size:21px;
@@ -66,21 +52,15 @@ border : 1px  solid #999999;
     color:blueviolet;
     font-family: sans-serif , arial ;
 }
-.photo6{
+.photo{
 float:left;
 border : 1px  solid #999999;
 }
 #holiday{
     text-align: center;
-    
     color:black;
-    font-size:35px;
+    font-size: 3.125rem;
 }
-.backpacking p {
-    color:white;
-     font-family: sans-serif , arial ;
-}
-
 .backpacking {
     font-size:21px;
 }
@@ -89,18 +69,8 @@ border : 1px  solid #999999;
     color:white;
      font-family: sans-serif , arial ;
 }
-#aktvitete{
-    font-size:30px;
-    color:red;
-    padding-bottom: 0px;
-}
-#festa{
-    font-size:30px;
-    padding-top: 8px;
-}
-.photo7{
-    float:left;
-border : 1px  solid #999999;
+.camping {
+    font-size:26px;
 }
 .camping p {
    background-color:#999999;
@@ -108,14 +78,6 @@ border : 1px  solid #999999;
      font-family: sans-serif , arial ;
      font-size:21px;
      text-align: left;
-}
-.camping {
-    font-size:26px;
-}
-
-.photo8{
-float:left;
-border : 1px  solid #999999;
 }
 .familyfriendly{
     font-size:26px;
@@ -126,10 +88,6 @@ border : 1px  solid #999999;
      font-family: sans-serif , arial ;
      font-size:21px;
      text-align: left;
-}
-.photo9{
-    float:left;
-    border: 1px solid #999999;
 }
 .luxurytravell{
     text-align:left;
@@ -142,10 +100,6 @@ background-color:#999999;
      font-family: sans-serif , arial ;
      font-size:21px;
      text-align: left;
-}
-.photo10{
-    float:left;
-    border: 1px solid #999999;
 }
 .workingholiday{
      text-align:left;
@@ -186,7 +140,9 @@ background-color:#999999;
      color:black;
 }
 #ranking{
-    font-size:30px;
+    font-size: 3.125rem;
+    line-height: 1.12;
+    color : black;
 }
  .adventureRankings{
    column-count: 3;
@@ -196,7 +152,7 @@ background-color:#999999;
   -webkit-column-count:4;
   -webkit-gap : 4px;
   -webkit-column-rule: 1px none outset;
-  background-color:lightblue;
+  background-color:white;
  }
  .photoState{
      padding-top:15px;   
