@@ -1,8 +1,9 @@
 .titulli
 {
+text-align: center;
 color:white;
 font-family:helvetica;
-font-size:3em;
+font-size:3.7em;
 }
 
 #FLIGHTS
@@ -26,19 +27,53 @@ background-attachment:scroll;
  background-attachment:scroll;
  background-repeat:no-repeat;
 }
+
 .nentitull
 {
 color:white;
 font-family:helvetica;
 }
 
-
- 
-  
- 
 ul{ 
  
   }
-  .icon{
-       
+  .kutia1-3H{
+      margin: 23% 11%;
+      width:80%;
+      padding:4%;
+      height:450px;
+      margin-bottom: 50%;
+      text-align: center;
+      background-color: blue;
+      border: 0.5px rgba(157, 157, 157, 0.74);solid; 
+      border-radius: 12px;
+      transition: all 0.9s;
+      font-size: 100%;
   }
+    .kutia1-3T{
+      margin: 23% 11%;
+      width:80%;
+      padding:4%;
+      height:650px;
+      margin-bottom: 50%;
+      text-align: center;
+      background-color: blue;
+      border: 0.5px rgba(157, 157, 157, 0.74);solid; 
+      border-radius: 12px;
+      transition: all 0.9s;
+      font-size: 100%;
+  }
+       
+  .kutia1-4{
+       margin: 15% 11%;
+       width: 80%;
+       height: 450px;
+      padding:5%;
+      text-align: center;
+      background-color: blue;
+      border: 0.5px rgba(157, 157, 157, 0.74); solid;
+      border-radius: 12px;
+      transition: all 0.9s;  
+      font-size: 100%;
+  }
+  
