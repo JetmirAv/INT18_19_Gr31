@@ -1,7 +1,6 @@
 /******************************************************************************
                         Header
 *******************************************************************************/
-
 header{
     padding-bottom: 1%;
 }
@@ -25,10 +24,11 @@ header li{
     text-transform: uppercase;
     padding:0.30% 1.5% 0.40% 1.5%;
     font-size: 60%;
-    
+    border-bottom: 0px white;
+    transition: all 0.4s;
 }
      li:hover , li:active {
-    border-bottom: 2px solid blue;
+    border-bottom: 0.8px solid rgba(157, 157, 157, 0.74);
 }
  .name {
     background: url(../images/booking/airplane.jpg);
@@ -41,9 +41,6 @@ header li{
     background-position: center;
     text-align: center;
 }
-
-
-
 /******************************************************************************
                         Footer
 *******************************************************************************/
@@ -52,8 +49,5 @@ header li{
 }
 .credits p{
     margin: 0.5% 0;
-}
-.credits:last-child{
-    text-align: right;
-    padding-left:1.5%;
+    margin-left: 8%;
 }
