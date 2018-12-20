@@ -3,34 +3,82 @@
 text-align: center;
 color:white;
 font-family:helvetica;
-font-size:3.7em;
+font-size:4.7em;
+margin-top: 7%;
+
 }
 
 #FLIGHTS
 {
- background-image:url(../images/offers/PLANE.jpg) ;
+ background-image:url(../images/offers/plane12.jpg) ;
  background-attachment:scroll;
  background-repeat:no-repeat;
  font-family:'Century Gothic ';
 }
 
+#flightsE link:hover{
+     
+    font-size:118%;
+     
+}
+
+#flightsPE link:hover{
+    
+    font-size:118%;
+    
+}
+
+#flightsB link:hover{
+     
+    font-size:118%;
+    
+}
+
+#flightsV link:hover{
+     
+    font-size:118%;
+     
+}
+
+#flights link{
+    margin:0% 45%;
+    width: 50%;
+}
+
 #HOTEL
 {
  background-image:url(../images/offers/hotel1.jpg);
-background-attachment:scroll;
+ background-attachment:scroll;
  background-repeat:no-repeat;
 }
+#hotelE link:hover{
+     
+    font-size:118%;
+}
 
+#hotelB link:hover{
+     
+    font-size:118%;
+}
+
+#hotelV link:hover{
+     
+    font-size:118%;
+}
 #TRAVEL
 {
  background-image:url(../images/offers/treni.jpg);
  background-attachment:scroll;
  background-repeat:no-repeat;
 }
-
+#travel link:hover{
+    background-color: rgba(226, 226, 226, 0.74);
+    font-size:118%;
+}
 .nentitull
 {
-color:white;
+font-size:222%;
+text-align:center;
 font-family:helvetica;
 }
 
@@ -75,5 +123,10 @@ ul{
       border-radius: 12px;
       transition: all 0.9s;  
       font-size: 100%;
+  }
+  
+  ul li{
+      list-style:none inside   ;
+      float:center;
   }
   
