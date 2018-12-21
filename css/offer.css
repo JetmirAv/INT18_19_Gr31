@@ -1,41 +1,81 @@
 .titulli
 {
 text-align: center;
-color:white;
+color:brown;
 font-family:helvetica;
-font-size:3.7em;
+font-size:4.7em;
+margin-top: 7%;
+
 }
 
 #FLIGHTS
 {
- background-image:url(../images/offers/PLANE.jpg) ;
+ background-image:url(../images/offers/Flugreisen.jpg) ;
  background-attachment:scroll;
  background-repeat:no-repeat;
  font-family:'Century Gothic ';
+ border-radius: 30px;
+}
+
+#flightsE link:hover{
+     
+    font-size:118%;
+     
+}
+
+#flightsPE link:hover{
+    
+    font-size:118%;
+    
+}
+
+#flightsB link:hover{
+     
+    font-size:118%;
+    
+}
+
+#flightsV link:hover{
+     
+    font-size:118%;
+     
+}
+
+#flights link{
+    margin:0% 45%;
+    width: 50%;
 }
 
 #HOTEL
 {
- background-image:url(../images/offers/hotel1.jpg);
-background-attachment:scroll;
- background-repeat:no-repeat;
-}
-
-#TRAVEL
-{
- background-image:url(../images/offers/treni.jpg);
+ background-image:url(../images/offers/hoteli.jpg);
  background-attachment:scroll;
  background-repeat:no-repeat;
+ border-radius: 12px;
+ 
 }
-
+ 
+#TRAVEL
+{
+ background-image:url(../images/offers/travel.jpg);
+ background-attachment:scroll;
+ background-repeat:no-repeat;
+ border-radius: 19px;
+}
+#travel link:hover{
+    background-color: rgba(226, 226, 226, 0.74);
+    font-size:118%;
+}
 .nentitull
 {
-color:white;
+font-size:222%;
+text-align:center;
 font-family:helvetica;
+color:blue;
 }
 
 ul{ 
- 
+ border:none;
   }
   .kutia1-3H{
       margin: 23% 11%;
@@ -44,21 +84,20 @@ ul{
       height:450px;
       margin-bottom: 50%;
       text-align: center;
-      background-color: blue;
-      border: 0.5px rgba(157, 157, 157, 0.74);solid; 
+      border: 0.5px rgba(157, 157, 157, 0.74) solid; 
       border-radius: 12px;
       transition: all 0.9s;
       font-size: 100%;
   }
     .kutia1-3T{
-      margin: 23% 11%;
+      margin: 11% 11%;
+      margin-bottom:216% ;
       width:80%;
       padding:4%;
       height:650px;
       margin-bottom: 50%;
       text-align: center;
-      background-color: blue;
-      border: 0.5px rgba(157, 157, 157, 0.74);solid; 
+      border: 0.5px rgba(157, 157, 157, 0.74) solid; 
       border-radius: 12px;
       transition: all 0.9s;
       font-size: 100%;
@@ -66,14 +105,24 @@ ul{
        
   .kutia1-4{
        margin: 15% 11%;
+       margin-bottom: 40%;
        width: 80%;
        height: 450px;
-      padding:5%;
-      text-align: center;
-      background-color: blue;
-      border: 0.5px rgba(157, 157, 157, 0.74); solid;
-      border-radius: 12px;
-      transition: all 0.9s;  
-      font-size: 100%;
+       padding:5%;
+       text-align: center;  
+       border: 0.5px rgba(157, 157, 157, 0.74)  solid;
+       border-radius: 12px;
+       transition: all 0.9s;  
+       font-size: 100%;
   }
   
+  ul li{
+      list-style:none inside;
+      float:center;
+      border:none;
+      color:red;
+  }
+  
+  p {
+      color:yellow;
+  }
