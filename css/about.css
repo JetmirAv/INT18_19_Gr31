@@ -5,9 +5,12 @@
     color:white;      
 }
 #activity{
+    padding-right: 18px;
     color:black;
     font-size: 3.125rem;
 }
+nav a:link,nav a:hover , nav a:visited{  /*Selectors pseudoClass*/
+    text-decoration: none; }
 .photo1{
     float:right;
     border : 1px  solid #999999;
@@ -22,7 +25,7 @@
     padding-right: 22px;
     text-align: center;
 }
-.airactivities{
+[class$="airactivities"]{     /*attributive selector*/
     text-align: left;
     color:gray;
     font-size:18px;
@@ -97,13 +100,13 @@ border : 1px solid #999999;
     font-size:18px;
     
 }
-.luxurytravell p {
+.luxurytravell p {    /*Selektor Kontekstual*/
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
 }
-.workingholiday{
+[class*=ay]{          /*attributive selector*/
     text-align:left;
     font-size:18px;
 }
@@ -113,7 +116,7 @@ border : 1px solid #999999;
     padding-right: 22px;
     text-align: center;
 }
-.visitor{
+.visitor h1{
     font-size:30px;
     padding-top:38px;
     margin-bottom: 20px;
@@ -122,11 +125,8 @@ border : 1px solid #999999;
 .border{
                 padding:15px;
                 height:15px;
-                border:3px green outset;
-                -webkit-transform:scaleX(1);
-                -webkit-transform: rotateX(180);
-                transform: scaleX(1);              
-                transform: rotateX(180deg);
+                border-top:ridge 1px #88b8a7;
+                border-bottom:solid 3px #016644;           
                 margin-bottom:16px;
 }
 
