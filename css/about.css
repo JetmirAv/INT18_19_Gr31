@@ -2,62 +2,88 @@
     margin:18px;     
     font-family : Georgia , sans-serif , arial ;
     font-size:21px;
-    color:white;      
+    color:white;   
+    font-family: 'Cabin', sans-serif;
 }
 #activity{
     padding-right: 18px;
     color:black;
     font-size: 3.125rem;
+    font-family: 'Cabin', sans-serif;
 }
 nav a:link,nav a:hover , nav a:visited{  /*Selectors pseudoClass*/
     text-decoration: none; }
+.start li{
+    text-transform: lowercase;
+    padding:0.30% 1.5% 0.40% 1.5%;
+    font-size: 110%;
+    border-bottom: 0px white;
+    transition: all 0.4s;
+    font-family: 'Cabin', sans-serif;
+}
+   li:hover , li:active {
+    border-bottom: 0.8px solid rgba(157, 157, 157, 0.74);
+}
 .photo1{
+    
     float:right;
     border : 1px  solid #999999;
 }
 .adventure{
     margin-right: 18px;
     font-size:18px;
+    font-family: 'Cabin', sans-serif;
+    position: relative;
 }
 .adventure p {
     color:black;
-    padding-top:12px;
-    padding-right: 22px;
+    padding-right: 10px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
+}
+#adventure{
+    color:black;
+    font-size:30px;
+    
 }
 [class$="airactivities"]{     /*attributive selector*/
     text-align: left;
     color:gray;
     font-size:18px;
+    font-family: 'Cabin', sans-serif;
 }
 .airactivities p{
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 .golf{
     text-align:left;
     font-size:18px;
     color:green;
+    font-family: 'Cabin', sans-serif;
 }
 .golf p{
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 .wateractivities{
     text-align: left;
     font-size:18px;
     color:blue;
+    font-family: 'Cabin', sans-serif;
 }
 .wateractivities p {
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
-    
+    font-family: 'Cabin', sans-serif;
 }
 .photo{
 float:left;
@@ -67,60 +93,71 @@ border : 1px solid #999999;
     text-align: center;
     color:black;
     font-size: 3.125rem;
+    font-family: 'Cabin', sans-serif;
 }
 .backpacking {
     font-size:18px;
+    font-family: 'Cabin', sans-serif;
 }
 .backpacking p{
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 .camping {
     font-size:18px;
+    font-family: 'Cabin', sans-serif;
 }
 .camping p {
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 .familyfriendly{
     font-size:18px;
+    font-family: 'Cabin', sans-serif;
 }
 .familyfriendly p{
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 .luxurytravell{
     text-align:left;
     font-size:18px;
-    
+    font-family: 'Cabin', sans-serif;    
 }
 .luxurytravell p {    /*Selektor Kontekstual*/
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 [class*=ay]{          /*attributive selector*/
     text-align:left;
     font-size:18px;
+    font-family: 'Cabin', sans-serif;
 }
 .workingholiday p{
     color:black;
     padding-top:12px;
     padding-right: 22px;
     text-align: center;
+    font-family: 'Cabin', sans-serif;
 }
 .visitor h1{
     font-size:30px;
     padding-top:38px;
     margin-bottom: 20px;
     color:#016644;
+    font-family: 'Cabin', sans-serif;
 }
 .border{
                 padding:15px;
@@ -133,17 +170,18 @@ border : 1px solid #999999;
 #ourvisitor{
     font-size: 21px;
     color: #B22A19;
-    font-family: Georgia , sans-serif , arial;
+    font-family: 'Cabin', sans-serif;
 }
 .comments{
      font-size:17px;
-     font-family: Georgia , sans-serif;
      color:black;
+     font-family: 'Cabin', sans-serif;
 }
 #ranking{
     font-size: 3.125rem;
     line-height: 1.12;
     color : black;
+    font-family: 'Cabin', sans-serif;
 }
  .adventureRankings{
    column-count: 3;
@@ -153,7 +191,7 @@ border : 1px solid #999999;
   -webkit-column-count:4;
   -webkit-gap : 4px;
   -webkit-column-rule: 1px none outset;
-  background-color:white;
+   background-color:white;
  }
  .photoState{
      padding-top:15px;   
@@ -163,8 +201,8 @@ border : 1px solid #999999;
 .state{
     padding-top:13px;
     padding-left:12px;
-    font-size:20px; 
-    font-family: Montserrat, "Helvetica Neue", Helvetica, sans-serif;
+    font-size:20px;
+    font-family: 'Cabin', sans-serif;
  }
  .photoSimboli{
      padding-left:12px;
@@ -173,18 +211,19 @@ border : 1px solid #999999;
      font-size:17px;
      color:red;
      color:black;
-     font-family:Arial;
+     font-family: 'Cabin', sans-serif;
  }
  .description2{
         padding-left:12px;
         color:grey;
         font-size:17px;
-        padding-right: 12px;    
+        padding-right: 12px;  
+        font-family: 'Cabin', sans-serif;
  }
 .paragraph p {
     padding-left:12px;
-    font-family: Roboto, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 0.875rem;
+    font-family: 'Cabin', sans-serif;
  }
  .gdp{
      padding-top:0px;
@@ -219,6 +258,11 @@ border : 1px solid #999999;
  }
  .population2{
      padding-left:12px;
+ }
+ .beOurGest b{
+     color:red;
+     font-size:60px;
+     
  }
  
 

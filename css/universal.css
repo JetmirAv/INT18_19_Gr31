@@ -15,7 +15,8 @@ header:first-child{
 .col{
     margin: 0;
 }
-nav a:link,nav a:hover , nav a:visited{
+nav a:link,nav a:hover , nav a:visited
+{
     text-decoration: none;   
 }
 
