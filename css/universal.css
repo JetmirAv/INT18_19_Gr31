@@ -27,6 +27,7 @@ header li{
     font-size: 60%;
     border-bottom: 0px white;
     transition: all 0.4s;
+    cursor: pointer;
 }
      li:hover , li:active {
     border-bottom: 0.8px solid rgba(157, 157, 157, 0.74);

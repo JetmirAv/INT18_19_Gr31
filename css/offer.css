@@ -1,128 +1,112 @@
+#FLIGHTS
+{
+ background-image:url(../images/offers/Flugreisen.jpg) ;
+ posion:relative;
+ margin-top: -72px;
+ margin-left: -67px;
+ margin-right: -75px;
+ background-attachment:scroll;
+ background-repeat:no-repeat;
+ font-family:'Century Gothic ';
+}
+
+#HOTEL
+{
+ background-image:url(../images/offers/hoteli.jpg);
+  margin-top: -138px;
+  margin-left: -67px;
+ margin-right: -75px;
+ margin-bottom: 10px;
+ background-attachment:scroll;
+ background-repeat:no-repeat;
+}
+#TRAVEL
+{
+ background-image:url(../images/offers/travel.jpg);
+ margin-top: -28px;
+  margin-left: -67px;
+ margin-right: -75px;
+  margin-bottom: 0px;
+ background-attachment:scroll;
+ background-repeat:no-repeat;
+}
 .titulli
 {
 text-align: center;
 color:brown;
 font-family:helvetica;
 font-size:4.7em;
-margin-top: 7%;
-
-}
-
-#FLIGHTS
-{
- background-image:url(../images/offers/Flugreisen.jpg) ;
- background-attachment:scroll;
- background-repeat:no-repeat;
- font-family:'Century Gothic ';
- border-radius: 30px;
-}
-
-#flightsE link:hover{
-     
-    font-size:118%;
-     
-}
-
-#flightsPE link:hover{
-    
-    font-size:118%;
-    
-}
-
-#flightsB link:hover{
-     
-    font-size:118%;
-    
-}
-
-#flightsV link:hover{
-     
-    font-size:118%;
-     
-}
-
-#flights link{
-    margin:0% 45%;
-    width: 50%;
-}
-
-#HOTEL
-{
- background-image:url(../images/offers/hoteli.jpg);
- background-attachment:scroll;
- background-repeat:no-repeat;
- border-radius: 12px;
- 
-}
- 
-#TRAVEL
-{
- background-image:url(../images/offers/travel.jpg);
- background-attachment:scroll;
- background-repeat:no-repeat;
- border-radius: 19px;
-}
-#travel link:hover{
-    background-color: rgba(226, 226, 226, 0.74);
-    font-size:118%;
+margin-top: 5%;
+margin-bottom: -5%;
 }
 .nentitull
 {
 font-size:222%;
 text-align:center;
 font-family:helvetica;
+margin-top: -3%;
+margin-bottom: 0%;
 color:blue;
 }
-
-ul{ 
- border:none;
-  }
-  .kutia1-3H{
-      margin: 23% 11%;
-      width:80%;
-      padding:4%;
-      height:450px;
-      margin-bottom: 50%;
-      text-align: center;
-      border: 0.5px rgba(157, 157, 157, 0.74) solid; 
-      border-radius: 12px;
-      transition: all 0.9s;
-      font-size: 100%;
-  }
-    .kutia1-3T{
-      margin: 11% 11%;
-      margin-bottom:216% ;
-      width:80%;
-      padding:4%;
-      height:650px;
-      margin-bottom: 50%;
-      text-align: center;
-      border: 0.5px rgba(157, 157, 157, 0.74) solid; 
-      border-radius: 12px;
-      transition: all 0.9s;
-      font-size: 100%;
-  }
-       
-  .kutia1-4{
-       margin: 15% 11%;
-       margin-bottom: 40%;
-       width: 80%;
-       height: 450px;
-       padding:5%;
-       text-align: center;  
-       border: 0.5px rgba(157, 157, 157, 0.74)  solid;
-       border-radius: 12px;
-       transition: all 0.9s;  
-       font-size: 100%;
-  }
-  
-  ul li{
-      list-style:none inside;
-      float:center;
+ ul li{
+      list-style:none ;
+      float:left;
       border:none;
       color:red;
+      margin-left:45px;
+      line-height:29px;
+      
+    }     
+.kutia1-4{
+       margin: 23% 11%;
+       margin-left: 15%;
+       margin-bottom: 20%;
+       width: 80%;
+       height: 480px;
+       padding:4%;
+       text-align: center;  
+       border: 0.5px rgba(157, 157, 157, 0.74)  solid;
+       background-color: rgba(226, 226, 226, 0.28);
+       border-radius: 12px;  
+       font-size: 100%;
   }
-  
-  p {
-      color:yellow;
-  }
+.kutia1-3H{
+      margin: 23% 11%;
+      margin-top: 18%;
+      width:80%;
+      padding:4%;
+      height:420px;
+      margin-bottom: 20%;
+      text-align: center;
+      background-color: rgba(226, 226, 226, 0.34);
+      border: 0.5px rgba(147, 157, 157, 0.74) solid; 
+      border-radius: 12px;
+      font-size: 100%;
+}
+.kutia1-3T{
+      margin: 23% 11%;
+      margin-top: 18%;
+      width:80%;
+      padding:4%;
+      height:420px;
+      margin-bottom:20% ;
+      text-align: center;
+      background-color: rgba(226, 226, 226, 0.38);
+      border: 0.5px rgba(147, 157, 157, 0.74) solid; 
+      border-radius: 12px;
+      font-size: 100%;
+  } 
+   
+p{
+        line-height: 24px;
+        font-size: 1.3em;
+}
+#hoteltraveltekst
+{
+        font-size:1.3em;
+        line-height:29px;
+        margin-bottom: 19px;
+}
+.icon{
+        margin-bottom: -11px;
+}
