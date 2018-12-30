@@ -1,217 +1,255 @@
+* {
+	-webkit-user-select: none;
+}
+
 section {
-    margin: 0;
+	margin: 0;
 }
 
 .hphotos {
-    padding-left: 1.2%;
+	padding-left: 2.65%;
 }
 
 .client-photo {
-    border-radius: 50px;
-    vertical-align: middle;
-    margin-right: 1%;
+	border-radius: 50px;
+	vertical-align: middle;
+	margin-right: 1%;
 }
 
 .client {
-    padding-left: 1.2%
+	padding-left: 1.2%
 }
 
 h2 {
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 0.2%;
-    font-size: 180%;
-    text-align: center;
-    margin-bottom: 2%;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	word-spacing: 0.2%;
+	font-size: 180%;
+	text-align: center;
+	margin-bottom: 2%;
 
 }
 
 /* Showslides Galery css code */
 .places {
-    margin: 0;
-    border: 0;
+	margin: 0;
+	border: 0;
 }
 
 .slides {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .container {
-    position: relative;
+	position: relative;
 }
 
 .slides {
-    display: none;
+	display: none;
 }
 
 .cursor {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .prev,
 .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    -webkit-user-select: none;
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	-webkit-user-select: none;
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
 }
 
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .column {
-    float: left;
-    width: 16.66%;
+	float: left;
+	width: 16.66%;
 }
 
 .small-photo {
-    opacity: 0.6;
-    width: 100%;
+	opacity: 0.6;
+	width: 100%;
 }
 
 .active,
 .small-photo:hover {
-    opacity: 1;
+	opacity: 1;
 }
 
 .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 9.5px 16px;
+	text-align: center;
+	background-color: #222;
+	padding: 9.5px 16px;
 }
 
 #caption {
-    color: #f8f4f4;
+	color: #f8f4f4;
 }
 
 div > .slides {
-    height: 425px;
-    width: 100%;
+	height: 425px;
+	width: 100%;
 }
 
 .large-photos {
-    width: 100%;
-    height: 425px;
+	width: 100%;
+	height: 425px;
 }
 
 .places {
-    margin: 0 -5.55%;
+	margin: 0 -5.55%;
 }
 
 /*Table css format code */
 
 
 table {
-    margin-left: 1%;
-    text-align: center;
-    border: solid 1pt black;
+	margin-left: 1%;
+	text-align: center;
+	border: solid 1pt black;
 }
 
 td {
-    border: solid 1px black;
-    padding: 7px;
+	border: solid 1px black;
+	padding: 7px;
 }
 
 th {
-    border: solid 1px black;
-    width: 222px;
+	border: solid 1px black;
+	width: 240px;
 }
 
 dl {
-    text-align: center;
+	text-align: center;
 }
 
 input[type=checkbox] + label {
-    cursor: pointer;
+	cursor: pointer;
 
 }
 
 input[type=checkbox] {
-    display: none;
+	display: none;
 }
 
 input[type=checkbox] + label:before {
-    content: "\2714";
-    border: 2px solid #000;
-    border-radius: 3.2px;
-    padding: 4px 8px;
-    color: transparent;
-    transition: .2s;
+	content: "\2714";
+	border: 2px solid #000;
+	border-radius: 3.2px;
+	padding: 4px 8px;
+	color: transparent;
+	transition: .2s;
 }
 
 input[type=checkbox]:checked + label:before {
-    background-color: #999;
-    border-color: #000;
-    color: #000;
+	background-color: #999;
+	border-color: #000;
+	color: #000;
 }
 
 .table1 {
-    margin: 1%;
+	margin: 1%;
 }
 
 .table-form input[type=checkbox] + label:before {
-    content: "\2714";
-    border: 2px solid #000;
-    border-radius: 3.2px;
-    padding: 0px 5px;
-    color: transparent;
-    transition: .2s;
+	content: "\2714";
+	border: 2px solid #000;
+	border-radius: 3.2px;
+	padding: 0px 5px;
+	color: transparent;
+	transition: .2s;
 }
 
 .table-form input[type=checkbox]:checked + label:before {
-    background-color: #999;
-    border-color: #000;
-    color: #000;
+	background-color: #999;
+	border-color: #000;
+	color: #000;
 }
 
 .tickets-number {
-    text-decoration: none;
-    border: 2px solid black;
-    width: 60px;
-    font-size: 15px;
-    padding: 3px 2px 4px;
-
-
+	text-decoration: none;
+	border: 2px solid black;
+	width: 60px;
+	font-size: 15px;
+	padding: 3px 2px 4px;
 }
 
-/*input[type="number"] {
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
+.radio-button-for-weight input[type=radio] {
+	opacity: 0;
+	float: left;
+	position: absolute;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-*/
+.radio-button-for-weight input[type=radio] + label {
+	position: relative;
+	padding: 3px 0 0 4px;
+	cursor: pointer;
+}
+
+.radio-button-for-weight input[type=radio] + label:before {
+	content: "\2714";
+	border: 2px solid #000;
+	border-radius: 3.2px;
+	padding: 0px 5px;
+	color: transparent;
+	transition: .2s;
+}
+
+.table-form input[type=radio]:checked + label:before {
+	background-color: #999;
+	border-color: #000;
+	color: #000;
+}
+
+
+/* Cars section*/
+
+button {
+	text-align: center;
+	margin: 20px 540px;
+	padding: 6px 10px;
+	font-size: 20px;
+	border: 2px solid #666666;
+	border-radius: 25px;
+}
+
+figure {
+	padding: 6px;
+}
+
+figcaption {
+	text-align: center;
+}
