@@ -3,7 +3,11 @@
 	padding:0;
 	border:0;
     color: black;
-    font-family: "Playfair Display"
+    font-family: "Playfair Display";
+    vertical-align: baseline;    
+}
+img, iframe, video, object{
+    max-width: 100%;
 }
 h1 ,h2, h3 ,h4, h5, h6{
     font-family: "Rokkit"
