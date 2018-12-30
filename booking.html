@@ -5,11 +5,95 @@
 	<title>AirAgency</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/booking.css" rel="stylesheet" type="text/css"/>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 	<link href="css/layout.css" rel="stylesheet">
 	<link href="css/universal.css" rel="stylesheet">
 	<link href="css/booking.css" rel="stylesheet">
 	<script type="text/JavaScript" src="javascript/booking.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<style>
+		.myImg:hover{
+			opacity: 0.8;
+		}
+
+		.modal-Image  {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 75px; 
+            left:0;
+            top: 0;
+            width: 100%; 
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.9);
+}
+		.myImg{
+			
+			width: 23.3%;
+			height: auto;
+			cursor: pointer;	
+		}
+				.modal-content {
+            margin: auto;
+			margin-left: 20px;
+            display: block;
+            width: 70%;
+            max-width: 700px;
+			padding-left: 70px;
+			float: left
+		}
+		#captionn {			
+            margin: auto;	
+            display: block;
+            width: 30%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0 10px 700px;
+            height: 150px;
+ }
+				.modal-content,
+		#captionn {
+			-webkit-animation-name: zoom;
+			-webkit-animation-duration: 0.6s;
+		}
+		@-webkit-keyframes zoom {
+			from {
+				-webkit-transform: scale(0)
+			}
+			to {
+				-webkit-transform: scale(1)
+			}
+		}
+		@keyframes zoom {
+			from {
+				transform: scale(0)
+			}
+			to {
+				transform: scale(1)
+			}
+		}
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 85px;
+			color: #f1f1f1;
+			font-size: 40px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+		.close:hover,
+		.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -118,13 +202,12 @@
 							<th>Photo</th>
 							<th>From</th>
 							<th>To</th>
-							<th>Quantity</th>
-							<th>Tickets Number</th>
+							<th>Tickets</th>
 							<th>Weight</th>
 							<th>Payment</th>
 						</tr>
 					</thead>
-					<tbody> 
+					<tbody>
 						<tr>
 							<td rowspan="2">
 								<form><input type="checkbox" id="check" value="">
@@ -135,143 +218,116 @@
 							<td rowspan="2">Canada</td>
 							<td rowspan="2">Roma</td>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-1-cell-5" value="">
-                                                                    <label for="row-1-cell-5" style="width: 50px; ">   
-                                                                    </label>
-								</form>
-								<p style="float: right; padding-right:20px ">Adult</p>
-							</td>
-							<td>
+								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
-                                                                    <label>Ticket Number: </label>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
-                                                        <td rowspan="2" class="table-form" style="text-align: left; ">
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
+							<td rowspan="2" class="table-form" style="text-align: left; ">
 
-									<div style="margin-bottom: 30px;">
-										<form style="float:left;">
-                                                                                    <input type="checkbox" id="row-1-form-1" value="">
-                                                                                    <label for="row-1-form-1" style="width: 50px; "></label>
-										</form>
-										<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="5kg">
-									</div>
-									<div style="padding-bottom: 10px; clear: both">
-										<form style="float:left;">
-                                                                                    <input type="checkbox" id="row-1-form-2" value="">
-                                                                                    <label for="row-1-form-2"></label>
-										</form>
-										<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-									</div>
-									<br>
-									<div style="padding-bottom: 10px; clear: both">
-										<form style="float:left;">
-                                                                                    <input type="checkbox" id="row-1-form-3" style="float: right;  padding-top: 2px;" value="">
-                                                                                    <label for="row-1-form-3"></label>
-										</form>
-										<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-									</div>
-									<br>
-									<div style="padding-bottom: 10px; clear: both">
-										<form style="float:left;" >
-                                                                                    <input type="checkbox" id="row-1-form-4" value="">
-                                                                                    <label for="row-1-form-4"></label>
-                                                                                </form>
-                                                                            <img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
-									</div>
+								<div class="radio-button-for-weight">
+									<form>
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-1" checked="checked" id="row-1-radio-1">
+											<label for="row-1-radio-1" style="width: 50px;"></label>
+											<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-1" id="row-1-radio-2">
+											<label for="row-1-radio-2"></label>
+											<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" id="row-1-radio-3" name="row-1" style="float: right;  padding-top: 2px;">
+											<label for="row-1-radio-3"></label>
+											<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-1" id="row-1-radio-4">
+											<label for="row-1-radio-4"></label>
+
+											<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+										</div>
+									</form>
+								</div>
 							</td>
 							<td rowspan="2">5000€
 							</td>
 						</tr>
+
 						<tr>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-2-cell-5" value="">
-                                                                    <label for="row-2-cell-5" style="width: 50px; ">
-                                                                    </label>
-								</form>
-								<p style="float: right; padding-right:20px ">Children</p>
-							</td>
-<td>
+								<p style="float: left; padding-right:20px ">Children</p>
+
 								<form>
-                                                                    <label>Ticket Number: </label>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
 						</tr>
 
 						<tr>
 							<td class="check1" rowspan="2">
 								<form>
-                                                                    <input type="checkbox" id="check1" value="">
-                                                                    <label for="check1"></label>
+									<input type="checkbox" id="check1" value="">
+									<label for="check1"></label>
 								</form>
 							</td>
 							<td rowspan="2"><img src="images/booking/foto2.png" alt="Hon Kong" width="100" class="hphotos" /></td>
 							<td rowspan="2">Kosovo</td>
 							<td rowspan="2">Hong Kong</td>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-3-cell-5" value="">
-                                                                    <label for="row-3-cell-5" style="width: 50px; "></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Adult</p>
-							</td>
-							<td>
+								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
-                                                                    <label>Ticket Number: </label>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
-							<td rowspan="2" class="table-form" style="text-align: left">
-								<div style="margin-bottom: 30px;">
-									<form style="float:left;"><input type="checkbox" id="row-2-form-1" value="">
-                                                                            <label for="row-2-form-1" style="width: 50px; "></label>
-									</form>
-									<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="5kg">
-								</div>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-2-form-2" value="">
-                                                                            <label for="row-2-form-2"></label>
-									</form>
-									<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-2-form-3" style="float: right;  padding-top: 2px;" value="">
-                                                                            <label for="row-2-form-3"></label>
-									</form>
-                                                                    <img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-								</div>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
+							<td rowspan="2" class="table-form" style="text-align: left; ">
 
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left">
-                                                                            <input type="checkbox" id="row-2-form-4" value="">
-                                                                            <label for="row-2-form-4"></label>
-                                                                        </form>
-									<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+								<div class="radio-button-for-weight">
+									<form>
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-2" checked="checked" id="row-2-radio-1">
+											<label for="row-2-radio-1" style="width: 50px;"></label>
+											<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-2" id="row-2-radio-2">
+											<label for="row-2-radio-2"></label>
+											<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" id="row-2-radio-3" name="row-2" style="float: right;  padding-top: 2px;">
+											<label for="row-2-radio-3"></label>
+											<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-2" id="row-2-radio-4">
+											<label for="row-2-radio-4"></label>
+
+											<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+										</div>
+									</form>
 								</div>
 							</td>
 							<td rowspan="2">1480€</td>
 						</tr>
+
 						<tr>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;"><input type="checkbox" id="row-4-cell-5" value="">
-									<label for="row-4-cell-5" style="width: 50px; "></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Children</p>
-							</td>
-<td>
+								<p style="float: left; padding-right:20px ">Children</p>
+
 								<form>
-                                                                    <label>Ticket Number: </label>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
 						</tr>
+
 						<tr>
 							<td rowspan="2">
 								<form><input type="checkbox" id="check2" value="">
@@ -282,282 +338,232 @@
 							<td rowspan="2">Germany</td>
 							<td rowspan="2">Tahiti</td>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;"><input type="checkbox" id="row-5-cell-5" value="">
-									<label for="row-5-cell-5" style="width: 50px; "></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Adult</p>
-							</td>
-							<td>
+								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
-                                                                    <label>Ticket Number: </label>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
-							<td rowspan="2" class="table-form" style="text-align: left">
-								<div style="margin-bottom: 30px;">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-4-form-1" value="">
-                                                                            <label for="row-4-form-1" style="width: 50px; "></label>
-									</form>
-									<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="5kg">
-								</div>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-4-form-2" value="">
-                                                                            <label for="row-4-form-2"></label>
-									</form>
-                                                                    <img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-4-form-3" style="float: right;  padding-top: 2px;" value="">
-                                                                            <label for="row-4-form-3"></label>
-									</form>
-									<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-								</div>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
+							<td rowspan="2" class="table-form" style="text-align: left; ">
 
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;" >
-                                                                            <input type="checkbox" id="row-4-form-4" value="">
-                                                                            <label for="row-4-form-4"></label>
-                                                                        </form>
-									<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+								<div class="radio-button-for-weight">
+									<form>
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-3" checked="checked" id="row-3-radio-1">
+											<label for="row-3-radio-1" style="width: 50px;"></label>
+											<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-3" id="row-3-radio-2">
+											<label for="row-3-radio-2"></label>
+											<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" id="row-3-radio-3" name="row-3" style="float: right;  padding-top: 2px;">
+											<label for="row-3-radio-3"></label>
+											<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-3" id="row-3-radio-4">
+											<label for="row-3-radio-4"></label>
+
+											<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+										</div>
+									</form>
 								</div>
 							</td>
 							<td rowspan="2">5647€</td>
 						</tr>
+
 						<tr>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;"><input type="checkbox" id="row-6-cell-5" value="">
-                                                                    <label for="row-6-cell-5" style="width: 50px;"></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Children</p>
-							</td>
-							<td>
+								<p style="float: left; padding-right:20px ">Children</p>
+
 								<form>
-                                                                    <label>Ticket Number: </label>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
-						</tr>
-						<tr>
-							<td rowspan="2">
-								<form>
-                                                                    <input type="checkbox" id="check3" value="">
-                                                                    <label for="check3"></label>
+									<input type="number" class="tickets-number" min="0" name="number">
 								</form>
 							</td>
-							<td rowspan="2">
-                                                            <img src="images/booking/foto4.png" alt="New york" width="100" class="hphotos" /></td>
-							<td rowspan="2">Italy</td>
-							<td rowspan="2">New York</td>
-							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-7-cell-5" value="">
-                                                                    <label for="row-7-cell-5" style="width: 50px; "></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Adult</p>
-							</td>
-							<td>
-								<form>
-                                                                    <label>Ticket Number: </label>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
-							<td rowspan="2" class="table-form" style="text-align: left">
-								<div style="margin-bottom: 30px;">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-5-form-1" value="">
-                                                                            <label for="row-5-form-1" style="width: 50px; "></label>
-									</form>
-									<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="5kg">
-								</div>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-5-form-2" value="">
-                                                                            <label for="row-5-form-2"></label>
-									</form>
-                                                                    <img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-5-form-3" style="float: right;  padding-top: 2px;" value="">
-                                                                            <label for="row-5-form-3">
-                                                                            </label>
-									</form>
-                                                                    <img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left">
-                                                                            <input type="checkbox" id="row-5-form-4" value="">
-                                                                            <label for="row-5-form-4"></label>
-                                                                        </form>
-                                                                    <img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
-								</div>
-							</td>
-							<td rowspan="2">6874€</td>
-						</tr>
-						<tr>
-							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-8-cell-5" value="">
-                                                                    <label for="row-8-cell-5" style="width: 50px; "></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Children</p>
-							</td>
-							<td>
-								<form>
-                                                                    <label>Ticket Number: </label><br>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
-                                                        
 						</tr>
 
 						<tr>
 							<td rowspan="2">
 								<form>
-                                                                    <input type="checkbox" id="check4" value="">
-                                                                    <label for="check4"></label>
+									<input type="checkbox" id="check3" value="">
+									<label for="check3"></label>
+								</form>
+							</td>
+							<td rowspan="2">
+								<img src="images/booking/foto4.png" alt="New york" width="100" class="hphotos" /></td>
+							<td rowspan="2">Italy</td>
+							<td rowspan="2">New York</td>
+							<td class="table-form">
+								<p style="float: left; padding-right:45px ">Adult</p>
+								<form>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
+							<td rowspan="2" class="table-form" style="text-align: left; ">
+
+								<div class="radio-button-for-weight">
+									<form>
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-4" checked="checked" id="row-4-radio-1">
+											<label for="row-4-radio-1" style="width: 50px;"></label>
+											<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-4" id="row-4-radio-2">
+											<label for="row-4-radio-2"></label>
+											<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" id="row-4-radio-3" name="row-4" style="float: right;  padding-top: 2px;">
+											<label for="row-4-radio-3"></label>
+											<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-4" id="row-4-radio-4">
+											<label for="row-4-radio-4"></label>
+
+											<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+										</div>
+									</form>
+								</div>
+							</td>
+							<td rowspan="2">6874€</td>
+						</tr>
+
+						<tr>
+							<td class="table-form">
+								<p style="float: left; padding-right:20px ">Children</p>
+
+								<form>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
+						</tr>
+
+						<tr>
+							<td rowspan="2">
+								<form>
+									<input type="checkbox" id="check4" value="">
+									<label for="check4"></label>
 								</form>
 							</td>
 							<td rowspan="2"><img src="images/booking/foto5.png" alt="Dubai" width="100" class="hphotos" /></td>
 							<td rowspan="2">London</td>
 							<td rowspan="2">Dubai</td>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-9-cell-5" value="">
-                                                                    <label for="row-9-cell-5" style="width: 50px; "></label>
+								<p style="float: left; padding-right:45px ">Adult</p>
+								<form>
+									<input type="number" class="tickets-number" min="0" name="number">
 								</form>
-								<p style="float: right; padding-right:20px ">Adult</p>
 							</td>
-							<td>Ticket Number</td>
-							<td rowspan="2" class="table-form" style="text-align: left">
-								<div style="margin-bottom: 30px;">
-									<form style="float:left;"><input type="checkbox" id="row-6-form-1" value="">
-										<label for="row-6-form-1" style="width: 50px; "></label>
+							<td rowspan="2" class="table-form" style="text-align: left; ">
+
+								<div class="radio-button-for-weight">
+									<form>
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-5" checked="checked" id="row-5-radio-1">
+											<label for="row-5-radio-1" style="width: 50px;"></label>
+											<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-5" id="row-5-radio-2">
+											<label for="row-5-radio-2"></label>
+											<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" id="row-5-radio-3" name="row-5" style="float: right;  padding-top: 2px;">
+											<label for="row-5-radio-3"></label>
+											<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-5" id="row-5-radio-4">
+											<label for="row-5-radio-4"></label>
+
+											<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+										</div>
 									</form>
-                                                                    <img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="5kg">
-								</div>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-6-form-2" value="">
-                                                                            <label for="row-6-form-2"></label>
-									</form>
-                                                                    <img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-6-form-3" style="float: right;  padding-top: 2px;" value="">
-                                                                            <label for="row-6-form-3"></label>
-									</form>
-									<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left">
-                                                                            <input type="checkbox" id="row-6-form-4" value="">
-                                                                            <label for="row-6-form-4">
-                                                                            </label>
-                                                                        </form>
-									<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
 								</div>
 							</td>
 							<td rowspan="2">5746€</td>
 						</tr>
+
 						<tr>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-10-cell-5" value="">
-                                                                    <label for="row-10-cell-5" style="width: 50px; ">
-                                                                    </label>
-								</form>
-								<p style="float: right; padding-right:20px ">Children</p>
-							</td>
-<td>
+								<p style="float: left; padding-right:20px ">Children</p>
+
 								<form>
-                                                                    <label>Ticket Number: </label><br>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
 						</tr>
 
 						<tr>
 							<td rowspan="2">
 								<form>
-                                                                    <input type="checkbox" id="check5" value="">
-                                                                    <label for="check5"></label>
+									<input type="checkbox" id="check5" value="">
+									<label for="check5"></label>
 								</form>
 							</td>
 							<td rowspan="2"><img src="images/booking/foto6.png" alt="Ausria" width="100" class="hphotos" /></td>
 							<td rowspan="2">Roma</td>
 							<td rowspan="2">Austria</td>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-11-cell-5" value="">
-                                                                    <label for="row-11-cell-5" style="width: 50px; "></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Adult</p>
-							</td>
-							<td>
+								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
-                                                                    <label>Ticket Number: </label><br>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
-							<td rowspan="2" class="table-form" style="text-align: left">
-								<div style="margin-bottom: 30px;">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-7-form-1" value="">
-                                                                            <label for="row-7-form-1" style="width: 50px; "></label>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
+							<td rowspan="2" class="table-form" style="text-align: left; ">
+
+								<div class="radio-button-for-weight">
+									<form>
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-6" checked="checked" id="row-6-radio-1">
+											<label for="row-6-radio-1" style="width: 50px;"></label>
+											<img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-6" id="row-6-radio-2">
+											<label for="row-6-radio-2"></label>
+											<img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" id="row-6-radio-3" name="row-6" style="float: right;  padding-top: 2px;">
+											<label for="row-6-radio-3"></label>
+											<img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
+										</div>
+
+										<div style="padding-bottom: 10px; clear: both">
+											<input style="float:left;" type="radio" name="row-6" id="row-6-radio-4">
+											<label for="row-6-radio-4"></label>
+
+											<img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
+										</div>
 									</form>
-                                                                    <img src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="5kg">
-								</div>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-7-form-2" value="">
-                                                                            <label for="row-7-form-2"></label>
-									</form>
-                                                                    <img class="weights" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left;">
-                                                                            <input type="checkbox" id="row-7-form-3" style="float: right;  padding-top: 2px;" value="">
-                                                                            <label for="row-7-form-3"></label>
-									</form>
-                                                                    <img class="weights" src="images/booking/20kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-								</div>
-								<br>
-								<div style="padding-bottom: 10px; clear: both">
-									<form style="float:left">
-                                                                            <input type="checkbox" id="row-7-form-4" value="">
-                                                                            <label for="row-7-form-4"></label>
-                                                                        </form>
-                                                                    <img class="weights" src="images/booking/30kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="30kg">
 								</div>
 							</td>
 							<td rowspan="2">4572€</td>
 						</tr>
 						<tr>
 							<td class="table-form">
-								<form style="float:left; padding-left: 25px;">
-                                                                    <input type="checkbox" id="row-12-cell-5" value="">
-                                                                    <label for="row-12-cell-5" style="width: 50px; "></label>
-								</form>
-								<p style="float: right; padding-right:20px ">Children</p>
-							</td>
-<td>
+								<p style="float: left; padding-right:20px ">Children</p>
 								<form>
-                                                                    <label>Ticket Number: </label><br>
-                                                                        <input type="number" class="tickets-number" min="0" name="number">
-                                                                </form>
-                                                        </td>
+									<input type="number" class="tickets-number" min="0" name="number">
+								</form>
+							</td>
 						</tr>
 
 					</tbody>
@@ -567,39 +573,351 @@
 	</section>
 	<hr>
 	<section class="fphoto">
-
 		<h2> Cars</h2>
+		<div class="lphoto"></div>
 		<div class="row">
+			<figure class="col span1-5">
+				<img class="myImg" src="images/booking/car1.jpg" alt="Name:BMW<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
 
-			<img src="images/booking/cars1.jpg" alt="Porsche" width="200" class="hphotos" />
-			<img src="images/booking/cars2.jpg" alt="Audi" width="200" class="hphotos" />
-			<img src="images/booking/cars3.jpg" alt="Nissan" width="200" class="hphotos" />
-			<img src="images/booking/cars4.jpg" alt="Lamborgini" width="200" class="hphotos" />
-			<img src="images/booking/cars5.jpg" alt="Ferrari" width="200" class="hphotos" />
+				<div id="myModal" class=modal-Image>
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01">
+					<div id="captionn"></div>
+				</div>
+				<figcaption>BMW</figcaption>
+			</figure>
+			<figure class="col span1-5 ">
+				<img class=" myImg" src="images/booking/car2.jpg" alt="name:Mercedes-Benz E 43 AMG
+                <br><br>Petrol:Gasoline <br><br> Transmission:Automatic <br><br> Number of Gears:7 " style="width: 100%; height: 100%;">
+				<div id="myModal" class=modal-Image>
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01">
+					<div id="captionn"></div>
+				</div>
+
+				<figcaption>Mercedes-Benz E 43 AMG</figcaption>
+			</figure>
+			<figure class="col span1-5">
+				<img class="myImg" src="images/booking/car3.jpg" alt="Name:2017 Jeep Compass Petrol Automatic
+                <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+				<div id="myModal" class=modal-Image>
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01">
+					<div id="captionn"></div>
+				</div>
+				<figcaption>Jeep Compass</figcaption>
+			</figure>
+			<figure class="col span1-5">
+				<img class="myImg" src="images/booking/car.jpg" alt="Name:Mercedes Benz GLE450 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:7" style="width: 100%">
+				<div id="myModal" class=modal-Image>
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01">
+					<div id="captionn"></div>
+				</div>
+				<figcaption>Mercedes Benz GLE450</figcaption>
+			</figure>
+			<figure class="col span1-5">
+				<img class="myImg" src="images/booking/car4.jpg" alt="Name:Volvo XC40 <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+				<div id="myModal" class=modal-Image>
+					<span class="close">&times;</span>
+					<img class="modal-content" id="img01">
+					<div id="captionn"></div>
+				</div>
+				<figcaption>Volvo XC40</figcaption>
+			</figure>
+			<div id="Showmore" style="display:none; padding-top:-5px;">
+
+				<div class="row">
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car5.jpg" alt="Name:Tata Tigor <br><br> Petrol:Disel <br><br> Transsmision:Manual <br><br> Number of Gears:5" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Tata Tigor</figcaption>
+					</figure>
+					<figure class="col span1-5 ">
+						<img class="myImg" src="images/booking/car6.jpg" alt="Name:BMW X6 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:6" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>BMW X6 </figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car7.jpg" alt="Name:Mercedes-Benz CLA 45 AMG       
+						<br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Mercedes-Benz CLA 45 AMG</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car8.jpg" alt="Name:Audi A8L <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:5" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Audi A8L</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car9.jpg" alt="Name:Jaguar XFR-S SportBrake
+                         <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:6" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Jaguar XFR-S SportBrake</figcaption>
+					</figure>
+				</div>
+				<div class="row">
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car10.jpg" alt="Name:BMW M5 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:7" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>BMW M5</figcaption>
+					</figure>
+					<figure class="col span1-5 ">
+						<img class="myImg" src="images/booking/car11.jpg" alt="Name:Audi Q7<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Audi Q7</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car12.jpg" alt="Name:Mercedes-AMG G 63 <br><br> Petrol:Disel <br><br> Transsmision:Automatic <br><br> Number of Gears:9" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Mercedes-AMG G 63</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car13.jpg" alt="Name:Mercedes-AMG G 63<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Mercedes-AMG G 63</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/car14.jpg" alt="Name:Hyundai Santa Fes<br><br> Petrol:Disel <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Hyundai Santa Fe</figcaption>
+					</figure>
+				</div>
+			</div>
 		</div>
+		<br>
+		<button onclick="function()" id="myBtn1">Show more</button>
+		<div>
 	</section>
 	<section class="fphoto">
 		<br>
 		<h2> Apartaments</h2>
 		<div class="row">
+			<div class="appartaments">
+				<figure class="col span1-5">
+					<img class="myImg" src="images/booking/Apartament1.jpg" alt=" FAM Living - City Walk <br><br>The units come with parquet flooring and feature a fully equipped kitchen (a dishwasher, an oven and a coffee machine etc) a flat-screen TV with cable channels, and all en suite private bathrooms with towels. " style="width: 100%">
+					<div id="myModal" class=modal-Image>
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="captionn"></div>
+					</div>
+					<figcaption>FAM Living - City Walk</figcaption>
+				</figure>
+				<figure class="col span1-5 ">
+					<img class=" myImg" src="images/booking/apartament2.jpg" alt=" Résidence Palais Étoile <br><br> Located in Paris, Résidence Palais Étoile offers self-catering apartments opposite Porte Maillot Palais de Congrès Exhibition Centre. Porte Maillot Metro Station is 20 metres away and leads directly to La Défense business district and the Champs-Elysées Avenue.
+                    Each apartment includes 1 bedroom, a living room with a sofa and a flat-screen TV." style=" width: 100%">
+					<div id="myModal" class=modal-Image>
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="captionn"></div>
+					</div>
+					<figcaption>Résidence Palais Étoile</figcaption>
+				</figure>
+				<figure class="col span1-5">
+					<img class="myImg" src="images/booking/Apartament3.jpg" alt="Rome as you feel - Navona Apartments offers luxurious self-catering accommodation in the historic centre of Rome. All apartments are located in different buildings around Piazza Navona square." style="width: 100%">
+					<div id="myModal" class=modal-Image>
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="captionn"></div>
+					</div>
+					<figcaption>Navona Apartmentsf</figcaption>
+				</figure>
+				<figure class="col span1-5">
+					<img class=" myImg" src="images/booking/Apartament4.jpg" alt="The Old Brompton Boutique <br><br> The Old Brompton Boutique offers accommodation in London, 1.5 km from Stamford Bridge - Chelsea FC and 1.6 km from Natural History Museum. This property offers access to free WiFi.
+                    This apartment comes with a kitchen, a seating area, a dining area and a satellite flat-screen TV." style="width: 100%">
+					<div id="myModal" class=modal-Image>
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="captionn"></div>
+					</div>
+					<figcaption>The Old Brompton Boutique</figcaption>
+				</figure>
+				<figure class="col span1-5">
+					<img class="myImg" src="images/booking/apartament5.jpg" alt="The Fulham Mirabel Gem <br><br> Set in London, The Fulham Mirabel Gem provides accommodation with a TV and a kitchen. Free WiFi is featured.
+                    " style="width: 100%">
+					<div id="myModal" class=modal-Image>
+						<span class="close">&times;</span>
+						<img class="modal-content" id="img01">
+						<div id="captionn"></div>
+					</div>
+					<figcaption>The Fulham Mirabel Gem</figcaption>
+				</figure>
+				<div class="showmore1" style="display:none">
+					<figure class="col span1-5 ">
+						<img class=" myImg" src="images/booking/apartament6.jpg" alt=" JW Marriott Hotel Hong Kong <br><br> Sitting atop the prestigious Pacific Place Complex, the JW Marriott Hotel Hong Kong has direct access to the Admiralty MTR Subway Station and Pacific Place Shopping Mall." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>JW Marriott Hotel Hong Kong</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/apartament7.jpg" alt="SACO Holborn <br><br> ituated in Bloomsbury area, SACO London boasts 32 award-winning serviced apartments with easy access to London’s West End, the City, and Tottenham Court Road, all within 1 mile radius." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>SACO Holborn</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class=" myImg" src="images/booking/apartament8.jpg" alt="Teva's Apt <br><br> Set in Punaauia, Teva's Apt features accommodation with a private pool and free WiFi. Housed in a building dating from 2008, this apartment is 3.7 km from the Museum of Tahiti." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Teva's Apt</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/appartament9.jpg" alt="Arlo SoHo <br><br>ocated close to SoHo, Tribeca and West Village neighborhoods, guests at Arlo Soho will find many dining and shopping destinations within easy reach. One World Trade Centre is 1.6 km from Arlo Soho." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Arlo SoHo</figcaption>
+					</figure>
+					<figure class="col span1-5 ">
+						<img class=" myImg" src="images/booking/apartament10.jpg" alt="Capri by Fraser Barcelona <br><br>This motorcycle-friendly hotel is 3 Metro stops from Plaza Catalunya and 15 minutes’ walk from the Barcelona’s beaches. There is free WiFi available throughout." style="width: 100%; height: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Capri by Fraser Barcelona</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/apartament11.jpg" alt="Dunes Hotel Apartments Oud Metha<br><br>" style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Dunes Hotel Apartments Oud Metha</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class=" myImg" src="images/booking/apartament12.jpg" alt="Habitat Apartments Bailén<br><br> Habitat Apartments Bailén is a modern apartment located in Barcelona, 5 minutes' walk from Arc de Triomf and 280 metres from Tetuan Square. Free WiFi access is available." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Habitat Apartments Bailén</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/apartament14.jpg" alt="<br><br>Located in Dubai, FAM Living - City Walk Dubai has well-equipped accommodation boasting free WiFi. City Walk Mall is 500 metres away." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>FAM Living - City Walk Dubai </figcaption>
+					</figure>
+					<figure class="col span1-5 ">
+						<img class=" myImg" src="images/booking/apartament13.jpg" alt="Sagrada Familia Sun <br><br> Located in Barcelona, Sagrada Familia Sun consists of a modern-style apartment with free WiFi. The Sagrada Familia is just a 10-minute walk away." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
 
-			<img src="images/booking/Apartament1.jpg" alt="Apartament in Roma" width="200" class="hphotos" />
-			<img src="images/booking/Apartament2.jpg" alt="Apartament in Hon Kong" width="200" class="hphotos" />
-			<img src="images/booking/Apartament3.jpg" alt="Apartament in Tahiti" width="200" class="hphotos" />
-			<img src="images/booking/Apartament4.jpg" alt="Apartament in New York" width="200" class="hphotos" />
-			<img src="images/booking/Apartament5.jpg" alt="Apartament in Dubai" width="200" class="hphotos" />
+						<figcaption>Sagrada Familia Sun</figcaption>
+					</figure>
+					<figure class="col span1-5">
+						<img class="myImg" src="images/booking/apartament15.jpg" alt="Fraser Residence City<br><br> Situated 2 minutes’ walk from Monument tube station, Fraser Residence City offers air-conditioned apartments with city views, fully equipped kitchens and an iPod docking station." style="width: 100%">
+						<div id="myModal" class=modal-Image>
+							<span class="close">&times;</span>
+							<img class="modal-content" id="img01">
+							<div id="captionn"></div>
+						</div>
+						<figcaption>Fraser Residence City</figcaption>
+					</figure>
+				</div>
+			</div>
 		</div>
+		<button onclick="function()" id="myBtn2">Show more</button>
 	</section>
+	<script>
+		$(document).ready(function() {
 
+			$("#myBtn1").click(function() {
+				$("#Showmore").hide("Show less");
+			});
+			$("#myBtn1").click(function() {
+				$("#Showmore").show();
+			});
+			$("#myBtn1").click(function() {
+				$("#myBtn1").text($("#myBtn1").text() === 'Show more' ? 'Show less' : 'Show more');
+			});
 
+			$("#myBtn2").click(function() {
+				$(".showmore1").hide("Show less");
+			});
+			$("#myBtn2").click(function() {
+				$(".showmore1").show();
+			});
+			$("#myBtn2").click(function() {
+				$("#myBtn2").text($("#myBtn2").text() === 'Show more' ? 'Show less' : 'Show more');
+			});
+			var modal = document.getElementById('myModal');
+			var img = $('.myImg');
+			var modalImg = $("#img01");
+			var captionText = document.getElementById("captionn");
+			$('.myImg').click(function() {
+				modal.style.display = "block";
+				var newSrc = this.src;
+				modalImg.attr('src', newSrc);
+				captionText.innerHTML = this.alt;
+			});
+			var span = document.getElementsByClassName("close")[0];
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+		});
 
-
-
-
-
-
-
-
+	</script>
 	<footer>
 		<div class="row">
 			<div class="col span2-3 credits">
@@ -610,8 +928,6 @@
 			</div>
 		</div>
 	</footer>
-
-
 </body>
 
 </html>
