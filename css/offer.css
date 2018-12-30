@@ -41,6 +41,7 @@ margin-bottom: -5%;
 }
 .nentitull
 {
+line-height: 50px;
 font-size:222%;
 text-align:center;
 font-family:helvetica;
@@ -62,14 +63,30 @@ color:blue;
        margin-left: 15%;
        margin-bottom: 20%;
        width: 80%;
-       height: 480px;
+        
        padding:4%;
        text-align: center;  
        border: 0.5px rgba(157, 157, 157, 0.74)  solid;
-       background-color: rgba(226, 226, 226, 0.28);
-       border-radius: 12px;  
+       background-color: rgba(226, 226, 226, 0.34);
+       border-radius: 12px; 
+       -webkit-border-radius: 12px;
+       -o-border-radius: 12px;
+       -moz-border-radius: 12px;
+       -ms-border-radius: 12px;
        font-size: 100%;
   }
+  .kutia1-4:hover{
+      background-color: rgba(326, 326, 326, 0.40);
+  }
+  .tekstikutia14{
+                
+        height:323px;             
+}
+.ul1-4{
+                  
+        height:124px;    
+                  
+}              
 .kutia1-3H{
       margin: 23% 11%;
       margin-top: 18%;
@@ -81,7 +98,14 @@ color:blue;
       background-color: rgba(226, 226, 226, 0.34);
       border: 0.5px rgba(147, 157, 157, 0.74) solid; 
       border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -o-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
       font-size: 100%;
+}
+.kutia1-3H:hover{
+    background-color: rgba(426, 426,426, 0.44);
 }
 .kutia1-3T{
       margin: 23% 11%;
@@ -94,9 +118,15 @@ color:blue;
       background-color: rgba(226, 226, 226, 0.38);
       border: 0.5px rgba(147, 157, 157, 0.74) solid; 
       border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -o-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
       font-size: 100%;
   } 
-   
+  .kutia1-3T:hover{
+      background-color: rgba(226, 226, 226, 0.55);
+  }  
 p{
         line-height: 24px;
         font-size: 1.3em;
@@ -108,5 +138,25 @@ p{
         margin-bottom: 19px;
 }
 .icon{
-        margin-bottom: -11px;
-}
+        width:35px;
+        height:35px;
+        margin-top: -13px;
+        transition:width 5s ;
+                -webkit-transition:width 5s ,height 5s,transform 5s;
+                -o-webkit-transition:width 5s ,height 5s,transform 5s;
+                -moz-webkit-transition:width 5s ,height 5s,transform 5s;
+                -ms-webkit-transition:width 5s ,height 5s,transform 5s;
+    }
+.icon:hover{
+        width:50px;
+        height:50px;
+        opacity: 0.8;
+                -webkit-transform: rotate(200deg);
+                -o-webkit-transform: rotate(200deg);
+                -moz-webkit-transform: rotate(200deg);
+                -ms-webkit-transform: rotate(200deg);
+            }
+            small{
+                font-size:81%;  
+                line-height: 50px;
+            }
