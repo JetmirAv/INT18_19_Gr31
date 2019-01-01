@@ -37,11 +37,6 @@ h2 {
 	border: 0;
 }
 
-.slides {
-	width: 100%;
-	height: 100%;
-}
-
 .container {
 	position: relative;
 }
@@ -113,6 +108,7 @@ h2 {
 	text-align: center;
 	background-color: #222;
 	padding: 9.5px 16px;
+	background-image: linear-gradient(to right, #100e0e, #454444, #100e0e);
 }
 
 #caption {
@@ -122,6 +118,15 @@ h2 {
 div > .slides {
 	height: 425px;
 	width: 100%;
+	text-align: center;
+	background-color: #171515;
+	background-image: linear-gradient(to right, #100e0e, #454444, #100e0e);
+}
+
+.slides > img {
+	width: 75%;
+	resize: vertical;
+	color: #454444
 }
 
 .large-photos {
@@ -145,6 +150,7 @@ table {
 td {
 	border: solid 1px black;
 	padding: 7px;
+	padding-bottom: -2px;
 }
 
 th {
@@ -155,6 +161,8 @@ th {
 dl {
 	text-align: center;
 }
+
+tabl3 > td > .hphotos {}
 
 input[type=checkbox] + label {
 	cursor: pointer;
@@ -237,7 +245,8 @@ input[type=checkbox]:checked + label:before {
 
 /* Cars section*/
 
-button {
+#myBtn1,
+#myBtn2 {
 	text-align: center;
 	margin: 20px 540px;
 	padding: 6px 10px;
@@ -252,4 +261,10 @@ figure {
 
 figcaption {
 	text-align: center;
+}
+
+output {
+	height: 30px;
+	display: block;
+	padding-top: 20px;
 }
