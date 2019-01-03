@@ -146,8 +146,9 @@ table {
 	text-align: center;
 	border: solid 1pt black;
 }
-tr{
-    padding: 0;
+
+tr {
+	padding: 0;
 }
 
 td {
@@ -165,8 +166,6 @@ dl {
 	text-align: center;
 }
 
-tabl3 > td > .hphotos {}
-
 input[type=checkbox] + label {
 	cursor: pointer;
 
@@ -182,7 +181,7 @@ input[type=checkbox] + label:before {
 	border-radius: 3.2px;
 	padding: 4px 8px;
 	color: transparent;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 input[type=checkbox]:checked + label:before {
@@ -201,7 +200,7 @@ input[type=checkbox]:checked + label:before {
 	border-radius: 3.2px;
 	padding: 0px 5px;
 	color: transparent;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 .table-form input[type=checkbox]:checked + label:before {
@@ -236,7 +235,7 @@ input[type=checkbox]:checked + label:before {
 	border-radius: 3.2px;
 	padding: 0px 5px;
 	color: transparent;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 .table-form input[type=radio]:checked + label:before {
@@ -247,11 +246,14 @@ input[type=checkbox]:checked + label:before {
 
 
 /* Cars section*/
+.fphoto {
+	margin-left: 50px;
+}
 
-#myBtn1,
-#myBtn2 {
+#btn1,
+#btn2 {
 	text-align: center;
-	margin: 20px 540px;
+	margin: 20px 497px;
 	padding: 6px 10px;
 	font-size: 20px;
 	border: 2px solid #666666;
@@ -270,4 +272,15 @@ output {
 	height: 30px;
 	display: block;
 	padding-top: 20px;
+}
+
+button {
+	outline: none;
+}
+
+.tabbtn {
+	padding: 10px 20px;
+	margin: 0;
+	background-color: #2f2f2f;
+	border-radius: 10px;
 }
