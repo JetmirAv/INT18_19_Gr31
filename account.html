@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Account</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt:700,900" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/universal.css" rel="stylesheet">
+    <link href="css/account.css" rel="stylesheet">
+    <script src="javascript/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col span1-3 header-name">
+                <p>AirAgency</p>
+            </div>
+            <nav>
+                <div class="col span2-3">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                        <li><a href="booking.html">Booking </a></li>
+                        <li><a href="#">sign up</a></li>
+                        <li><a href="About.html">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <section id="box">
+        <div class="title">
+            <h1 class="active" id="title1">Sign In</h1>
+            <h1 id="title2">Sign Up</h1>
+        </div>
+        <section class="size" id="sign-in">
+            <div class="wrapper sign-in">
+                <form method="post">
+                    <div class="details">
+                        <label class="label" placeholder="Your Email Address" required>Email:</label>
+                        <input type="email">
+                    </div>
+                    <div class="details">
+                        <label class="label" placeholder="Your Password" required>Password:</label>
+                        <input type=" password">
+                    </div>
+                    <div class="details">
+                        <button type="submit">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="size" id="sign-up">
+            <div class="wrapper sign-in">
+                <form method="post">
+                    <div class="details">
+                        <label class="label" placeholder="eg. John" required>Name:</label>
+                        <input type="text">
+                    </div>
+                    <div class="details">
+                        <label class="label" placeholder="eg. Smith" required>Surname:</label>
+                        <input type="text">
+                    </div>
+                    <div class="details">
+                        <label class="label" placeholder="eg. johnsmith@hotmail.com" required>Email:</label>
+                        <input type="text">
+                    </div>
+                    <div class="details">
+                        <label class="label" placeholder="eg. Passwor1!" required>Password:</label>
+                        <input type="password">
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </section>
+</body>
+<script type="text/javascript">
+    var vHeight = $(window).height(),
+        vWidth = $(window).width(),
+        cover = $('#box'),
+        body = $('body');
+    cover.css({
+        "max-width": "100%",
+        "height": vHeight - ((vHeight / 100) * 40)
+
+    });
+    body.css({
+        "max-width": vWidth - (vWidth / 10)
+    });
+
+    function Event1() {
+        document.getElementById("title1").classList.add("active");
+        document.getElementById("title2").classList.remove("active");
+        document.getElementById("sign-in").style.display = "block";
+        document.getElementById("sign-up").style.display = "none";
+    };
+
+    function Event2() {
+        document.getElementById("title2").classList.add("active");
+        document.getElementById("title1").classList.remove("active");
+        document.getElementById("sign-up").style.display = "block";
+        document.getElementById("sign-in").style.display = "none";
+    };
+
+    document.getElementById("title1").addEventListener('click', Event1);
+    document.getElementById("title2").addEventListener('click', Event2);
+</script>
+
+</html>

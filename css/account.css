@@ -1,0 +1,81 @@
+h1 {
+    display: inline-block;
+    font-size: 200%;
+    font-weight: 500;
+    width: 30%;
+    margin: 0 8%;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.title {
+    padding-top: 1%;
+    width: 35%;
+    margin: auto;
+}
+
+.details {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 155%;
+    font-family: "Lato";
+    background-color: rgba(226, 226, 226, 0.74);
+    height: 80px;
+}
+
+.details:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.details:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.label {
+    padding-top: 30px;
+    width: 25%;
+    float: left;
+    margin-left: 10%;
+}
+
+input {
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 22px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+    height: 35px;
+    width: 55%;
+    border-radius: 8px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 22px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.active {
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(226, 226, 226, 0.74);
+}
+
+#sign-in,
+#sign-up {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#sign-up {
+    display: none;
+}
+
+button {
+    font-size: 110%;
+    border-radius: 10px;
+}
