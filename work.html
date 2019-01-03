@@ -1,269 +1,827 @@
 <!DOCTYPE html>
 <html>
-    <head>
-         <title>BlueFolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Rokkitt:700,900" rel="stylesheet">
-        <link href="css/layout.css" rel="stylesheet">
-        <link href="css/universal.css" rel="stylesheet">  
-        <link href="css/work.css" rel="stylesheet">        
-    </head>
-    <body>
-        <section>    
-        <header>
-            <div class="row">
-                <div class="col span1-3 header-name">
-                    <p>AirAgency</p>
-                </div>
-                    <nav>
-                        <div class="col span2-3" >
-                        <ul>
-                            <li><a href="index.html">Home</a></li> 
-                            <li><a href="work.html">Work</a></li>
-                            <li><a href="offers.html">Offers</a></li>
-                            <li><a href="booking.html">Booking </a></li>
-                            <li><a href="#">sign up</a></li>
-                            <li><a href="About.html">About</a></li>  
-                        </ul>
-                            </div>
-                    </nav>
+
+<head>
+    <title>BlueFolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt:700,900" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/universal.css" rel="stylesheet">
+    <link href="css/work.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col span1-3 header-name">
+                <p>AirAgency</p>
             </div>
-        </header>
-        <hr>
-        </section>    
-		<section class="begin">
-			<div class="row services">
-				<h1 id="big-txt">Our Services</h1>
-				<div class="row">
-					<div class="col span1-3">
-						<div class="all_ser">	
-							<h2 class="ser-text">Flights</h2>
-							<img src="images/services/plane1.png"/>
-							<p>	We offer best flight services in region. 
-								Our offers come from economical ones to VIP.
-								Best offer of this month is only <br/><span class="price-medium">99$</span>	
-							</p>
-                            <button><a href="#flights">See more</a></button>
-						</div>
-					</div>
-					<div class="col span1-3">
-						<div class="all_ser">
-							<h2 class="ser-text">Hotels</h2>
-							<img src="images/services/hotel1.png"/>
-							<p>	We offer best flight services in region. 
-								Our offers come from economical ones to VIP.
-								Best offer of this month is only <br/><span class="price-medium">99$</span>	
-							</p>
-                            <button><a href="#cars">See more</a></button>
-						</div>
-					</div>
-					<div class="col span1-3">
-                        <div class="all_ser">
-                            <h2 class="ser-text">Cars</h2>
-                            <img src="images/services/car1.png"/>
-                            <p>	We offer best flight services in region. 
-                                    Our offers come from economical ones to VIP.
-                                    Best offer of this month is only <br/><span class="price-medium">99$</span>	
-                            </p>
-                            <button><a href="#hotels">See more</a></button>
-						</div>
-					</div>
-				</div>	
-			</div>		
-		</section>
-		<section id="flights"> 
-            <h1 id="title">Flights</h1>
-            <form>
-                <div class="row flight-box place-form">
-                    <div class="col span1-3">
-                        <div class="row">
-                            <h3 class="des-name">Barcelona</h3>
-                        </div>
-                        <div class="row">
-                            <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
-                        </div>
-                    </div>
-                    <div class="col span2-3">			
-                        <div class="row c_description">
-                            <div class="col span4-5 break">
-                                <span>Brief:</span>					
-                                <br/>
-                                <p>	Barcelona is the capital city of Catalonia, which is a region of Spain. 
-                                    Barcelona is the largest city on the Mediterranean coast.
-                                    The city is between the rivers of Llobregat and Besòs, 
-                                    and south of the Pyrenees mountains. 
-                                </p>
-                                <span>Plane Information:</span>					
-                                <br/>
-                                <p>	
-                                    <span class="desc-title">Name: </span>AirBus 707
-                                    <span class="desc-title">Age: </span>39
-                                    <span class="desc-title">Class: </span>A+ 
-                                </p>
-                                <span>Select your Seat:</span>
-                                <br/>
-                                <div>
-                                    <span class="desc-title">Class: </span>
-                                    <select>
-                                        <option>VIP</option>
-                                        <option>Business</option>
-                                        <option>Standard</option>
-                                    </select> 
-                                    <span class="desc-title">Seat: </span>
-                                    <select>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <span class="desc-title">Luggage: </span>
-                                    <select>
-                                        <option><img src="#">Small</option>
-                                        <option>Medium</option>
-                                        <option>Large</option>
-                                        <option>Extra-Large</option>
-                                    </select> 
-                                    
-                                </div>
-                            </div>
-                            <div class="col span1-5">
-                                <button type="submit">Place Order</button>
-                            </div>
-                        </div>
-                    </div>
+            <nav>
+                <div class="col span2-3">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                        <li><a href="booking.html">Booking </a></li>
+                        <li><a href="account.html">sign up</a></li>
+                        <li><a href="About.html">About</a></li>
+                    </ul>
                 </div>
-            </form>
-            <form>
-                <div class="row flight-box place-form">
-                    <div class="col span1-3">
-                        <div class="row">
-                            <h3 class="des-name">Barcelona</h3>
-                        </div>
-                        <div class="row">
-                            <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
-                        </div>
-                    </div>
-                    <div class="col span2-3">			
-                        <div class="row c_description">
-                            <div class="col span4-5 break">
-                                <span>Brief:</span>					
-                                <br/>
-                                <p>	Barcelona is the capital city of Catalonia, which is a region of Spain. 
-                                    Barcelona is the largest city on the Mediterranean coast.
-                                    The city is between the rivers of Llobregat and Besòs, 
-                                    and south of the Pyrenees mountains. 
-                                </p>
-                                <span>Plane Information:</span>					
-                                <br/>
-                                <p>	
-                                    <span class="desc-title">Name: </span>AirBus 707
-                                    <span class="desc-title">Age: </span>39
-                                    <span class="desc-title">Class: </span>A+ 
-                                </p>
-                                <span>Select your Seat:</span>
-                                <br/>
-                                <div>
-                                    <span class="desc-title">Class: </span>
-                                    <select>
-                                        <option>VIP</option>
-                                        <option>Business</option>
-                                        <option>Standard</option>
-                                    </select> 
-                                    <span class="desc-title">Seat: </span>
-                                    <select>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <span class="desc-title">Luggage: </span>
-                                    <select>
-                                        <option><img src="#">Small</option>
-                                        <option>Medium</option>
-                                        <option>Large</option>
-                                        <option>Extra-Large</option>
-                                    </select> 
-                                    
-                                </div>
-                            </div>
-                            <div class="col span1-5">
-                                <button type="submit">Place Order</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <form>
-                <div class="row flight-box place-form">
-                    <div class="col span1-3">
-                        <div class="row">
-                            <h3 class="des-name">Barcelona</h3>
-                        </div>
-                        <div class="row">
-                            <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
-                        </div>
-                    </div>
-                    <div class="col span2-3">			
-                        <div class="row c_description">
-                            <div class="col span4-5 break">
-                                <span>Brief:</span>					
-                                <br/>
-                                <p>	Barcelona is the capital city of Catalonia, which is a region of Spain. 
-                                    Barcelona is the largest city on the Mediterranean coast.
-                                    The city is between the rivers of Llobregat and Besòs, 
-                                    and south of the Pyrenees mountains. 
-                                </p>
-                                <span>Plane Information:</span>					
-                                <br/>
-                                <p>	
-                                    <span class="desc-title">Name: </span>AirBus 707
-                                    <span class="desc-title">Age: </span>39
-                                    <span class="desc-title">Class: </span>A+ 
-                                </p>
-                                <span>Select your Seat:</span>
-                                <br/>
-                                <div>
-                                    <span class="desc-title">Class: </span>
-                                    <select>
-                                        <option>VIP</option>
-                                        <option>Business</option>
-                                        <option>Standard</option>
-                                    </select> 
-                                    <span class="desc-title">Seat: </span>
-                                    <select>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                    </select>
-                                    <span class="desc-title">Luggage: </span>
-                                    <select>
-                                        <option><img src="#">Small</option>
-                                        <option>Medium</option>
-                                        <option>Large</option>
-                                        <option>Extra-Large</option>
-                                    </select> 
-                                    
-                                </div>
-                            </div>
-                            <div class="col span1-5">
-                                <button type="submit">Place Order</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <button id="see-more" type="submit" name="see-more">See More</button>
-        </section>
-		<footer>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <section class="begin">
+        <div class="row services">
+            <div id="cart-icon">
+                <p id="cart-items"></p>
+            </div>
+            <h1 id="big-txt">Our Services</h1>
             <div class="row">
-                <div class="col span2-3 credits">
-                   <p>All right reserved &copy; for Gr31 - Internet!</p>
-               </div>
-               <div class="col span1-3 credits">
-                   <p>2018/2019</p>
-               </div>
-            </div>    
-        </footer>    
-    </body>
+                <div class="col span1-3">
+                    <div class="all_ser">
+                        <h2 class="ser-text">Flights</h2>
+                        <img src="images/services/plane1.png" />
+                        <p> We offer best flight services in region.
+                            Our offers come from economical ones to VIP.
+                            Best offer of this month is only <br /><span class="price-medium">99$</span>
+                        </p>
+                        <button><a id="see-offers-flights" href="#services">See more</a></button>
+                    </div>
+                </div>
+                <div class="col span1-3">
+                    <div class="all_ser">
+                        <h2 class="ser-text">Cars</h2>
+                        <img src="images/services/car1.png" />
+                        <p> We offer best flight services in region.
+                            Our offers come from economical ones to VIP.
+                            Best offer of this month is only <br /><span class="price-medium">99$</span>
+                        </p>
+                        <button><a id="see-offers-cars" href="#services">See more</a></button>
+                    </div>
+                </div>
+                <div class="col span1-3">
+                    <div class="all_ser">
+                        <h2 class="ser-text">Hotels</h2>
+                        <img src="images/services/hotel1.png" />
+                        <p> We offer best flight services in region.
+                            Our offers come from economical ones to VIP.
+                            Best offer of this month is only <br /><span class="price-medium">99$</span>
+                        </p>
+                        <button><a id="see-offers-hotels" href="#services">See more</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row">
+    </div>
+    <section id="services">
+        <h1 class="title" id="title1">Flights</h1>
+        <h1 class="title" id="title2">Cars</h1>
+        <h1 class="title" id="title3">Hotels</h1>
+        <div id="serv-flights">
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item1" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item2" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item3" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="bttn-see-more1" type="submit" name="see-more">See More</button>
+            <div id="see-more1">
+
+                <div class="row flight-box place-form">
+                    <div class="col span1-3">
+                        <div class="row">
+                            <h3 class="des-name">Barcelona</h3>
+                        </div>
+                        <div class="row">
+                            <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                        </div>
+                    </div>
+                    <div class="col span2-3">
+                        <div class="row c_description">
+                            <div class="col span4-5 break">
+                                <span>Brief:</span>
+                                <br />
+                                <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                    Barcelona is the largest city on the Mediterranean coast.
+                                    The city is between the rivers of Llobregat and Besòs,
+                                    and south of the Pyrenees mountains.
+                                </p>
+                                <span>Plane Information:</span>
+                                <br />
+                                <p>
+                                    <span class="desc-title">Name: </span>AirBus 707
+                                    <span class="desc-title">Age: </span>39
+                                    <span class="desc-title">Class: </span>A+
+                                </p>
+                                <span>Select your Seat:</span>
+                                <br />
+                                <div>
+                                    <span class="desc-title">Class: </span>
+                                    <select>
+                                        <option>VIP</option>
+                                        <option>Business</option>
+                                        <option>Standard</option>
+                                    </select>
+                                    <span class="desc-title">Seat: </span>
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <span class="desc-title">Luggage: </span>
+                                    <select>
+                                        <option><img src="#">Small</option>
+                                        <option>Medium</option>
+                                        <option>Large</option>
+                                        <option>Extra-Large</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col span1-5">
+                                <button class="addToCart" id="item4" type="submit">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Cars -->
+        <div id="serv-cars">
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item5" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item6" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item7" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="bttn-see-more2" type="submit" name="see-more">See More</button>
+            <div id="see-more2">
+
+                <div class="row flight-box place-form">
+                    <div class="col span1-3">
+                        <div class="row">
+                            <h3 class="des-name">Barcelona</h3>
+                        </div>
+                        <div class="row">
+                            <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                        </div>
+                    </div>
+                    <div class="col span2-3">
+                        <div class="row c_description">
+                            <div class="col span4-5 break">
+                                <span>Brief:</span>
+                                <br />
+                                <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                    Barcelona is the largest city on the Mediterranean coast.
+                                    The city is between the rivers of Llobregat and Besòs,
+                                    and south of the Pyrenees mountains.
+                                </p>
+                                <span>Plane Information:</span>
+                                <br />
+                                <p>
+                                    <span class="desc-title">Name: </span>AirBus 707
+                                    <span class="desc-title">Age: </span>39
+                                    <span class="desc-title">Class: </span>A+
+                                </p>
+                                <span>Select your Seat:</span>
+                                <br />
+                                <div>
+                                    <span class="desc-title">Class: </span>
+                                    <select>
+                                        <option>VIP</option>
+                                        <option>Business</option>
+                                        <option>Standard</option>
+                                    </select>
+                                    <span class="desc-title">Seat: </span>
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <span class="desc-title">Luggage: </span>
+                                    <select>
+                                        <option><img src="#">Small</option>
+                                        <option>Medium</option>
+                                        <option>Large</option>
+                                        <option>Extra-Large</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col span1-5">
+                                <button class="addToCart" id="item8" type="submit">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Hotels -->
+        <div id="serv-hotels">
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item9" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item10" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row flight-box place-form">
+                <div class="col span1-3">
+                    <div class="row">
+                        <h3 class="des-name">Barcelona</h3>
+                    </div>
+                    <div class="row">
+                        <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                    </div>
+                </div>
+                <div class="col span2-3">
+                    <div class="row c_description">
+                        <div class="col span4-5 break">
+                            <span>Brief:</span>
+                            <br />
+                            <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                Barcelona is the largest city on the Mediterranean coast.
+                                The city is between the rivers of Llobregat and Besòs,
+                                and south of the Pyrenees mountains.
+                            </p>
+                            <span>Plane Information:</span>
+                            <br />
+                            <p>
+                                <span class="desc-title">Name: </span>AirBus 707
+                                <span class="desc-title">Age: </span>39
+                                <span class="desc-title">Class: </span>A+
+                            </p>
+                            <span>Select your Seat:</span>
+                            <br />
+                            <div>
+                                <span class="desc-title">Class: </span>
+                                <select>
+                                    <option>VIP</option>
+                                    <option>Business</option>
+                                    <option>Standard</option>
+                                </select>
+                                <span class="desc-title">Seat: </span>
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="desc-title">Luggage: </span>
+                                <select>
+                                    <option><img src="#">Small</option>
+                                    <option>Medium</option>
+                                    <option>Large</option>
+                                    <option>Extra-Large</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col span1-5">
+                            <button class="addToCart" id="item11" type="submit">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <button id="bttn-see-more3" type="submit" name="see-more">See More</button>
+            <div id="see-more3">
+
+                <div class="row flight-box place-form">
+                    <div class="col span1-3">
+                        <div class="row">
+                            <h3 class="des-name">Barcelona</h3>
+                        </div>
+                        <div class="row">
+                            <img class="place-img" src="images/services/barcelona.jpg" alt="Barcelona">
+                        </div>
+                    </div>
+                    <div class="col span2-3">
+                        <div class="row c_description">
+                            <div class="col span4-5 break">
+                                <span>Brief:</span>
+                                <br />
+                                <p> Barcelona is the capital city of Catalonia, which is a region of Spain.
+                                    Barcelona is the largest city on the Mediterranean coast.
+                                    The city is between the rivers of Llobregat and Besòs,
+                                    and south of the Pyrenees mountains.
+                                </p>
+                                <span>Plane Information:</span>
+                                <br />
+                                <p>
+                                    <span class="desc-title">Name: </span>AirBus 707
+                                    <span class="desc-title">Age: </span>39
+                                    <span class="desc-title">Class: </span>A+
+                                </p>
+                                <span>Select your Seat:</span>
+                                <br />
+                                <div>
+                                    <span class="desc-title">Class: </span>
+                                    <select>
+                                        <option>VIP</option>
+                                        <option>Business</option>
+                                        <option>Standard</option>
+                                    </select>
+                                    <span class="desc-title">Seat: </span>
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <span class="desc-title">Luggage: </span>
+                                    <select>
+                                        <option><img src="#">Small</option>
+                                        <option>Medium</option>
+                                        <option>Large</option>
+                                        <option>Extra-Large</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col span1-5">
+                                <button class="addToCart" id="item12" type="submit">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col span2-3 credits">
+                <p>All right reserved &copy; for Gr31 - Internet!</p>
+            </div>
+            <div class="col span1-3 credits">
+                <p>2018/2019</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="javascript/serTabs.js"></script>
+<script src="javascript/addToCart.js"></script>
+
 </html>

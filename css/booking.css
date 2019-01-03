@@ -278,9 +278,10 @@ button {
 	outline: none;
 }
 
-.tabbtn {
-	padding: 10px 20px;
+.pay {
+	padding: 10px 0px;
 	margin: 0;
 	background-color: #2f2f2f;
-	border-radius: 10px;
+	border-radius: 0px;
+
 }
