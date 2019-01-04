@@ -172,6 +172,17 @@ button a {
     background-color: rgba(244, 244, 244, 0.71);
 }
 
+.place-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1%;
+}
+
+.place-img:first-child {
+    display: block;
+}
+
 .flight-box {
     clear: both;
     border-bottom: 0.5px solid rgba(103, 103, 103, 0.65);

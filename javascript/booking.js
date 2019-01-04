@@ -1,35 +1,35 @@
 /*eslint-env browser*/
 
 
-var slideIndex = 1;
-showSlides(slideIndex);
+var number = 1;
+showImages(number);
 
-function plusSlides(n) {
-	showSlides(slideIndex += n);
+function plusphotos(n) {
+	showImages(number += n);
 }
 
-function currentSlide(n) {
-	showSlides(slideIndex = n);
+function currentPhoto(n) {
+	showImages(number = n);
 }
 
-function showSlides(n) {
+function showImages(n) {
 	var i;
-	var slides = document.getElementsByClassName("slides");
-	var dots = document.getElementsByClassName("small-photo");
-	var captionText = document.getElementById("caption");
-	if (n > slides.length) {
-		slideIndex = 1;
+	var photos = document.getElementsByClassName("photos");
+	var small = document.getElementsByClassName("small-photo");
+	var cap = document.getElementById("slideShow-caption");
+	if (n > photos.length) {
+		number = 1;
 	}
 	if (n < 1) {
-		slideIndex = slides.length;
+		number = photos.length;
 	}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none";
+	for (i = 0; i < photos.length; i++) {
+		photos[i].style.display = "none";
 	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
+	for (i = 0; i < small.length; i++) {
+		small[i].className = small[i].className.replace(" active", "");
 	}
-	slides[slideIndex - 1].style.display = "block";
-	dots[slideIndex - 1].className += " active";
-	captionText.innerHTML = dots[slideIndex - 1].alt;
+	photos[number - 1].style.display = "block";
+	small[number - 1].className += " active";
+	cap.innerHTML = small[number - 1].alt;
 }
