@@ -5,7 +5,7 @@ var c = canvas.getContext('2d');
 
 var mouse = {
     x: undefined,
-    y: undefined
+    y: undefined 
 };
 
 window.addEventListener('mousemove',function(event){
@@ -16,7 +16,7 @@ window.addEventListener('resize', function(){
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 });
-  var maxRadius=40;
+  var maxRadius=15;
   var colorArray=[
       '#2C3E50',
       '#E74C3C',
