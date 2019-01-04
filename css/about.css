@@ -13,30 +13,18 @@ section:first-child {
 .startList{
     font-size:35px;
 }
- a:link, a:hover ,  a:visited{  /*Selectors pseudoClass*/
-    text-decoration: none;
-
-}
-.start li{
-    text-transform: lowercase;
-    padding:0.30% 1.5% 0.40% 1.5%;
-    font-size: 110%;
-    border-bottom: 0px white;
-    transition: all 0.4s;
-    font-family: 'Cabin', sans-serif;
-    
-}
-ul{
+a {
     text-decoration: none;
 }
-ol li:link, 
-ol li:visited{
-    border-bottom: 0.8px solid transparent;
+.start li {
+    text-decoration: black;
+    width: 140px;
 }
-   ol li:hover ,ol li:active {
-    border-bottom: 0.8px solid rgba(157, 157, 157, 0.74);
-    width:250px;
-    
+.start ul li:hover{
+    border-bottom: none;
+}
+.start ol li:hover , .start ol li:active{
+    border-bottom: 0.8px solid rgba(157,157,157,0.74);
 }
 
 .photo1{
