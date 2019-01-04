@@ -1,22 +1,22 @@
 #FLIGHTS
 {
  background-image:url(../images/offers/Flugreisen.jpg) ;
- posion:relative;
+ position:relative;
  margin-top: -72px;
  margin-left: -67px;
  margin-right: -75px;
- background-attachment:scroll;
- background-repeat:no-repeat;
- font-family:    arial, sans-serif, helvetica;
+ background-attachment: scroll;
+ background-repeat: no-repeat;
+ font-family:  arial, sans-serif, helvetica;
 }
 
 #HOTEL
 {
  background-image:url(../images/offers/hoteli.jpg);
-  margin-top: -138px;
-  margin-left: -67px;
+ margin-top: -165px;
+ margin-left: -67px;
  margin-right: -75px;
- margin-bottom: 10px;
+ margin-bottom: -68px;
  background-attachment:scroll;
  background-repeat:no-repeat;
  font-family:   arial, sans-serif, helvetica;
@@ -55,16 +55,12 @@ color:lightblue;
 }
 .nentitull:hover{
      text-shadow: -4px 4px 6px dimgrey;
+      -webkit-transition-duration: 0.4s;
+      -moz-transition-duration: 0.4s;
+      -o-transition-duration:0.4s;
+        transition-duration: 0.4s;
 }
- ul li{
-      list-style:none ;
-      float:left;
-      border:none;
-      color:red;
-      margin-left:45px;
-      line-height:29px;
-      
-    }     
+  
 .kutia1-4{
        margin: 23% 11%;
        margin-left: 15%;
@@ -85,6 +81,10 @@ color:lightblue;
      .kutia1-4:hover{
       background-color: rgba(326, 326, 326, 0.40);
       box-shadow: -5px -5px 111px lightblue;
+      transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration:0.5s;
   }
   .tekstikutia14{
                 
@@ -95,9 +95,7 @@ color:lightblue;
         height:124px;    
                   
 }     
-li:hover{
-text-shadow: 1px 0px 0px red;
-}
+ 
 .kutia1-3H{
       margin: 23% 11%;
       margin-top: 18%;
@@ -118,6 +116,10 @@ text-shadow: 1px 0px 0px red;
 .kutia1-3H:hover{
     background-color: rgba(426, 426,426, 0.44);
     box-shadow: -10px -10px 150px dimgrey;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+      -moz-transition-duration: 0.4s;
+      -o-transition-duration:0.4s;
 }
 .kutia1-3T{
       margin: 23% 11%;
@@ -139,6 +141,10 @@ text-shadow: 1px 0px 0px red;
   .kutia1-3T:hover{
       background-color: rgba(226, 226, 226, 0.55);
       box-shadow: -10px -10px 150px lightgreen;
+      transition-duration: 0.4s;
+      -webkit-transition-duration: 0.4s;
+      -moz-transition-duration: 0.4s;
+      -o-transition-duration:0.4s;
   }  
 p{
         line-height: 24px;
@@ -160,7 +166,8 @@ p{
                 -moz-webkit-transition:width 5s ,height 5s,transform 5s;
                 -ms-webkit-transition:width 5s ,height 5s,transform 5s;
     }
-.icon:hover{
+.icon:hover
+{
         width:50px;
         height:50px;
         opacity: 0.8;
@@ -168,17 +175,36 @@ p{
                 -o-webkit-transform: rotate(200deg);
                 -moz-webkit-transform: rotate(200deg);
                 -ms-webkit-transform: rotate(200deg);
-            }
-            small{
+}
+small
+{
                 font-size:79%;  
                 line-height: 50px;
                 color:lightblue;
-               
-              font-family:   helvetica,arial, sans-serif;
- 
-            }
-            small:hover{
-               
-    text-shadow: -4px 4px 6px dimgrey;
-            }
+                font-family:   helvetica,arial, sans-serif;
+}
+small:hover
+{
+                 transition-duration: 0.4s;
+                 -webkit-transition-duration: 0.4s;
+                 -moz-transition-duration: 0.4s;
+                 -o-transition-duration:0.4s;
+                 text-shadow: -4px 4px 6px dimgrey;
+}
+           
+      .flightlist{
+      list-style:none ;
+      float:left;
+      border:none;
+      color:red;
+      margin-left:45px;
+      line-height:29px;
+    }     
             
+    .flightlist:hover{
+     text-shadow: 1px 0px 0px red;
+     transition-duration: 0.7s;
+     -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+     -o-transition-duration:0.7s;
+  }
