@@ -8,15 +8,15 @@ function plusphotos(n) {
 	showImages(number += n);
 }
 
-function currentSlide(n) {
+function currentPhoto(n) {
 	showImages(number = n);
 }
 
 function showImages(n) {
 	var i;
 	var photos = document.getElementsByClassName("photos");
-	var dots = document.getElementsByClassName("small-photo");
-	var captionText = document.getElementById("caption");
+	var small = document.getElementsByClassName("small-photo");
+	var cap = document.getElementById("slideShow-caption");
 	if (n > photos.length) {
 		number = 1;
 	}
@@ -26,10 +26,10 @@ function showImages(n) {
 	for (i = 0; i < photos.length; i++) {
 		photos[i].style.display = "none";
 	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" active", "");
+	for (i = 0; i < small.length; i++) {
+		small[i].className = small[i].className.replace(" active", "");
 	}
 	photos[number - 1].style.display = "block";
-	dots[number - 1].className += " active";
-	captionText.innerHTML = dots[number - 1].alt;
+	small[number - 1].className += " active";
+	cap.innerHTML = small[number - 1].alt;
 }
