@@ -29,24 +29,21 @@
 .box:first-child {
 	margin-left: 0;
 	padding-left: 0;
-
-	.box:first-child {
-		margin-left: 0;
-		padding-left: 0;
-	}
+}
 
 	.box {
 		margin-left: 0.3%;
 		background-color: #c8d9e4;
 		border-radius: 10px;
+                height: 285px;
 	}
 
-	.name {
+.name {
 		height: 550px;
 		background-color: red;
 	}
 
-	.name img {
+.name img {
 		top: -21%;
 		left: 30%;
 		width: 160%;
@@ -54,9 +51,7 @@
 		z-index: -1;
 	}
 
-	body {
-		font-family: cabin;
-	}
+
 
 	/*******************************************************************************
                                     Contact - Start
