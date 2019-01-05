@@ -8,24 +8,34 @@
     margin: 3% auto;
 }
 .work_description img{
+    padding-top: 15px;
+    padding-left: 100px;
+    height:70px;
     width:60px;
-    float:left;
     margin: 7px 5px 0 5px;
     border-radius:6px;
 } 
 #info_text{
-    font-size: 150%;
+    font-size: 100%;
+    text-align: center;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 10px;
+    
 }
 .box:first-child{
     margin-left:0;
     padding-left:0;
+
 }
 .box{
     margin-left:0.3%; 
     background-color:#c8d9e4;
     border-radius: 10px;
 }
-
+body{
+    font-family: cabin;
+}
 
 /*******************************************************************************
                                     Contact - Start
