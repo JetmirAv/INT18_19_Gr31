@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>AirAgency</title>
+	<title>AirAgency-Booking</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
@@ -14,6 +14,8 @@
 	<script src="javascript/jquery.min.js"></script>
 	<script src="javascript/date-time.js"></script>
 	<script src="javascript/layoutchange.js"></script>
+	<script src="javascript/table.js"></script>
+	<script src="javascript/bmodal.js"></script>
 	<script src="javascript/bbuttons.js"></script>
 
 	<style>
@@ -784,8 +786,7 @@
 						</tr>
 						<!-- Thirteenth row -->
 						<tr>
-							<td colspan="5"></td>
-							<td style="padding: 0"><button class="tabbtn">Pay</button></td>
+							<td colspan="6"></td>
 							<td rowspan="2">
 								<div class="table-form">
 									<output id="totali"></output>
@@ -1111,20 +1112,7 @@
 	</section>
 	<script>
 		$(document).ready(function() {
-			var modal = document.querySelector(".mImage");
-			var img = $('.imgg');
-			var modalImg = $(".modals");
-			var captionText = document.querySelector(".modal-caption");
-			$('.imgg').click(function() {
-				modal.style.display = "block";
-				var newSrc = this.src;
-				modalImg.attr('src', newSrc);
-				captionText.innerHTML = this.alt;
-			});
-			var span = document.getElementsByClassName("close")[0];
-			span.onclick = function() {
-				modal.style.display = "none";
-			}
+
 			$('.form-group').on('input', '.tickets-number', function() {
 				var totalSum = 0;
 				$('.form-group .adult1').each(function() {
@@ -1423,7 +1411,7 @@
 				<p>All right reserved &copy; for Gr31 - Internet!</p>
 			</div>
 			<div class="col span1-3 credits">
-				<p>2018/2019</p>
+				<p id="year">2018/2019</p>
 			</div>
 		</div>
 	</footer>
