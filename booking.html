@@ -6,6 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 	<link href="css/layout.css" rel="stylesheet">
 	<link href="css/universal.css" rel="stylesheet">
 	<link href="css/booking.css" rel="stylesheet">
@@ -13,7 +14,8 @@
 	<script src="javascript/jquery.min.js"></script>
 	<script src="javascript/date-time.js"></script>
 	<script src="javascript/layoutchange.js"></script>
-	<script src="javascript/jQueryy.js"></script>
+	<script src="javascript/bbuttons.js"></script>
+
 	<style>
 		.imgg:hover{
 
@@ -132,44 +134,34 @@
 	<!-- photoshow galery -->
 	<section class="row places">
 		<div class="slideShow">
-			<dd class="photos">
-				<div class="numbertext">1 / 6</div>
-				<img class="large-photos" src="images/booking/foto1.png" alt="Roma">
-			</dd>
+			<dl>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto1.png" alt="Roma">
+				</dd>
 
-			<dd class="photos">
-				<div class="numbertext">2 / 6</div>
-				<img class="large-photos" src="images/booking/foto2.png" alt="Hon Kong">
-			</dd>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto2.png" alt="Hon Kong">
+				</dd>
 
-			<dd class="photos">
-				<div class="numbertext">3 / 6</div>
-				<img class="large-photos" src="images/booking/foto3.png" alt="Tahiti">
-			</dd>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto3.png" alt="Tahiti">
+				</dd>
 
-			<dd class="photos">
-				<div class="numbertext">4 / 6</div>
-				<img class="large-photos" src="images/booking/foto4.png" alt="New YOrk">
-			</dd>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto4.png" alt="New YOrk">
+				</dd>
 
-			<dd class="photos">
-				<div class="numbertext">5 / 6</div>
-				<img class="large-photos" src="images/booking/foto5.png" alt="Barcelona">
-			</dd>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto5.png" alt="Barcelona">
+				</dd>
 
-			<dd class="photos">
-				<div class="numbertext">6 / 6</div>
-				<img class="large-photos" src="images/booking/foto6.png" alt="Dubai">
-			</dd>
-
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto6.png" alt="Dubai">
+				</dd>
+			</dl>
 			<!-- Buttons -->
 			<a class="prev" onclick="plusphotos(-1)">&#10094;</a>
 			<a class="next" onclick="plusphotos(1)">&#10095;</a>
-
-
-			<div class="caption-container">
-				<p id="slideShow-caption"></p>
-			</div>
 			<div class="row">
 				<dl>
 					<dd class="column">
@@ -200,11 +192,23 @@
 	<br>
 
 	<section>
-		<div class="row client">
-			<img class=" client-photo" src="images/booking/foto7.png" width="100" height="100" alt="John Dayn" />John Dayn
-			<br>
-			<br>
-		</div>
+		<address>
+			<div class="row client">
+				<div class="col span1-5" style="width: 9%">
+					<img class="client-photo" src="images/booking/foto7.png" width="100" height="100" alt="John Dayn" />
+				</div>
+				<div class="col span1-5" style="float: left; padding-top: 20px;">
+					Name:John
+					<br>
+					Surname:Doe
+					<br>
+					Age:27
+					<br>
+					<br>
+				</div>
+			</div>
+		</address>
+		<br>
 		<div class="row">
 			<div class="col span3-3">
 				<table cellspacing="2" cellpadding="0">
@@ -240,7 +244,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input class="tickets-number adult1" type="text" min="0" name="number" onkeypress="onlynumbers(event)" style="padding-bottom: 0;" disabled>
+										<input class="tickets-number adult1" type="number" min="0" name="number" onkeypress="onlynumbers(event)" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -1356,7 +1360,7 @@
 					$('.child1').attr('disabled', true);
 				}
 			});
-			/*$('#check1').on('click', function() {
+			$('#check1').on('click', function() {
 				if ($(this).is(':checked')) {
 					$('.adult2').attr('disabled', false);
 					$('.child2').attr('disabled', false);
@@ -1365,7 +1369,7 @@
 					$('.child2').attr('disabled', true);
 				}
 			});
-			*/
+
 			$('#check2').on('click', function() {
 				if ($(this).is(':checked')) {
 					$('.adult3').attr('disabled', false);
@@ -1402,21 +1406,10 @@
 					$('.child6').attr('disabled', true);
 				}
 			});
-			/*$("table").on(hover, function() {
-				alert("Choose first wheigts and check checkbox ")
-			});
-			/*
-					function onlynumbers(evt) {
-						var ch = String.fromCharCode(evt.which);
-						if (!(/[0-9]/.test(ch))) {
-							evt.preventDefault();
-						}
-					}
+
 			*/
-			$(".child1 , .adult1").keypress(function(e) {
-				//if the letter is not digit then display error and don't type anything
+			$(".child1 , .adult1,.child2 , .adult2 , .child3 , .adult3 , .child4 , .adult4 , .child5 , .adult5 ,.child6 , .adult6").keypress(function(e) {
 				if (e.which != 7 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-					//display error message
 					alert("Digits only")
 					return false;
 				}

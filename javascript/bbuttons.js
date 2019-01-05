@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
 	$("#btn1").click(function () {
 		$("#Showmore").hide("Show less");
 	});

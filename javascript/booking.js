@@ -16,7 +16,6 @@ function showImages(n) {
 	var i;
 	var photos = document.getElementsByClassName("photos");
 	var small = document.getElementsByClassName("small-photo");
-	var cap = document.getElementById("slideShow-caption");
 	if (n > photos.length) {
 		number = 1;
 	}
@@ -31,5 +30,4 @@ function showImages(n) {
 	}
 	photos[number - 1].style.display = "block";
 	small[number - 1].className += " active";
-	cap.innerHTML = small[number - 1].alt;
 }
