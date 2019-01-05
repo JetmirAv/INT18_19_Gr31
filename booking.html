@@ -11,6 +11,9 @@
 	<link href="css/booking.css" rel="stylesheet">
 	<script type="text/JavaScript" src="javascript/booking.js"></script>
 	<script src="javascript/jquery.min.js"></script>
+	<script src="javascript/date-time.js"></script>
+	<script src="javascript/layoutchange.js"></script>
+	<script src="javascript/jQueryy.js"></script>
 	<style>
 		.imgg:hover{
 
@@ -70,7 +73,7 @@
 		}
 
 		
-		.close  {
+		.close   {
 			position: absolute;
 			top: 15px;
 			right: 85px;
@@ -194,11 +197,12 @@
 
 	</section>
 	<!-- End of htlm and javascript photos show galery code  -->
-	<hr>
+	<br>
 
 	<section>
 		<div class="row client">
-			<img class=" client-photo" src="images/booking/foto7.png" width="100" height="100" alt="Dwayne Jonson" />Dwayne Jonson
+			<img class=" client-photo" src="images/booking/foto7.png" width="100" height="100" alt="John Dayn" />John Dayn
+			<br>
 			<br>
 		</div>
 		<div class="row">
@@ -236,7 +240,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input class="tickets-number adult1" type="text" min="0" name="number" onkeypress="onlynumbers(event)" style="padding-bottom: 0;">
+										<input class="tickets-number adult1" type="text" min="0" name="number" onkeypress="onlynumbers(event)" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -307,7 +311,7 @@
 								<p style="float: left; padding-right:25px ">Children</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child1" min="0" name="number" style="padding-bottom: 0 ;">
+										<input type="number" class="tickets-number child1" min="0" name="number" style="padding-bottom: 0 ;" disabled>
 									</div>
 								</form>
 							</td>
@@ -320,7 +324,7 @@
 									<label for="check1"></label>
 								</form>
 							</td>
-							<td rowspan="2"><img style="height:16.91%; width: 100%; " src="images/booking/foto2.png" alt="Hon Kong">
+							<td rowspan="2"><img class="imgg" style="height:16.91%; width: 100%; " src="images/booking/foto2.png" alt="Hon Kong">
 								<div class="mImage">
 									<span class="close">&times;</span>
 									<img class="modals">
@@ -333,7 +337,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult2" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult2" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -400,7 +404,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child2" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child2" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -412,7 +416,7 @@
 									<label for="check2"></label>
 								</form>
 							</td>
-							<td rowspan="2"><img src="images/booking/foto3.png" alt="Tahiti" style="width: 100%; height:5.15%;">
+							<td rowspan="2"><img src="images/booking/foto3.png" alt="Tahiti" style="width: 100%; height:5.15%;" class="imgg">
 								<div 1 class="mImage" 1>
 									<span class="close1">&times;</span>
 									<img class="modals" 1 id="img11">
@@ -425,7 +429,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult3" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult3" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -492,7 +496,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child3" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child3" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -505,7 +509,7 @@
 									<label for="check3"></label>
 								</form>
 							</td>
-							<td rowspan="2"><img src="images/booking/foto4.png" alt="Austria" style="width: 100%; height: 10.26%;">
+							<td rowspan="2"><img src="images/booking/foto4.png" class="imgg" alt="Austria" style="width: 100%; height: 10.26%;">
 								<div class="mImage">
 									<span class="close">&times;</span>
 									<img class="modals">
@@ -518,7 +522,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult4" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult4" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -585,7 +589,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child4" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child4" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -598,7 +602,7 @@
 									<label for="check4"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0;"><img src="images/booking/foto5.png" alt="Dubai" style="width: 100%; height: 14.6%;">
+							<td rowspan="2" style="padding: 0;"><img class="imgg" src="images/booking/foto5.png" alt="Dubai" style="width: 100%; height: 14.6%;">
 								<div class="mImage">
 									<span class="close">&times;</span>
 									<img class="modals">
@@ -611,7 +615,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult5" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult5" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -678,7 +682,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child5" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child5" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -691,7 +695,7 @@
 									<label for="check5"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0; "><img src="images/booking/foto8.png" alt="Austria" style="width: 100%; height:74.19%;">
+							<td rowspan="2" style="padding: 0; "><img class="imgg" src="images/booking/foto8.png" alt="Austria" style="width: 100%; height:74.19%;">
 								<div class="mImage">
 									<span class="close">&times;</span>
 									<img class="modals">
@@ -704,7 +708,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult6" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult6" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -769,7 +773,7 @@
 								<p style="float: left; padding-right:25px ">Children</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child6" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child6" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -1092,6 +1096,7 @@
 							<span class="close">&times;</span>
 							<img class="modals">
 							<div class="modal-caption"></div>
+
 						</div>
 						<figcaption>Fraser Residence City</figcaption>
 					</figure>
@@ -1102,26 +1107,6 @@
 	</section>
 	<script>
 		$(document).ready(function() {
-
-			$("#btn1").click(function() {
-				$("#Showmore").hide("Show less");
-			});
-			$("#btn1").click(function() {
-				$("#Showmore").show();
-			});
-			$("#btn1").click(function() {
-				$("#btn1").text($("#btn1").text() === 'Show more' ? 'Show less' : 'Show more');
-			});
-
-			$("#btn2").click(function() {
-				$(".showmore1").hide("Show less");
-			});
-			$("#btn2").click(function() {
-				$(".showmore1").show();
-			});
-			$("#btn2").click(function() {
-				$("#btn2").text($("#btn2").text() === 'Show more' ? 'Show less' : 'Show more');
-			});
 			var modal = document.querySelector(".mImage");
 			var img = $('.imgg');
 			var modalImg = $(".modals");
@@ -1139,6 +1124,7 @@
 			$('.form-group').on('input', '.tickets-number', function() {
 				var totalSum = 0;
 				$('.form-group .adult1').each(function() {
+
 					var inputVal = $(".adult1").val() * 157.647 + $(".child1").val() * 54.5;
 
 					var n = document.getElementById("row-1-radio-3").checked;
@@ -1291,6 +1277,8 @@
 				});
 				$('#result5').val((totalSum5 / 2).toFixed(2) + " $");
 				var totalSum6 = 0;
+
+
 				$('.form-group .adult6').each(function() {
 					var inputVal = $(".adult6").val() * 99 + $(".child6").val() * 30;
 					var n6 = document.getElementById("row-6-radio-3").checked;
@@ -1321,8 +1309,6 @@
 
 				});
 				$('#result6').val((totalSum6 / 2).toFixed(2) + " $");
-
-
 
 				var totarray = [];
 				var x1 = document.getElementById("check").checked;
@@ -1361,61 +1347,64 @@
 
 			});
 
-			//function time()
-			var currentTime = new Date().getHours();
-			if (7 < currentTime && currentTime < 18) {
-				if (document.body) {
-					document.body.style.background = "rgba(236, 236, 236, 0.74)";
-				}
-			} else {
-				if (document.body) {
-					document.body.style.background = "white";
-				}
-
-			}
-
-			function date() {
-				var date = new Date();
-				var h = date.getHours();
-				var m = date.getMinutes();
-				var s = date.getSeconds();
-				var r = date.getDay() - 1;
-				var month = date.getMonth() + 1;
-				var y = date.getFullYear();
-				var sec;
-				if (s < 10) {
-					sec = '0' + s;
+			$('#check').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult1 ').attr('disabled', false);
+					$('.child1').attr('disabled', false);
 				} else {
-					sec = s;
+					$('.adult1').attr('disabled', true);
+					$('.child1').attr('disabled', true);
 				}
-				var d = document.getElementById("date");
-				d.innerHTML = r + "/" + month + "/" + y + " &nbsp &nbsp &nbsp" +
-					h + ":" + m + ":" + sec;
-
-
-			}
-			setInterval(date, 500)
-
-
-
-			/*function time() {
-				var today = new Date();
-				var h = today.getHours()
-				var m = today.getMinutes();
-				var s = today.getSeconds();
-				m = checkTime(m);
-				s = checkTime(s);
-				document.getElementById('date').innerHTML = h + ":" + m + ":" + s;
-
-				var t = setTimeout(time, 500);
-			}
-			
-			//t.addEventListener('change', date);
-
-			//var t = setTimeout(time, 600000);
-
-
-
+			});
+			/*$('#check1').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult2').attr('disabled', false);
+					$('.child2').attr('disabled', false);
+				} else {
+					$('.adult2').attr('disabled', true);
+					$('.child2').attr('disabled', true);
+				}
+			});
+			*/
+			$('#check2').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult3').attr('disabled', false);
+					$('.child3').attr('disabled', false);
+				} else {
+					$('.adult3').attr('disabled', true);
+					$('.child3').attr('disabled', true);
+				}
+			});
+			$('#check3').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult4').attr('disabled', false);
+					$('.child4').attr('disabled', false);
+				} else {
+					$('.adult4').attr('disabled', true);
+					$('.child4').attr('disabled', true);
+				}
+			});
+			$('#check4').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult5').attr('disabled', false);
+					$('.child5').attr('disabled', false);
+				} else {
+					$('.adult5').attr('disabled', true);
+					$('.child5').attr('disabled', true);
+				}
+			});
+			$('#check5').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult6').attr('disabled', false);
+					$('.child6').attr('disabled', false);
+				} else {
+					$('.adult6').attr('disabled', true);
+					$('.child6').attr('disabled', true);
+				}
+			});
+			/*$("table").on(hover, function() {
+				alert("Choose first wheigts and check checkbox ")
+			});
 			/*
 					function onlynumbers(evt) {
 						var ch = String.fromCharCode(evt.which);
@@ -1424,7 +1413,14 @@
 						}
 					}
 			*/
-
+			$(".child1 , .adult1").keypress(function(e) {
+				//if the letter is not digit then display error and don't type anything
+				if (e.which != 7 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+					//display error message
+					alert("Digits only")
+					return false;
+				}
+			});
 		});
 
 	</script>
