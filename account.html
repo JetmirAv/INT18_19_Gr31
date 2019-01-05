@@ -107,10 +107,81 @@
     <div id="error">
     </div>
 </body>
-<script src="javascript/account.js"></script>
-<script src="javascript/validateForm.js"></script>
+<script src="account.js"></script>
 <script type="text/javascript">
     isLogin();
+
+    function isEmail(email) {
+
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        return regex.test(email);
+
+    }
+
+
+    $("#bttn-in").click(function() {
+
+        var errorMessage = "";
+
+        if (isEmail($("#email").val()) == false) {
+
+            errorMessage += "Your email address is not valid";
+
+        }
+
+        if (errorMessage != "") {
+
+            alert(errorMessage);
+
+        } else {
+
+            alert("Jeni kyqyr me Sukses");
+            localStorage.isLogin = "Logged"
+            setTimeout(function() {
+                window.location.replace("index.html")
+            }, 1000)
+        }
+
+    });
+
+    console.log(isNaN("18"));
+
+    $("#bttn-up").click(function() {
+
+        var errorMessage = "";
+
+        var regex = $("#reg-email").val();
+        var control = regex.match(/hotmail|gmail|yahoo/i);
+
+        console.log(control);
+
+        if (isEmail($("#reg-email").val()) === false) {
+
+            errorMessage += " email address ";
+
+        }
+        if (isNaN($("#reg-number").val()) !== false) {
+            errorMessage += " Phone number "
+        }
+        if ($("reg-password").val() !== $("reg-cpassword").val()) {
+            errorMessage += " Confirm Password "
+        }
+
+        if (errorMessage != "") {
+
+            alert("Correct your " + errorMessage);
+
+        } else {
+
+            alert("You have been registered successfuly. Your email contains: " + control);
+            setTimeout(function() {
+                window.location.replace("index.html");
+            }, 1000)
+        }
+
+    });
+
 
     function isLogin() {
         if (localStorage.isLogin !== "") {
