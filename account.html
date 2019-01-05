@@ -37,13 +37,9 @@
     </header>
     <hr>
     <section id="box">
-        <div class="sign-in-title" id="title1">
-            <h1 class="active">Sign In</h1>
-            <h1 id="listen2">Sign Up</h1>
-        </div>
-        <div class="deactive sign-up-title" id="title2">
-            <h1 id="listen1">Sign In</h1>
-            <h1 class="active">Sign Up</h1>
+        <div class="title">
+            <h1 class="active" id="title1">Sign In</h1>
+            <h1 id="title2">Sign Up</h1>
         </div>
         <section class="size" id="sign-in">
             <div class="wrapper sign-in">
@@ -57,15 +53,9 @@
                         <input type=" password">
                     </div>
                     <div class="details">
-                        <button id="bttn-in" type="submit">Log In</button>
+                        <button type="submit">Log In</button>
                     </div>
-
                 </form>
-            </div>
-            <div class="info-log-in">
-                <div class="info">
-                    <h1>Log In</h1>
-                </div>
             </div>
         </section>
         <section class="size" id="sign-up">
@@ -108,22 +98,21 @@
     });
 
     function Event1() {
-        document.getElementById("title2").classList.add("deactive");
-        document.getElementById("title1").classList.remove("deactive");
+        document.getElementById("title1").classList.add("active");
+        document.getElementById("title2").classList.remove("active");
         document.getElementById("sign-in").style.display = "block";
         document.getElementById("sign-up").style.display = "none";
     };
 
     function Event2() {
-        document.getElementById("title1").classList.add("deactive");
-        document.getElementById("title2").classList.remove("deactive");
+        document.getElementById("title2").classList.add("active");
+        document.getElementById("title1").classList.remove("active");
         document.getElementById("sign-up").style.display = "block";
         document.getElementById("sign-in").style.display = "none";
     };
 
-    document.getElementById("listen1").addEventListener('click', Event1);
-    document.getElementById("listen2").addEventListener('click', Event2);
-
+    document.getElementById("title1").addEventListener('click', Event1);
+    document.getElementById("title2").addEventListener('click', Event2);
 </script>
 
 </html>

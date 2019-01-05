@@ -1,8 +1,6 @@
 #FLIGHTS
 {
  background-image:url(../images/offers/Flugreisen.jpg) ;
- background-origin: content-box;
- background-clip:padding-box;
  position:relative;
  margin-top: -72px;
  margin-left: -67px;
@@ -15,8 +13,6 @@
 #HOTEL
 {
  background-image:url(../images/offers/hoteli.jpg);
-  background-origin: content-box;
-  background-clip:initial;
  margin-top: -165px;
  margin-left: -67px;
  margin-right: -75px;
@@ -28,8 +24,6 @@
 #TRAVEL
 {
  background-image:url(../images/offers/travel.jpg);
-  background-origin: content-box;
-  background-clip:initial;
  margin-top: -28px;
   margin-left: -67px;
  margin-right: -75px;
@@ -60,11 +54,11 @@ color:lightblue;
 
 }
 .nentitull:hover{
-text-shadow: -4px 4px 6px dimgrey;
--webkit-transition-duration: 0.4s;
--moz-transition-duration: 0.4s;
--o-transition-duration:0.4s;
-transition-duration: 0.4s;
+     text-shadow: -4px 4px 6px dimgrey;
+      -webkit-transition-duration: 0.4s;
+      -moz-transition-duration: 0.4s;
+      -o-transition-duration:0.4s;
+        transition-duration: 0.4s;
 }
   
 .kutia1-4{
@@ -124,8 +118,8 @@ transition-duration: 0.4s;
     box-shadow: -10px -10px 150px dimgrey;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
-    -moz-transition-duration: 0.4s;
-    -o-transition-duration:0.4s;
+      -moz-transition-duration: 0.4s;
+      -o-transition-duration:0.4s;
 }
 .kutia1-3T{
       margin: 23% 11%;
@@ -198,13 +192,13 @@ small:hover
                  text-shadow: -4px 4px 6px dimgrey;
 }
            
-     .flightlist{
-     list-style:none ;
-     float:left;
-     border:none;
-     color:red;
-     margin-left:45px;
-     line-height:29px;
+      .flightlist{
+      list-style:none ;
+      float:left;
+      border:none;
+      color:red;
+      margin-left:45px;
+      line-height:29px;
     }     
             
     .flightlist:hover{
@@ -213,151 +207,4 @@ small:hover
      -webkit-transition-duration: 0.7s;
      -moz-transition-duration: 0.7s;
      -o-transition-duration:0.7s;
-     
   }
-  .tekstiT1 {
- height:400px;
- overflow: hidden;
- position: relative;
-  }
- .tekstiT1 p{
-               position:absolute;
-               font-size:1.3em;
-               line-height:29px;  
-               margin:0;
-               text-align:center;
-               width: 100%;
-               height: 100%;
-               /* fillon pozicioni */
-               -moz-transform:translateY(100%);
-               -webkit-transform:translateY(100%);	
-               transform:translateY(100%);
-               /* Aplikon animacionin te elementi */	
-               -moz-animation: tekstiT1 40s linear infinite;
-               -webkit-animation: tekstiT1 40s linear infinite;
-               animation: tekstiT1 40s linear infinite;
-}  
-    @-moz-keyframes tekstiT1 {
-    100%   { -moz-transform: translateY(-100%); }
-    0% { -moz-transform: translateY(100%); }
-}
-    @-webkit-keyframes tekstiT1 {
-    100%   { -webkit-transform: translateY(-100%); }
-    0% { -webkit-transform: translateY(100%); }
-}
-    @keyframes tekstiT1 {
-    100%   { 
-    -moz-transform: translateY(-100%);  
-    -webkit-transform: translateY(-100%);  
-    transform: translateY(-100%); 		
- }
-    0% { 
-    -moz-transform: translateY(100%); 
-    -webkit-transform: translateY(100%);  
-    transform: translateY(100%); 
- }
-}
-
-  .tekstiT2 {
- height:400px;
- overflow: hidden;
- position: relative;
- }
- .tekstiT2 p{
-        position:absolute;
-        font-size:1.3em;
-        line-height:29px;  
-        margin:0;
-        text-align:center;
-        width: 100%;
-        height: 100%;
-            /* fillon pozicioni */
-            -moz-transform:translateY(100%);
-            -webkit-transform:translateY(100%);	
-             transform:translateY(100%);
-             /* Aplikon animacionin te elementi */	
-             -moz-animation: tekstiT1 40s linear infinite;
-             -webkit-animation: tekstiT1 40s linear infinite;
-             animation: tekstiT1 40s linear infinite;
-}
-   @-moz-keyframes tekstiT1 {
-   100%   { -moz-transform: translateY(-100%); }
-   0% { -moz-transform: translateY(100%); }
-}
-   @-webkit-keyframes tekstiT1 {
-   100%   { -webkit-transform: translateY(-100%); }
-   0% { -webkit-transform: translateY(100%); }
-}
-   @keyframes tekstiT1 {
-   100%   { 
-   -moz-transform: translateY(-100%);  
-   -webkit-transform: translateY(-100%);  
-   transform: translateY(-100%); 		
-}
-   0% { 
-   -moz-transform: translateY(100%); 
-   -webkit-transform: translateY(100%);  
-   transform: translateY(100%); 
-} 
-}
-
-.tekstiT3 {
- height:400px;
- overflow: hidden;
- position: relative;
-  }
- .tekstiT3 p{
-        position:absolute;
-        font-size:1.3em;
-        line-height:29px;  
-        margin:0;
-        text-align:center;
-        width: 100%;
-        height: 100%;
-           /* fillon pozicioni */
-           -moz-transform:translateY(100%);
-           -webkit-transform:translateY(100%);	
-           transform:translateY(100%);
-           /* Aplikon animacionin te elementi */	
-           -moz-animation: tekstiT3 40s linear infinite;
-           -webkit-animation: tekstiT3 40s linear infinite;
-           animation: tekstiT3 40s linear infinite;
-}
- 
-   @-moz-keyframes tekstiT3 {
-   100%   { -moz-transform: translateY(-100%); }
-   0% { -moz-transform: translateY(100%); }
-}
-   @-webkit-keyframes tekstiT3 {
-   100%   { -webkit-transform: translateY(-100%); }
-   0% { -webkit-transform: translateY(100%); }
-}
-   @keyframes tekstiT3 {
-   100%   { 
-   -moz-transform: translateY(-100%);  
-   -webkit-transform: translateY(-100%);  
-   transform: translateY(-100%); 		
-    }
-  0% { 
-  -moz-transform: translateY(100%); 
-  -webkit-transform: translateY(100%);  
-  transform: translateY(100%); 
- }
-}
- 
- .tekstiT1 p:hover{
- -moz-animation-play-state: paused;
- -webkit-animation-play-state: paused;
- animation-play-state: paused;
- 
- }
- .tekstiT2 p:hover{
- -moz-animation-play-state: paused;
- -webkit-animation-play-state: paused;
- animation-play-state: paused;
- }
- .tekstiT3 p:hover{
- -moz-animation-play-state: paused;
- -webkit-animation-play-state: paused;
- animation-play-state: paused;
- }

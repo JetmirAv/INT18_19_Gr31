@@ -82,9 +82,8 @@
 }
 
 #cart-items {
-    padding-top: 7px; 
     margin: auto;
-    font-size: 200%;
+    font-size: 180%;
 }
 
 #big-txt {
@@ -171,17 +170,6 @@ button a {
 
 .place-form:hover {
     background-color: rgba(244, 244, 244, 0.71);
-}
-
-.place-img {
-    display: none;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 1%;
-}
-
-.place-img:first-child {
-    display: block;
 }
 
 .flight-box {

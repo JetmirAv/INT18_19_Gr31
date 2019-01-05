@@ -3,7 +3,7 @@
 	padding: 0;
 	border: 0;
 	color: black;
-	outline: none;
+
 }
 
 img,
@@ -24,12 +24,11 @@ h6 {
 
 body {
 	margin: 0 5%;
-	background: rgba(227, 226, 226, 0.74);
-	font-family: cabin;
+	background: rgba(236, 236, 236, 0.74);
 }
 
 header {
-	margin: 0 -5.55%;
+	margin: 0 -5.5%;
 	background-color: rgba(226, 226, 226, 0.74);
 	font-size: 140%;
 }

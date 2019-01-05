@@ -1,33 +1,35 @@
 /*eslint-env browser*/
 
 
-var number = 1;
-showImages(number);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function plusphotos(n) {
-	showImages(number += n);
+function plusSlides(n) {
+	showSlides(slideIndex += n);
 }
 
-function currentPhoto(n) {
-	showImages(number = n);
+function currentSlide(n) {
+	showSlides(slideIndex = n);
 }
 
-function showImages(n) {
+function showSlides(n) {
 	var i;
-	var photos = document.getElementsByClassName("photos");
-	var small = document.getElementsByClassName("small-photo");
-	if (n > photos.length) {
-		number = 1;
+	var slides = document.getElementsByClassName("slides");
+	var dots = document.getElementsByClassName("small-photo");
+	var captionText = document.getElementById("caption");
+	if (n > slides.length) {
+		slideIndex = 1;
 	}
 	if (n < 1) {
-		number = photos.length;
+		slideIndex = slides.length;
 	}
-	for (i = 0; i < photos.length; i++) {
-		photos[i].style.display = "none";
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
 	}
-	for (i = 0; i < small.length; i++) {
-		small[i].className = small[i].className.replace(" active", "");
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
 	}
-	photos[number - 1].style.display = "block";
-	small[number - 1].className += " active";
+	slides[slideIndex - 1].style.display = "block";
+	dots[slideIndex - 1].className += " active";
+	captionText.innerHTML = dots[slideIndex - 1].alt;
 }
