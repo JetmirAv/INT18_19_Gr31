@@ -82,8 +82,9 @@
 }
 
 #cart-items {
+    padding-top: 7px; 
     margin: auto;
-    font-size: 180%;
+    font-size: 200%;
 }
 
 #big-txt {

@@ -1,8 +1,8 @@
 	function time() {
 		var currentTime = new Date().getHours();
-		if (7 < currentTime && currentTime < 17) {
+		if (7 < currentTime && currentTime < 21) {
 			if (document.body) {
-				document.body.style.background = "rgba(236, 236, 236, 0.74)";
+				document.body.style.background = "rgba(216, 216, 216, 0.74)";
 			}
 		} else {
 			if (document.body) {
@@ -12,4 +12,4 @@
 		}
 	}
 
-	var t = setInterval(time, 500);
+	setInterval(time, 30000);
