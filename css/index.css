@@ -7,22 +7,39 @@
     text-align: center;
     margin: 3% auto;
 }
-.work_description img{
+
+.work_description img {
     padding-top: 15px;
     padding-left: 100px;
-    height:70px;
-    width:60px;
+    height: 70px;
+    width: 60px;
     margin: 7px 5px 0 5px;
-    border-radius:6px;
-} 
-#info_text{
+    border-radius: 6px;
+}
+
+#info_text {
     font-size: 100%;
     text-align: center;
     padding-left: 12px;
     padding-bottom: 12px;
     padding-right: 10px;
-    
+
 }
+
+.name {
+    height: 550px;
+}
+
+.name img {
+    top: -21%;
+    left: 0%;
+    width: 160%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(80%);
+    filter: blur(2px);
+}
+
 
 .box:first-child {
     margin-left: 0;
@@ -204,81 +221,118 @@ input[type="reset"]:hover {
 /*******************************************************************************
                               seksioni   i 10slidephoto 
 *******************************************************************************/
-.kalim {display: none;}
-img {vertical-align: middle;}
+.kalim {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
 
 /* Slideshow container */
 .kalimet {
-  max-width: auto;
-  position: relative;
-  margin: auto;
+    max-width: auto;
+    position: relative;
+    margin: auto;
 }
+
 /* The dots/bullets/indicators */
 .katrori {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbe;
-  border-radius: 20%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbe;
+    border-radius: 20%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #717171;
+    background-color: #717171;
 }
 
 /* Fading animation */
 .fade {
-  -o-animation-name: fade;
-  -o-animation-duration: 1.5s;
-  -moz-animation-name: fade;
-  -moz-animation-duration: 1.5s;
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  -ms-animation-name: fade;
-  -ms-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+    -o-animation-name: fade;
+    -o-animation-duration: 1.5s;
+    -moz-animation-name: fade;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    -ms-animation-name: fade;
+    -ms-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 @-ms-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
+
 @-o-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
+
 @-moz-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
+
 @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
-#fotot10{
-    width:95%;
-    height:420px;
-    margin:1% 2.5%;
-    text-align:center;
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
 }
-#titulli10foto
-{
+
+#fotot10 {
+    width: 95%;
+    height: 420px;
+    margin: 1% 2.5%;
+    text-align: center;
+}
+
+#titulli10foto {
     text-align: center;
     line-height: 40px;
     font-size: 25px;
-    font-family:   helvetica,arial, sans-serif;
+    font-family: helvetica, arial, sans-serif;
     letter-spacing: 3px;
 }
 
