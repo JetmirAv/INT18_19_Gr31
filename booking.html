@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AirAgency</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/universal.css" rel="stylesheet">
+    <link href="css/booking.css" rel="stylesheet">
+    <script type="text/JavaScript" src="javascript/booking.js"></script>
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/date-time.js"></script>
+    <script src="javascript/layoutchange.js"></script>
+    <script src="javascript/bbuttons.js"></script>
+
+    <style>
+        .imgg:hover{
+
+			opacity: 0.8;
+		}
+
+		.mImage{
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 75px; 
+            left:0;
+            top: 0;
+            width: 100%; 
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+			background-color: rgba(0,0,0,0.9);
+}
+		.imgg {
+			
+			width: 100%;
+			height: 15.4%;
+			cursor: pointer;	
+		}
+				.modals {
+            margin: auto;
+			margin-left: 20px;
+            display: block;
+            width: 70%;
+            max-width: 700px;
+			padding-left: 70px;
+			float: left
+		}
+		.modal-caption{			
+            margin: auto;	
+            display: block;
+            width: 30%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0 10px 700px;
+            height: 150px;
+ }
+		.modals,
+		.modal-caption{
+			-webkit-animation-name: zoom;
+			-webkit-animation-duration: 0.6s;
+		}
+		@-webkit-keyframes zoom {
+			from {
+				-webkit-transform: scale(0)
+			}
+			to {
+				-webkit-transform: scale(1)
+			}
+		}
+
+		
+		.close   {
+			position: absolute;
+			top: 15px;
+			right: 85px;
+			color: #f1f1f1;
+			font-size: 40px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+		.close:hover,
+		.close:focus
+		
+		
+		{
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		
+		
+		.weights {
+		width: 20px;
+			height: 20px;
+		}
+		
+		
+	</style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="row">
+            <div class="col span2-5 header-name">
+                <p>AirAgency</p>
+            </div>
+            <div class="col span1-5 header-date">
+                <p id="date"></p>
+            </div>
+
+            <nav>
+                <div class="col span2-5">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Services</a></li>
+                        <li><a href="offers.html">Offers</a></li>
+                        <li><a href="booking.html">Booking </a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <li><a href="About.html">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Slideshow -->
+    <section class="row places">
+        <div class="slideShow">
+            <dl>
+                <dd class="photos">
+                    <img class="large-photos" src="images/booking/foto1.png" alt="Roma">
+                </dd>
+
+                <dd class="photos">
+                    <img class="large-photos" src="images/booking/foto2.png" alt="Hon Kong">
+                </dd>
+
+                <dd class="photos">
+                    <img class="large-photos" src="images/booking/foto3.png" alt="Tahiti">
+                </dd>
+
+                <dd class="photos">
+                    <img class="large-photos" src="images/booking/foto4.png" alt="New YOrk">
+                </dd>
+
+                <dd class="photos">
+                    <img class="large-photos" src="images/booking/foto5.png" alt="Barcelona">
+                </dd>
+
+                <dd class="photos">
+                    <img class="large-photos" src="images/booking/foto6.png" alt="Dubai">
+                </dd>
+            </dl>
+            <!-- Buttons -->
+            <a class="prev" onclick="plusphotos(-1)">&#10094;</a>
+            <a class="next" onclick="plusphotos(1)">&#10095;</a>
+            <div class="row">
+                <dl>
+                    <dd class="column">
+                        <img class="small-photo" src="images/booking/foto1.png" onclick="currentPhoto(1)" alt="Roma">
+                    </dd>
+                    <dd class="column">
+                        <img class="small-photo" src="images/booking/foto2.png" onclick="currentPhoto(2)" alt="Hon Kong">
+                    </dd>
+                    <dd class="column">
+                        <img class="small-photo" src="images/booking/foto3.png" onclick="currentPhoto(3)" alt="Tahiti">
+                    </dd>
+                    <dd class="column">
+                        <img class="small-photo" src="images/booking/foto4.png" onclick="currentPhoto(4)" alt="New York">
+                    </dd>
+                    <dd class="column">
+                        <img class="small-photo" src="images/booking/foto5.png" onclick="currentPhoto(5)" alt="Barcelona">
+                    </dd>
+                    <dd class="column">
+                        <img class="small-photo" src="images/booking/foto6.png" onclick="currentPhoto(6)" alt="Dubai">
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- End of htlm and javascript photos show galery code  -->
+    <br>
+
+    <section>
+        <address>
+            <div class="row client">
+                <div class="col span1-5" style="width: 9%">
+                    <img class="client-photo" src="images/booking/foto7.png" width="100" height="100" alt="John Dayn" />
+                </div>
+                <div class="col span1-5" style="float: left; padding-top: 20px;">
+                    Name:John
+                    <br>
+                    Surname:Doe
+                    <br>
+                    Age:27
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </address>
+        <br>
+        <div class="row">
+            <div class="col span3-3">
+                <table cellspacing="2" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>Check</th>
+                            <th>Photo</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Tickets</th>
+                            <th>Weight</th>
+                            <th>Payment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--First row-->
+                        <tr>
+                            <td rowspan="2">
+                                <form><input type="checkbox" id="check" value="">
+                                    <label for="check"></label>
+                                </form>
+                            </td>
+                            <td rowspan="2"><img style="width: 100%; height: 15.36%;" src="images/booking/foto1.png" alt="Roma" class="imgg">
+                                <div class="mImage">
+                                    <span class="close">&times;</span>
+                                    <img class="modals">
+                                    <div class="modal-caption"></div>
+                                </div>
+                            </td>
+                            <td rowspan="2">Canada</td>
+                            <td rowspan="2">Roma</td>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:45px ">Adult</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input class="tickets-number adult1" type="number" min="0" name="number" onkeypress="onlynumbers(event)" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                            <td rowspan="2" class="table-form" style="text-align: left; padding-bottom: -2px;">
+
+                                <div class="radio-button-for-weight">
+                                    <form>
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-1" checked="checked" id="row-1-radio-1">
+                                            <label for="row-1-radio-1" style="width: 50px;"></label>
+
+
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">10kg</p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-1" id="row-1-radio-2">
+                                            <label for="row-1-radio-2"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">15kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input type="radio" id="row-1-radio-3" name="row-1" style="float: right;  padding-top: 2px;">
+                                            <label for="row-1-radio-3"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">23kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 0px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-1" id="row-1-radio-4">
+                                            <label for="row-1-radio-4"></label>
+
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">32kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </td>
+                            <td rowspan="2">
+                                <div class="table-form">
+                                    <output id="result"></output>
+                                </div>
+                            </td>
+                        </tr>
+                        <!--Second row -->
+                        <tr>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:25px ">Children</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number child1" min="0" name="number" style="padding-bottom: 0 ;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <!--Third row-->
+                        <tr>
+                            <td class="check1" rowspan="2">
+                                <form>
+                                    <input type="checkbox" id="check1" value="">
+                                    <label for="check1"></label>
+                                </form>
+                            </td>
+                            <td rowspan="2"><img class="imgg" style="height:16.91%; width: 100%; " src="images/booking/foto2.png" alt="Hon Kong">
+                                <div class="mImage">
+                                    <span class="close">&times;</span>
+                                    <img class="modals">
+                                    <div class="modal-caption"></div>
+                                </div>
+                            </td>
+                            <td rowspan="2">Kosovo</td>
+                            <td rowspan="2">Hong Kong</td>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:45px ">Adult</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number adult2" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                            <td rowspan="2" class="table-form" style="text-align: left; ">
+
+                                <div class="radio-button-for-weight" style="padding-top: 4px;">
+                                    <form>
+                                        <div style="padding-bottom: 6px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-2" checked="checked" id="row-2-radio-1">
+                                            <label for="row-2-radio-1" style="width: 50px;"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">10kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 0px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-2" id="row-2-radio-2">
+                                            <label for="row-2-radio-2"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">15kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 6px; clear: both">
+                                            <input type="radio" id="row-2-radio-3" name="row-2" style="float: right;  padding-top: 2px;">
+                                            <label for="row-2-radio-3"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">23kg</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="padding-bottom: 0px; clear: both">
+                                                <input style="float:left;" type="radio" name="row-2" id="row-2-radio-4">
+                                                <label for="row-2-radio-4"></label>
+
+                                                <div class="img-space">
+                                                    <img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+                                                    <div class="content-space">
+                                                        <p class="weights-content">32kg</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </td>
+                            <td rowspan="2">
+                                <div class="table-form">
+                                    <output id="result2"></output>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Fourth row -->
+                        <tr>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:25px ">Children</p>
+
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number child2" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <!-- Fifth row -->
+                        <tr>
+                            <td rowspan="2">
+                                <form><input type="checkbox" id="check2" value="">
+                                    <label for="check2"></label>
+                                </form>
+                            </td>
+                            <td rowspan="2"><img src="images/booking/foto3.png" alt="Tahiti" style="width: 100%; height:5.15%;" class="imgg">
+                                <div 1 class="mImage" 1>
+                                    <span class="close1">&times;</span>
+                                    <img class="modals" 1 id="img11">
+                                    <div id="captionn1"></div>
+                                </div>
+                            </td>
+                            <td rowspan="2">Germany</td>
+                            <td rowspan="2">Tahiti</td>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:45px ">Adult</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number adult3" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                            <td rowspan="2" class="table-form" style="text-align: left; ">
+
+                                <div class="radio-button-for-weight">
+                                    <form>
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-3" checked="checked" id="row-3-radio-1">
+                                            <label for="row-3-radio-1" style="width: 50px;"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">10kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-3" id="row-3-radio-2">
+                                            <label for="row-3-radio-2"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">15kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" id="row-3-radio-3" name="row-3" style="float: right;  padding-top: 2px;">
+                                            <label for="row-3-radio-3"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">23kg</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="padding-bottom: 0px; clear: both">
+                                                <input style="float:left;" type="radio" name="row-3" id="row-3-radio-4">
+                                                <label for="row-3-radio-4"></label>
+
+                                                <div class="img-space">
+                                                    <img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+                                                    <div class="content-space">
+                                                        <p class="weights-content">32kg</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </td>
+                            <td rowspan="2">
+                                <div class="table-form">
+                                    <output id="result3"></output>
+                                </div>
+                            </td>
+                        </tr>
+                        <!--Sixth row -->
+                        <tr>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:25px ">Children</p>
+
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number child3" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <!-- Seventh row -->
+                        <tr>
+                            <td rowspan="2">
+                                <form>
+                                    <input type="checkbox" id="check3" value="">
+                                    <label for="check3"></label>
+                                </form>
+                            </td>
+                            <td rowspan="2"><img src="images/booking/foto4.png" class="imgg" alt="Austria" style="width: 100%; height: 10.26%;">
+                                <div class="mImage">
+                                    <span class="close">&times;</span>
+                                    <img class="modals">
+                                    <div class="modal-caption"></div>
+                                </div>
+                            </td>
+                            <td rowspan="2">Italy</td>
+                            <td rowspan="2">New York</td>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:45px ">Adult</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number adult4" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                            <td rowspan="2" class="table-form" style="text-align: left; ">
+
+                                <div class="radio-button-for-weight">
+                                    <form>
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-4" checked="checked" id="row-4-radio-1">
+                                            <label for="row-4-radio-1" style="width: 50px;"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">10kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-4" id="row-4-radio-2">
+                                            <label for="row-4-radio-2"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">15kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" id="row-4-radio-3" name="row-4" style="float: right;  padding-top: 2px;">
+                                            <label for="row-4-radio-3"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">23kg</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="padding-bottom: 0px; clear: both">
+                                                <input style="float:left;" type="radio" name="row-4" id="row-4-radio-4">
+                                                <label for="row-4-radio-4"></label>
+
+                                                <div class="img-space">
+                                                    <img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+                                                    <div class="content-space">
+                                                        <p class="weights-content">32kg</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </td>
+                            <td rowspan="2">
+                                <div class="table-form">
+                                    <output id="result4"></output>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Eighth row -->
+                        <tr>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:25px ">Children</p>
+
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number child4" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <!-- Ninth row -->
+                        <tr>
+                            <td rowspan="2">
+                                <form>
+                                    <input type="checkbox" id="check4" value="">
+                                    <label for="check4"></label>
+                                </form>
+                            </td>
+                            <td rowspan="2" style="padding: 0;"><img class="imgg" src="images/booking/foto5.png" alt="Dubai" style="width: 100%; height: 14.6%;">
+                                <div class="mImage">
+                                    <span class="close">&times;</span>
+                                    <img class="modals">
+                                    <div class="modal-caption"></div>
+                                </div>
+                            </td>
+                            <td rowspan="2">London</td>
+                            <td rowspan="2">Dubai</td>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:45px ">Adult</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number adult5" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                            <td rowspan="2" class="table-form" style="text-align: left; ">
+
+                                <div class="radio-button-for-weight">
+                                    <form>
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-5" checked="checked" id="row-5-radio-1">
+                                            <label for="row-5-radio-1" style="width: 50px;"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">10kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-5" id="row-5-radio-2">
+                                            <label for="row-5-radio-2"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">15kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" id="row-5-radio-3" name="row-5" style="float: right;  padding-top: 2px;">
+                                            <label for="row-5-radio-3"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">23kg</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="padding-bottom: 0px; clear: both">
+                                                <input style="float:left;" type="radio" name="row-5" id="row-5-radio-4">
+                                                <label for="row-5-radio-4"></label>
+
+                                                <div class="img-space">
+                                                    <img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+                                                    <div class="content-space">
+                                                        <p class="weights-content">32kg</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </form>
+                                </div>
+                            </td>
+                            <td rowspan="2">
+                                <div class="table-form">
+                                    <output id="result5"></output>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Tenth row -->
+                        <tr>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:25px ">Children</p>
+
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number child5" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <!-- Eleventh row -->
+                        <tr>
+                            <td rowspan="2">
+                                <form>
+                                    <input type="checkbox" id="check5" value="">
+                                    <label for="check5"></label>
+                                </form>
+                            </td>
+                            <td rowspan="2" style="padding: 0; "><img class="imgg" src="images/booking/foto8.png" alt="Austria" style="width: 100%; height:74.19%;">
+                                <div class="mImage">
+                                    <span class="close">&times;</span>
+                                    <img class="modals">
+                                    <div class="modal-caption"></div>
+                                </div>
+                            </td>
+                            <td rowspan="2">Roma</td>
+                            <td rowspan="2">Austria</td>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:45px ">Adult</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number adult6" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                            <td rowspan="2" class="table-form" style="text-align: left; ">
+
+                                <div class="radio-button-for-weight">
+                                    <form>
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-6" checked="checked" id="row-6-radio-1">
+                                            <label for="row-6-radio-1" style="width: 50px;"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">10kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-6" id="row-6-radio-2">
+                                            <label for="row-6-radio-2"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">15kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="padding-bottom: 8px; clear: both">
+                                            <input style="float:left;" type="radio" id="row-6-radio-3" name="row-6" style="float: right;  padding-top: 2px;">
+                                            <label for="row-6-radio-3"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">23kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="padding-bottom: 0px; clear: both">
+                                            <input style="float:left;" type="radio" name="row-6" id="row-6-radio-4">
+                                            <label for="row-6-radio-4"></label>
+                                            <div class="img-space">
+                                                <img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+                                                <div class="content-space">
+                                                    <p class="weights-content">32kg</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </td>
+                            <td rowspan="2">
+                                <div class="table-form">
+                                    <output id="result6"></output>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Twelfth row -->
+                        <tr>
+                            <td class="table-form">
+                                <p style="float: left; padding-right:25px ">Children</p>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="number" class="tickets-number child6" min="0" name="number" style="padding-bottom: 0;" disabled>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <!-- Thirteenth row -->
+                        <tr>
+                            <td colspan="6"></td>
+                            <td rowspan="2">
+                                <div class="table-form">
+                                    <output id="totali"></output>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class=" fphoto">
+        <br>
+        <h2>Rent a car</h2>
+        <div class="lphoto"></div>
+        <div class="row">
+            <figure class="col span1-5">
+                <img class=imgg src="images/booking/car1.jpg" alt="Name:BMW<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
+
+                <div class="mImage">
+                    <span class="close">&times;</span>
+                    <img class="modals">
+                    <div class="modal-caption"></div>
+                </div>
+                <figcaption>BMW</figcaption>
+            </figure>
+            <figure class="col span1-5 ">
+                <img class=" imgg" src="images/booking/car2.jpg" alt="name:Mahindra KUV100 NXT
+                <br><br>Petrol:Gasoline <br><br> Transmission:Automatic <br><br> Number of Gears:7 " style="width: 100%; height: 100%;">
+                <div class="mImage">
+                    <span class="close">&times;</span>
+                    <img class="modals">
+                    <div class="modal-caption"></div>
+                </div>
+
+                <figcaption>Mahindra KUV100 NXT</figcaption>
+            </figure>
+            <figure class="col span1-5">
+                <img class=imgg src="images/booking/car3.jpg" alt="Name:2017 Jeep Compass Petrol Automatic
+                <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+                <div class="mImage">
+                    <span class="close">&times;</span>
+                    <img class="modals">
+                    <div class="modal-caption"></div>
+                </div>
+                <figcaption>Jeep Compass</figcaption>
+            </figure>
+            <figure class="col span1-5">
+                <img class=imgg src="images/booking/car.jpg" alt="Name:Mercedes Benz GLE450 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:7" style="width: 100%">
+                <div class="mImage">
+                    <span class="close">&times;</span>
+                    <img class="modals">
+                    <div class="modal-caption"></div>
+                </div>
+                <figcaption>Mercedes Benz GLE450</figcaption>
+            </figure>
+            <figure class="col span1-5">
+                <img class=imgg src="images/booking/car4.jpg" alt="Name:Volvo XC40 <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+                <div class="mImage">
+                    <span class="close">&times;</span>
+                    <img class="modals">
+                    <div class="modal-caption"></div>
+                </div>
+                <figcaption>Volvo XC40</figcaption>
+            </figure>
+            <div id="Showmore" style="display:none; padding-top:-5px;">
+
+                <div class="row">
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car5.jpg" alt="Name:Tata Tigor <br><br> Petrol:Disel <br><br> Transsmision:Manual <br><br> Number of Gears:5" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Tata Tigor</figcaption>
+                    </figure>
+                    <figure class="col span1-5 ">
+                        <img class=imgg src="images/booking/car6.jpg" alt="Name:BMW X6 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:6" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>BMW X6 </figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car7.jpg" alt="Name:Mercedes-Benz CLA 45 AMG       
+						<br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption><abbr title="Mercedes-Benz CLA 45 AMG">MCB</abbr></figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car8.jpg" alt="Name:Audi A8L <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:5" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Audi A8L</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car9.jpg" alt="Name:Jaguar XFR-S SportBrake
+                         <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:6" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Jaguar XFR-S SportBrake</figcaption>
+                    </figure>
+                </div>
+                <div class="row">
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car10.jpg" alt="Name:BMW M5 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:7" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>BMW M5</figcaption>
+                    </figure>
+                    <figure class="col span1-5 ">
+                        <img class=imgg src="images/booking/car11.jpg" alt="Name:Audi Q7<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Audi Q7</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car12.jpg" alt="Name:Mercedes-AMG G 63 <br><br> Petrol:Disel <br><br> Transsmision:Automatic <br><br> Number of Gears:9" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Mercedes-AMG G 63</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car13.jpg" alt="Name:Audi RS5 Coupe<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Audi RS5 Coupe</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/car14.jpg" alt="Name:Hyundai Santa Fes<br><br> Petrol:Disel <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Hyundai Santa Fe</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button onclick="function()" id=btn1>Show more</button>
+    </section>
+    <section class="fphoto">
+        <br>
+        <h2> Check out some of our top apartments</h2>
+        <div class="row">
+            <div class="appartaments">
+                <figure class="col span1-5">
+                    <img class=imgg src="images/booking/Apartament1.jpg" alt=" FAM Living - City Walk <br><br>The units come with parquet flooring and feature a fully equipped kitchen (a dishwasher, an oven and a coffee machine etc) a flat-screen TV with cable channels, and all en suite private bathrooms with towels. " style="width: 100%">
+                    <div class="mImage">
+                        <span class="close">&times;</span>
+                        <img class="modals">
+                        <div class="modal-caption"></div>
+                    </div>
+                    <figcaption>FAM Living - City Walk</figcaption>
+                </figure>
+                <figure class="col span1-5 ">
+                    <img class=" imgg" src="images/booking/apartament2.jpg" alt=" Résidence Palais Étoile <br><br> Located in Paris, Résidence Palais Étoile offers self-catering apartments opposite Porte Maillot Palais de Congrès Exhibition Centre. Porte Maillot Metro Station is 20 metres away and leads directly to La Défense business district and the Champs-Elysées Avenue.
+                    Each apartment includes 1 bedroom, a living room with a sofa and a flat-screen TV." style=" width: 100%">
+                    <div class="mImage">
+                        <span class="close">&times;</span>
+                        <img class="modals">
+                        <div class="modal-caption"></div>
+                    </div>
+                    <figcaption>Résidence Palais Étoile</figcaption>
+                </figure>
+                <figure class="col span1-5">
+                    <img class=imgg src="images/booking/Apartament3.jpg" alt="Navona Apartmentsf <br><br> Rome as you feel - Navona Apartments offers luxurious self-catering accommodation in the historic centre of Rome. All apartments are located in different buildings around Piazza Navona square." style="width: 100%">
+                    <div class="mImage">
+                        <span class="close">&times;</span>
+                        <img class="modals">
+                        <div class="modal-caption"></div>
+                    </div>
+                    <figcaption>Navona Apartmentsf</figcaption>
+                </figure>
+                <figure class="col span1-5">
+                    <img class=" imgg" src="images/booking/Apartament4.jpg" alt="The Old Brompton Boutique <br><br> The Old Brompton Boutique offers accommodation in London, 1.5 km from Stamford Bridge - Chelsea FC and 1.6 km from Natural History Museum. This property offers access to free WiFi.
+                    This apartment comes with a kitchen, a seating area, a dining area and a satellite flat-screen TV." style="width: 100%">
+                    <div class="mImage">
+                        <span class="close">&times;</span>
+                        <img class="modals">
+                        <div class="modal-caption"></div>
+                    </div>
+                    <figcaption>The Old Brompton Boutique</figcaption>
+                </figure>
+                <figure class="col span1-5">
+                    <img class=imgg src="images/booking/apartament5.jpg" alt="The Fulham Mirabel Gem <br><br> Set in London, The Fulham Mirabel Gem provides accommodation with a TV and a kitchen. Free WiFi is featured.
+                    " style="width: 100%">
+                    <div class="mImage">
+                        <span class="close">&times;</span>
+                        <img class="modals">
+                        <div class="modal-caption"></div>
+                    </div>
+                    <figcaption>The Fulham Mirabel Gem</figcaption>
+                </figure>
+                <div class="showmore1" style="display:none">
+                    <figure class="col span1-5 ">
+                        <img class=" imgg" src="images/booking/apartament6.jpg" alt=" JW Marriott Hotel Hong Kong <br><br> Sitting atop the prestigious Pacific Place Complex, the JW Marriott Hotel Hong Kong has direct access to the Admiralty MTR Subway Station and Pacific Place Shopping Mall." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>JW Marriott Hotel Hong Kong</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/apartament7.jpg" alt="SACO Holborn <br><br> ituated in Bloomsbury area, SACO London boasts 32 award-winning serviced apartments with easy access to London’s West End, the City, and Tottenham Court Road, all within 1 mile radius." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>SACO Holborn</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=" imgg" src="images/booking/apartament8.jpg" alt="Teva's Apt <br><br> Set in Punaauia, Teva's Apt features accommodation with a private pool and free WiFi. Housed in a building dating from 2008, this apartment is 3.7 km from the Museum of Tahiti." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Teva's Apt</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/appartament9.jpg" alt="Arlo SoHo <br><br>ocated close to SoHo, Tribeca and West Village neighborhoods, guests at Arlo Soho will find many dining and shopping destinations within easy reach. One World Trade Centre is 1.6 km from Arlo Soho." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Arlo SoHo</figcaption>
+                    </figure>
+                    <figure class="col span1-5 ">
+                        <img class=" imgg" src="images/booking/apartament10.jpg" alt="Capri by Fraser Barcelona <br><br>This motorcycle-friendly hotel is 3 Metro stops from Plaza Catalunya and 15 minutes’ walk from the Barcelona’s beaches. There is free WiFi available throughout." style="width: 100%; height: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Capri by Fraser Barcelona</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/apartament11.jpg" alt="Dunes Hotel Apartments Oud Metha<br><br>Featuring a pool with panoramic views over Dubai, this hotel offers self-catering apartments with wall-mounted flat-screen TVs. It is located right across from Dubai’s American Hospital." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Dunes Hotel Apartments Oud Metha</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=" imgg" src="images/booking/apartament12.jpg" alt="Habitat Apartments Bailén<br><br> Habitat Apartments Bailén is a modern apartment located in Barcelona, 5 minutes' walk from Arc de Triomf and 280 metres from Tetuan Square. Free WiFi access is available." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>Habitat Apartments Bailén</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/apartament14.jpg" alt="FAM Living - City Walk Dubai<br><br>Located in Dubai, FAM Living - City Walk Dubai has well-equipped accommodation boasting free WiFi. City Walk Mall is 500 metres away." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+                        <figcaption>FAM Living - City Walk Dubai </figcaption>
+                    </figure>
+                    <figure class="col span1-5 ">
+                        <img class=" imgg" src="images/booking/apartament13.jpg" alt="Sagrada Familia Sun <br><br> Located in Barcelona, Sagrada Familia Sun consists of a modern-style apartment with free WiFi. The Sagrada Familia is just a 10-minute walk away." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+                        </div>
+
+                        <figcaption>Sagrada Familia Sun</figcaption>
+                    </figure>
+                    <figure class="col span1-5">
+                        <img class=imgg src="images/booking/apartament15.jpg" alt="Fraser Residence Citys <br><br> Fraser Residence City Situated 2 minutes’ walk from Monument tube station, Fraser Residence City offers air-conditioned apartments with city views, fully equipped kitchens and an iPod docking station." style="width: 100%">
+                        <div class="mImage">
+                            <span class="close">&times;</span>
+                            <img class="modals">
+                            <div class="modal-caption"></div>
+
+                        </div>
+                        <figcaption>Fraser Residence City</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <button onclick="function()" id="btn2">Show more</button>
+    </section>
+    <script>
+        $(document).ready(function() {
+            var modal = document.querySelector(".mImage");
+            var img = $('.imgg');
+            var modalImg = $(".modals");
+            var captionText = document.querySelector(".modal-caption");
+            $('.imgg').click(function() {
+                modal.style.display = "block";
+                var newSrc = this.src;
+                modalImg.attr('src', newSrc);
+                captionText.innerHTML = this.alt;
+            });
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            $('.form-group').on('input', '.tickets-number', function() {
+                var totalSum = 0;
+                $('.form-group .adult1').each(function() {
+
+                    var inputVal = $(".adult1").val() * 157.647 + $(".child1").val() * 54.5;
+
+                    var n = document.getElementById("row-1-radio-3").checked;
+
+                    var m = document.getElementById("row-1-radio-4").checked;
+
+
+                    if (n == 1) {
+
+                        totalSum = totalSum + parseFloat(inputVal) + 200;
+
+                        if ($('.adult1').val() == 0 && $('.child1').val() == 0) {
+                            totalSum = 0;
+                        }
+
+                    } else if (m == 1) {
+
+                        totalSum = totalSum + parseFloat(inputVal) + 400;
+
+                        if ($('.adult1').val() == 0 && $('.child1').val() == 0) {
+                            totalSum = 0;
+
+                        }
+                    } else {
+                        {
+                            totalSum = totalSum + parseFloat(inputVal);
+                        }
+
+                    };
+
+                });
+
+                $('#result').val((totalSum / 2).toFixed(2) + " $");
+                var totalSum2 = 0
+                $('.form-group .adult2').each(function() {
+                    var inputVal = $(".adult2").val() * 99 + $(".child2").val() * 3;
+                    var n2 = document.getElementById("row-2-radio-3").checked;
+                    var m2 = document.getElementById("row-2-radio-4").checked;
+
+
+                    if (n2 == 1) {
+
+                        totalSum2 = totalSum2 + parseFloat(inputVal) + 200;
+                        if ($('.adult2').val() == 0 && $('.child2').val() == 0) {
+                            totalSum2 = 0;
+                        }
+
+                    } else if (m2 == 1) {
+
+                        totalSum2 = totalSum2 + parseFloat(inputVal) + 400;
+                        if ($('.adult2').val() == 0 && $('.child2').val() == 0) {
+                            totalSum2 = 0;
+
+                        }
+                    } else {
+                        {
+                            totalSum2 = totalSum2 + parseFloat(inputVal);
+                        }
+
+                    };
+
+                });
+                $('#result2').val((totalSum2 / 2).toFixed(2) + " $");
+                var totalSum3 = 0;
+                $('.form-group .adult3').each(function() {
+                    var inputVal = $(".adult3").val() * 43.5 + $(".child3").val() * 21;
+                    var n3 = document.getElementById("row-3-radio-3").checked;
+                    var m3 = document.getElementById("row-3-radio-4").checked;
+                    if (n3 == 1) {
+
+                        totalSum3 = totalSum3 + parseFloat(inputVal) + 200;
+                        if ($('.adult3').val() == 0 && $('.child3').val() == 0) {
+                            totalSum3 = 0;
+                        }
+
+                    } else if (m3 == 1) {
+
+                        totalSum2 = totalSum2 + parseFloat(inputVal) + 400;
+                        if ($('.adult3').val() == 0 && $('.child3').val() == 0) {
+                            totalSum3 = 0;
+
+                        }
+                    } else {
+                        {
+                            totalSum3 = totalSum3 + parseFloat(inputVal);
+                        }
+
+                    };
+
+                });
+                $('#result3').val((totalSum3 / 2).toFixed(2) + " $");
+                var totalSum4 = 0;
+                $('.form-group .adult4').each(function() {
+                    var inputVal = $(".adult4").val() * 154 + $(".child4").val() * 81;
+                    var n4 = document.getElementById("row-4-radio-3").checked;
+                    var m4 = document.getElementById("row-4-radio-4").checked;
+
+
+                    if (n4 == 1) {
+
+                        totalSum4 = totalSum4 + parseFloat(inputVal) + 200;
+                        if ($('.adult4').val() == 0 && $('.child4').val() == 0) {
+                            totalSum4 = 0;
+                        }
+
+                    } else if (m4 == 1) {
+
+                        totalSum4 = totalSum4 + parseFloat(inputVal) + 400;
+                        if ($('.adult4').val() == 0 && $('.child4').val() == 0) {
+                            totalSum2 = 0;
+
+                        }
+                    } else {
+                        {
+                            totalSum4 = totalSum4 + parseFloat(inputVal);
+                        }
+
+                    };
+
+                });
+                $('#result4').val((totalSum4 / 2).toFixed(2) + " $");
+                var totalSum5 = 0;
+                $('.form-group .adult5').each(function() {
+                    var inputVal = $(".adult5").val() * 39.5 + $(".child5").val() * 20;
+                    var n5 = document.getElementById("row-5-radio-3").checked;
+                    var m5 = document.getElementById("row-5-radio-4").checked;
+
+
+                    if (n5 == 1) {
+
+                        totalSum5 = totalSum5 + parseFloat(inputVal) + 200;
+                        if ($('.adult5').val() == 0 && $('.child5').val() == 0) {
+                            totalSum4 = 0;
+                        }
+
+                    } else if (m5 == 1) {
+
+                        totalSum5 = totalSum5 + parseFloat(inputVal) + 400;
+                        if ($('.adult5').val() == 0 && $('.child5').val() == 0) {
+                            totalSum2 = 0;
+
+                        }
+                    } else {
+                        {
+                            totalSum5 = totalSum5 + parseFloat(inputVal);
+                        }
+
+                    };
+
+                });
+                $('#result5').val((totalSum5 / 2).toFixed(2) + " $");
+                var totalSum6 = 0;
+
+
+                $('.form-group .adult6').each(function() {
+                    var inputVal = $(".adult6").val() * 99 + $(".child6").val() * 30;
+                    var n6 = document.getElementById("row-6-radio-3").checked;
+                    var m6 = document.getElementById("row-6-radio-4").checked;
+
+
+                    if (n6 == 1) {
+
+                        totalSum6 = totalSum6 + parseFloat(inputVal) + 200;
+                        if ($('.adult6').val() == 0 && $('.child6').val() == 0) {
+                            totalSum6 = 0;
+                        }
+
+                    } else if (m6 == 1) {
+
+                        totalSum6 = totalSum6 + parseFloat(inputVal) + 400;
+                        if ($('.adult6').val() == 0 && $('.child6').val() == 0) {
+                            totalSum6 = 0;
+
+                        }
+                    } else {
+                        {
+                            totalSum6 = totalSum6 + parseFloat(inputVal);
+
+                        }
+
+                    };
+
+                });
+                $('#result6').val((totalSum6 / 2).toFixed(2) + " $");
+
+                var totarray = [];
+                var x1 = document.getElementById("check").checked;
+                var x2 = document.getElementById("check1").checked;
+                var x3 = document.getElementById("check2").checked;
+                var x4 = document.getElementById("check3").checked;
+                var x5 = document.getElementById("check4").checked;
+                var x6 = document.getElementById("check5").checked;
+                if (x1 == 1) {
+                    totarray.push(totalSum / 2);
+                }
+                if (x2 == 1) {
+                    totarray.push(totalSum2 / 2);
+                }
+                if (x3 == 1) {
+                    totarray.push(totalSum3 / 2);
+                }
+                if (x4 == 1) {
+                    totarray.push(totalSum4 / 2);
+                }
+                if (x5 == 1) {
+                    totarray.push(totalSum5 / 2);
+                }
+                if (x6 == 1) {
+                    totarray.push(totalSum6 / 2);
+                }
+
+
+                var tot = 0;
+                for (var i = 0; i < totarray.length; i++) {
+                    tot = tot + totarray[i];
+                }
+
+
+                $("#totali").val(tot.toFixed(2) + " $");
+
+            });
+
+            $('#check').on('click', function() {
+                if ($(this).is(':checked')) {
+                    $('.adult1 ').attr('disabled', false);
+                    $('.child1').attr('disabled', false);
+                } else {
+                    $('.adult1').attr('disabled', true);
+                    $('.child1').attr('disabled', true);
+                }
+            });
+            $('#check1').on('click', function() {
+                if ($(this).is(':checked')) {
+                    $('.adult2').attr('disabled', false);
+                    $('.child2').attr('disabled', false);
+                } else {
+                    $('.adult2').attr('disabled', true);
+                    $('.child2').attr('disabled', true);
+                }
+            });
+            $('#check2').on('click', function() {
+                if ($(this).is(':checked')) {
+                    $('.adult3').attr('disabled', false);
+                    $('.child3').attr('disabled', false);
+                } else {
+                    $('.adult3').attr('disabled', true);
+                    $('.child3').attr('disabled', true);
+                }
+            });
+            $('#check3').on('click', function() {
+                if ($(this).is(':checked')) {
+                    $('.adult4').attr('disabled', false);
+                    $('.child4').attr('disabled', false);
+                } else {
+                    $('.adult4').attr('disabled', true);
+                    $('.child4').attr('disabled', true);
+                }
+            });
+            $('#check4').on('click', function() {
+                if ($(this).is(':checked')) {
+                    $('.adult5').attr('disabled', false);
+                    $('.child5').attr('disabled', false);
+                } else {
+                    $('.adult5').attr('disabled', true);
+                    $('.child5').attr('disabled', true);
+                }
+            });
+            $('#check5').on('click', function() {
+                if ($(this).is(':checked')) {
+                    $('.adult6').attr('disabled', false);
+                    $('.child6').attr('disabled', false);
+                } else {
+                    $('.adult6').attr('disabled', true);
+                    $('.child6').attr('disabled', true);
+                }
+            });
+
+            $(".child1 , .adult1 ,.child2 , .adult2 ,.child3 , .adult3 ,.child4 , .adult4 ,.child5 , .adult5 ,.child6 , .adult6 ").keypress(function(e) {
+                if (e.which != 7 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    alert("Digits only")
+                    return false;
+                }
+            });
+
+
+
+
+        });
+    </script>
+    <footer>
+        <div class="row">
+            <div class="col span2-3 credits">
+                <p>All right reserved &copy; for Gr31 - Internet!</p>
+            </div>
+            <div class="col span1-3 credits">
+                <p id="year">2018/2019</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
