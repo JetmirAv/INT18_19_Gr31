@@ -145,38 +145,4 @@
         </div>
     </footer>
 </body>
-
-<script type="text/javascript">
-    function validateEmail(email) {
-
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-        return regex.test(email);
-
-    }
-
-
-    function emailVerification(email) {
-
-        var errorMessage = "";
-
-
-
-        if (validateEmail(email === false)) {
-            errorMessage += "<p>Your email address is not valid</p>";
-        }
-
-        if (errorMessage !== "") {
-            alert(errorMessage);
-
-        } else {
-            successMessage = "Your email was added with success";
-            alert(successMessage);
-
-        }
-    };
-
-    document.getElementById("sub-submit").onclick = emailVerification($("sub-email").val());
-</script>
-
 </html>
