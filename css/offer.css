@@ -1,8 +1,6 @@
 #FLIGHTS
 {
  background-image:url(../images/offers/Flugreisen.jpg) ;
- background-origin: content-box;
- background-clip:padding-box;
  position:relative;
  margin-top: -72px;
  margin-left: -67px;
@@ -121,10 +119,6 @@ transition-duration: 0.4s;
     background-color: rgba(426, 426,426, 0.44);
     box-shadow: -10px -10px 150px dimgrey;
     transition-duration: 0.4s;
-            -webkit-transition-duration: 0.4s;
-            -moz-transition-duration: 0.4s;
-            -o-transition-duration:0.4s;
-            -ms-transition-duration:0.4s;
 }
 .kutia1-3T{
       margin: 23% 11%;
@@ -198,7 +192,7 @@ small:hover
                  -o-transition-duration:0.4s;
                  -ms-transition-duration:0.4s;
                  text-shadow: -4px 4px 6px dimgrey;
-}      
+}
       .flightlist{
       list-style:none ;
       float:left;
@@ -206,14 +200,15 @@ small:hover
       color:red;
       margin-left:45px;
       line-height:29px;
-    }           
+            -webkit-transition-duration: 0.4s;
+            -moz-transition-duration: 0.4s;
+            -o-transition-duration:0.4s;
+            -ms-transition-duration:0.4s;
+      }
     .flightlist:hover{
      text-shadow: 1px 0px 0px red;
      transition-duration: 0.7s;
      -webkit-transition-duration: 0.7s;
      -moz-transition-duration: 0.7s;
      -o-transition-duration:0.7s;
-     -ms-transition-duration:0.7s;
-  }
-   
-  
+    }
