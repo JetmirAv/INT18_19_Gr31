@@ -6,18 +6,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 	<link href="css/layout.css" rel="stylesheet">
 	<link href="css/universal.css" rel="stylesheet">
 	<link href="css/booking.css" rel="stylesheet">
 	<script type="text/JavaScript" src="javascript/booking.js"></script>
 	<script src="javascript/jquery.min.js"></script>
+	<script src="javascript/date-time.js"></script>
+	<script src="javascript/layoutchange.js"></script>
+	<script src="javascript/bbuttons.js"></script>
+
 	<style>
 		.imgg:hover{
 
 			opacity: 0.8;
 		}
 
-		.modal-Image  {
+		.mImage{
             display: none;
             position: fixed;
             z-index: 1;
@@ -30,13 +35,13 @@
             background-color: rgb(0,0,0);
 			background-color: rgba(0,0,0,0.9);
 }
-		.imgg{
+		.imgg {
 			
-			width: 23.3%;
-			height: auto;
+			width: 100%;
+			height: 15.4%;
 			cursor: pointer;	
 		}
-				.modal {
+				.modals {
             margin: auto;
 			margin-left: 20px;
             display: block;
@@ -45,7 +50,7 @@
 			padding-left: 70px;
 			float: left
 		}
-		#captionn {			
+		.modal-caption{			
             margin: auto;	
             display: block;
             width: 30%;
@@ -55,8 +60,8 @@
             padding: 10px 0 10px 700px;
             height: 150px;
  }
-				.modal,
-		#captionn {
+		.modals,
+		.modal-caption{
 			-webkit-animation-name: zoom;
 			-webkit-animation-duration: 0.6s;
 		}
@@ -70,7 +75,7 @@
 		}
 
 		
-		.close {
+		.close   {
 			position: absolute;
 			top: 15px;
 			right: 85px;
@@ -80,7 +85,10 @@
 			transition: 0.3s;
 		}
 		.close:hover,
-		.close:focus {
+		.close:focus
+		
+		
+		{
 			color: #bbb;
 			text-decoration: none;
 			cursor: pointer;
@@ -92,29 +100,6 @@
 			height: 20px;
 		}
 		
-		.modal1 {
-            margin: auto;
-			margin-left: 20px;
-            display: block;
-            width: 50%;
-            max-width: 400px;
-			padding-top: 80px;
-			padding-left: 300px;
-			float: left;
-		}
-		captionn1
-		{			
-            margin: auto;	
-            display: block;
-            width: 30%;
-            max-width: 700px;
-            text-align: left;
-            color: #ccc;
-            padding: 230px 0 10px 700px;
-            height: 150px;
-			font-size: 35px;
-		}
-		
 		
 	</style>
 
@@ -124,11 +109,14 @@
 
 	<header>
 		<div class="row">
-			<div class="col span1-3 header-name">
+			<div class="col span2-5 header-name">
 				<p>AirAgency</p>
 			</div>
+			<div class="col span1-5 header-date">
+				<p id="date"></p>
+			</div>
 			<nav>
-				<div class="col span2-3">
+				<div class="col span2-5">
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="work.html">Work</a></li>
@@ -141,85 +129,89 @@
 			</nav>
 		</div>
 	</header>
-	<hr>
 
-	<!-- Slideshow galery -->
+
+	<!-- photoshow galery -->
 	<section class="row places">
-		<div class="container">
-			<div class="slides">
-				<div class="numbertext">1 / 6</div>
-				<img class="large-photos" src="images/booking/foto1.png" alt="Roma">
-			</div>
+		<div class="slideShow">
+			<dl>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto1.png" alt="Roma">
+				</dd>
 
-			<div class="slides">
-				<div class="numbertext">2 / 6</div>
-				<img class="large-photos" src="images/booking/foto2.png" alt="Hon Kong">
-			</div>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto2.png" alt="Hon Kong">
+				</dd>
 
-			<div class="slides">
-				<div class="numbertext">3 / 6</div>
-				<img class="large-photos" src="images/booking/foto3.png" alt="Tahiti">
-			</div>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto3.png" alt="Tahiti">
+				</dd>
 
-			<div class="slides">
-				<div class="numbertext">4 / 6</div>
-				<img class="large-photos" src="images/booking/foto4.png" alt="New YOrk">
-			</div>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto4.png" alt="New YOrk">
+				</dd>
 
-			<div class="slides">
-				<div class="numbertext">5 / 6</div>
-				<img class="large-photos" src="images/booking/foto5.png" alt="Barcelona">
-			</div>
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto5.png" alt="Barcelona">
+				</dd>
 
-			<div class="slides">
-				<div class="numbertext">6 / 6</div>
-				<img class="large-photos" src="images/booking/foto6.png" alt="Dubai">
-			</div>
-
+				<dd class="photos">
+					<img class="large-photos" src="images/booking/foto6.png" alt="Dubai">
+				</dd>
+			</dl>
 			<!-- Buttons -->
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-			<div class="caption-container">
-				<p id="caption"></p>
-			</div>
+			<a class="prev" onclick="plusphotos(-1)">&#10094;</a>
+			<a class="next" onclick="plusphotos(1)">&#10095;</a>
 			<div class="row">
-				<div class="column">
-					<img class="small-photo cursor" src="images/booking/foto1.png" onclick="currentSlide(1)" alt="Roma">
-				</div>
-				<div class="column">
-					<img class="small-photo cursor" src="images/booking/foto2.png" onclick="currentSlide(2)" alt="Hon Kong">
-				</div>
-				<div class="column">
-					<img class="small-photo cursor" src="images/booking/foto3.png" onclick="currentSlide(3)" alt="Tahiti">
-				</div>
-				<div class="column">
-					<img class="small-photo cursor" src="images/booking/foto4.png" onclick="currentSlide(4)" alt="New York">
-				</div>
-				<div class="column">
-					<img class="small-photo cursor" src="images/booking/foto5.png" onclick="currentSlide(5)" alt="Barcelona">
-				</div>
-				<div class="column">
-					<img class="small-photo cursor" src="images/booking/foto6.png" onclick="currentSlide(6)" alt="Dubai">
-				</div>
-
+				<dl>
+					<dd class="column">
+						<img class="small-photo" src="images/booking/foto1.png" onclick="currentPhoto(1)" alt="Roma">
+					</dd>
+					<dd class="column">
+						<img class="small-photo" src="images/booking/foto2.png" onclick="currentPhoto(2)" alt="Hon Kong">
+					</dd>
+					<dd class="column">
+						<img class="small-photo" src="images/booking/foto3.png" onclick="currentPhoto(3)" alt="Tahiti">
+					</dd>
+					<dd class="column">
+						<img class="small-photo" src="images/booking/foto4.png" onclick="currentPhoto(4)" alt="New York">
+					</dd>
+					<dd class="column">
+						<img class="small-photo" src="images/booking/foto5.png" onclick="currentPhoto(5)" alt="Barcelona">
+					</dd>
+					<dd class="column">
+						<img class="small-photo" src="images/booking/foto6.png" onclick="currentPhoto(6)" alt="Dubai">
+					</dd>
+				</dl>
 			</div>
 		</div>
 
 
 	</section>
-	<!-- End of htlm and javascript slideshow galery code  -->
-	<hr>
+	<!-- End of htlm and javascript photos show galery code  -->
+	<br>
 
 	<section>
-		<div class="row client">
-			<img class=" client-photo" src="images/booking/foto7.png" width="100" height="100" alt="Dwayne Jonson" />Dwayne Jonson
-			<br>
-		</div>
+		<address>
+			<div class="row client">
+				<div class="col span1-5" style="width: 9%">
+					<img class="client-photo" src="images/booking/foto7.png" width="100" height="100" alt="John Dayn" />
+				</div>
+				<div class="col span1-5" style="float: left; padding-top: 20px;">
+					Name:John
+					<br>
+					Surname:Doe
+					<br>
+					Age:27
+					<br>
+					<br>
+				</div>
+			</div>
+		</address>
+		<br>
 		<div class="row">
 			<div class="col span3-3">
-				<table>
+				<table cellspacing="2" cellpadding="0">
 					<thead>
 						<tr>
 							<th>Check</th>
@@ -239,11 +231,11 @@
 									<label for="check"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0;"><img class="imgg" src="images/booking/foto1.png" alt="Roma" style="width: 100%; height: 14.55%">
-								<div id=modal class=modal-Image>
+							<td rowspan="2"><img style="width: 100%; height: 15.36%;" src="images/booking/foto1.png" alt="Roma" class="imgg">
+								<div class="mImage">
 									<span class="close">&times;</span>
-									<img class=modal id="img01">
-									<div id="captionn"></div>
+									<img class="modals">
+									<div class="modal-caption"></div>
 								</div>
 							</td>
 							<td rowspan="2">Canada</td>
@@ -252,7 +244,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult1" min="0" name="number" style="padding-bottom: 0;">
+										<input class="tickets-number adult1" type="number" min="0" name="number" onkeypress="onlynumbers(event)" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -263,33 +255,37 @@
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-1" checked="checked" id="row-1-radio-1">
 											<label for="row-1-radio-1" style="width: 50px;"></label>
-											<img class="weights imgg1 " src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
-											<div id=modal1 class=modal-Image>
-												<span class="close">&times;</span>
-												<img class="modal1 " id="img01">
-												<span id="captionn"></span>
+
+
+											<div class="img-space">
+												<img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+												<div class="content-space">
+													<p class="weights-content">10kg</p>
+												</div>
 											</div>
+
+
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-1" id="row-1-radio-2">
 											<label for="row-1-radio-2"></label>
-											<img class="weights imgg" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+												<div class="content-space">
+													<p class="weights-content">15kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" id="row-1-radio-3" name="row-1" style="float: right;  padding-top: 2px;">
 											<label for="row-1-radio-3"></label>
-											<img class="weights imgg" src="images/booking/20kgicon.png" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+												<div class="content-space">
+													<p class="weights-content">23kg</p>
+												</div>
 											</div>
 										</div>
 
@@ -297,11 +293,11 @@
 											<input style="float:left;" type="radio" name="row-1" id="row-1-radio-4">
 											<label for="row-1-radio-4"></label>
 
-											<img class="weights  imgg" src="images/booking/30kgicon.png" style="float: right;  padding: 2px 20px 0 0; width: 20px; height: 20px" alt="30kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+												<div class="content-space">
+													<p class="weights-content">32kg</p>
+												</div>
 											</div>
 										</div>
 									</form>
@@ -319,7 +315,7 @@
 								<p style="float: left; padding-right:25px ">Children</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child1" min="0" name="number" style="padding-bottom: 0 ;">
+										<input type="number" class="tickets-number child1" min="0" name="number" style="padding-bottom: 0 ;" disabled>
 									</div>
 								</form>
 							</td>
@@ -332,11 +328,11 @@
 									<label for="check1"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0; "><img class="imgg" src="images/booking/foto2.png" alt="Hon Kong" style="width: 100%; height: 15.1%; ">
-								<div id=modal class=modal-Image>
+							<td rowspan="2"><img class="imgg" style="height:16.91%; width: 100%; " src="images/booking/foto2.png" alt="Hon Kong">
+								<div class="mImage">
 									<span class="close">&times;</span>
-									<img class=modal id="img01">
-									<div id="captionn"></div>
+									<img class="modals">
+									<div class="modal-caption"></div>
 								</div>
 							</td>
 							<td rowspan="2">Kosovo</td>
@@ -345,58 +341,57 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult2" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult2" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
 							<td rowspan="2" class="table-form" style="text-align: left; ">
 
-								<div class="radio-button-for-weight">
+								<div class="radio-button-for-weight" style="padding-top: 4px;">
 									<form>
-										<div style="padding-bottom: 8px; clear: both">
+										<div style="padding-bottom: 6px; clear: both">
 											<input style="float:left;" type="radio" name="row-2" checked="checked" id="row-2-radio-1">
 											<label for="row-2-radio-1" style="width: 50px;"></label>
-											<img class="weights imgg " src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
-											</div>
-										</div>
-
-										<div style="padding-bottom: 8px; clear: both">
-											<input style="float:left;" type="radio" name="row-2" id="row-2-radio-2">
-											<label for="row-2-radio-2"></label>
-											<img class="weights imgg" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
-											</div>
-										</div>
-
-										<div style="padding-bottom: 8px; clear: both">
-											<input style="float:left;" type="radio" id="row-2-radio-3" name="row-2" style="float: right;  padding-top: 2px;">
-											<label for="row-2-radio-3"></label>
-											<img class="weights imgg" src="images/booking/20kgicon.png" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+												<div class="content-space">
+													<p class="weights-content">10kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 0px; clear: both">
-											<input style="float:left;" type="radio" name="row-2" id="row-2-radio-4">
-											<label for="row-2-radio-4"></label>
-
-											<img class="weights  imgg" src="images/booking/30kgicon.png" style="float: right;  padding: 2px 20px 0 0; width: 20px; height: 20px" alt="30kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<input style="float:left;" type="radio" name="row-2" id="row-2-radio-2">
+											<label for="row-2-radio-2"></label>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+												<div class="content-space">
+													<p class="weights-content">15kg</p>
+												</div>
 											</div>
 										</div>
+
+										<div style="padding-bottom: 6px; clear: both">
+											<input style="float:left;" type="radio" id="row-2-radio-3" name="row-2" style="float: right;  padding-top: 2px;">
+											<label for="row-2-radio-3"></label>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+												<div class="content-space">
+													<p class="weights-content">23kg</p>
+												</div>
+											</div>
+
+											<div style="padding-bottom: 0px; clear: both">
+												<input style="float:left;" type="radio" name="row-2" id="row-2-radio-4">
+												<label for="row-2-radio-4"></label>
+
+												<div class="img-space">
+													<img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+													<div class="content-space">
+														<p class="weights-content">32kg</p>
+													</div>
+												</div>
+											</div>
 									</form>
 								</div>
 							</td>
@@ -413,7 +408,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child2" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child2" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -425,11 +420,11 @@
 									<label for="check2"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0;"><img class=" imgg" src="images/booking/foto3.png" alt="Tahiti" style="width: 100%; height:4.8%;">
-								<div id=modal class=modal-Image>
-									<span class="close">&times;</span>
-									<img class=modal id="img01">
-									<div id="captionn"></div>
+							<td rowspan="2"><img src="images/booking/foto3.png" alt="Tahiti" style="width: 100%; height:5.15%;" class="imgg">
+								<div 1 class="mImage" 1>
+									<span class="close1">&times;</span>
+									<img class="modals" 1 id="img11">
+									<div id="captionn1"></div>
 								</div>
 							</td>
 							<td rowspan="2">Germany</td>
@@ -438,7 +433,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult3" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult3" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -449,47 +444,46 @@
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-3" checked="checked" id="row-3-radio-1">
 											<label for="row-3-radio-1" style="width: 50px;"></label>
-											<img class="weights imgg " src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+												<div class="content-space">
+													<p class="weights-content">10kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-3" id="row-3-radio-2">
 											<label for="row-3-radio-2"></label>
-											<img class="weights imgg" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+												<div class="content-space">
+													<p class="weights-content">15kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" id="row-3-radio-3" name="row-3" style="float: right;  padding-top: 2px;">
 											<label for="row-3-radio-3"></label>
-											<img class="weights imgg" src="images/booking/20kgicon.png" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+												<div class="content-space">
+													<p class="weights-content">23kg</p>
+												</div>
 											</div>
-										</div>
 
-										<div style="padding-bottom: 0px; clear: both">
-											<input style="float:left;" type="radio" name="row-3" id="row-3-radio-4">
-											<label for="row-3-radio-4"></label>
+											<div style="padding-bottom: 0px; clear: both">
+												<input style="float:left;" type="radio" name="row-3" id="row-3-radio-4">
+												<label for="row-3-radio-4"></label>
 
-											<img class="weights  imgg" src="images/booking/30kgicon.png" style="float: right;  padding: 2px 20px 0 0; width: 20px; height: 20px" alt="30kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+												<div class="img-space">
+													<img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+													<div class="content-space">
+														<p class="weights-content">32kg</p>
+													</div>
+												</div>
 											</div>
-										</div>
 									</form>
 								</div>
 							</td>
@@ -506,7 +500,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child3" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child3" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -519,11 +513,11 @@
 									<label for="check3"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0;"><img class=" imgg" src="images/booking/foto4.png" alt="Austria" style="width: 100%; height: 9.55%;">
-								<div id=modal class=modal-Image>
+							<td rowspan="2"><img src="images/booking/foto4.png" class="imgg" alt="Austria" style="width: 100%; height: 10.26%;">
+								<div class="mImage">
 									<span class="close">&times;</span>
-									<img class=modal id="img01">
-									<div id="captionn"></div>
+									<img class="modals">
+									<div class="modal-caption"></div>
 								</div>
 							</td>
 							<td rowspan="2">Italy</td>
@@ -532,7 +526,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult4" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult4" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -543,47 +537,46 @@
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-4" checked="checked" id="row-4-radio-1">
 											<label for="row-4-radio-1" style="width: 50px;"></label>
-											<img class="weights imgg " src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+												<div class="content-space">
+													<p class="weights-content">10kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-4" id="row-4-radio-2">
 											<label for="row-4-radio-2"></label>
-											<img class="weights imgg" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class="modal-content modal-content1" id="img01">
-												<div id="captionn captionn1"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+												<div class="content-space">
+													<p class="weights-content">15kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" id="row-4-radio-3" name="row-4" style="float: right;  padding-top: 2px;">
 											<label for="row-4-radio-3"></label>
-											<img class="weights imgg" src="images/booking/20kgicon.png" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+												<div class="content-space">
+													<p class="weights-content">23kg</p>
+												</div>
 											</div>
-										</div>
 
-										<div style="padding-bottom: 0px; clear: both">
-											<input style="float:left;" type="radio" name="row-4" id="row-4-radio-4">
-											<label for="row-4-radio-4"></label>
+											<div style="padding-bottom: 0px; clear: both">
+												<input style="float:left;" type="radio" name="row-4" id="row-4-radio-4">
+												<label for="row-4-radio-4"></label>
 
-											<img class="weights  imgg" src="images/booking/30kgicon.png" style="float: right;  padding: 2px 20px 0 0; width: 20px; height: 20px" alt="30kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+												<div class="img-space">
+													<img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+													<div class="content-space">
+														<p class="weights-content">32kg</p>
+													</div>
+												</div>
 											</div>
-										</div>
 									</form>
 								</div>
 							</td>
@@ -600,7 +593,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child4" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child4" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -613,11 +606,11 @@
 									<label for="check4"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0;"><img class=" imgg" src="images/booking/foto5.png" alt="Dubai" style="width: 100%; height: 13.5%;">
-								<div id=modal class=modal-Image>
+							<td rowspan="2" style="padding: 0;"><img class="imgg" src="images/booking/foto5.png" alt="Dubai" style="width: 100%; height: 14.6%;">
+								<div class="mImage">
 									<span class="close">&times;</span>
-									<img class=modal id="img01">
-									<div id="captionn"></div>
+									<img class="modals">
+									<div class="modal-caption"></div>
 								</div>
 							</td>
 							<td rowspan="2">London</td>
@@ -626,7 +619,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult5" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult5" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -637,47 +630,46 @@
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-5" checked="checked" id="row-5-radio-1">
 											<label for="row-5-radio-1" style="width: 50px;"></label>
-											<img class="weights imgg " src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+												<div class="content-space">
+													<p class="weights-content">10kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-5" id="row-5-radio-2">
 											<label for="row-5-radio-2"></label>
-											<img class="weights imgg" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+												<div class="content-space">
+													<p class="weights-content">15kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" id="row-5-radio-3" name="row-5" style="float: right;  padding-top: 2px;">
 											<label for="row-5-radio-3"></label>
-											<img class="weights imgg" src="images/booking/20kgicon.png" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+												<div class="content-space">
+													<p class="weights-content">23kg</p>
+												</div>
 											</div>
-										</div>
 
-										<div style="padding-bottom: 0px; clear: both">
-											<input style="float:left;" type="radio" name="row-5" id="row-5-radio-4">
-											<label for="row-5-radio-4"></label>
+											<div style="padding-bottom: 0px; clear: both">
+												<input style="float:left;" type="radio" name="row-5" id="row-5-radio-4">
+												<label for="row-5-radio-4"></label>
 
-											<img class="weights  imgg" src="images/booking/30kgicon.png" style="float: right;  padding: 2px 20px 0 0; width: 20px; height: 20px" alt="30kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+												<div class="img-space">
+													<img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+													<div class="content-space">
+														<p class="weights-content">32kg</p>
+													</div>
+												</div>
 											</div>
-										</div>
 									</form>
 								</div>
 							</td>
@@ -694,7 +686,7 @@
 
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child5" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child5" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -707,11 +699,11 @@
 									<label for="check5"></label>
 								</form>
 							</td>
-							<td rowspan="2" style="padding: 0; "><img class=" imgg" src="images/booking/foto8.png" alt="Austria" style="width: 100%; height: 68.5%;">
-								<div id=modal class=modal-Image>
+							<td rowspan="2" style="padding: 0; "><img class="imgg" src="images/booking/foto8.png" alt="Austria" style="width: 100%; height:74.19%;">
+								<div class="mImage">
 									<span class="close">&times;</span>
-									<img class=modal id="img01">
-									<div id="captionn"></div>
+									<img class="modals">
+									<div class="modal-caption"></div>
 								</div>
 							</td>
 							<td rowspan="2">Roma</td>
@@ -720,7 +712,7 @@
 								<p style="float: left; padding-right:45px ">Adult</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number adult6" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number adult6" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
@@ -731,46 +723,45 @@
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-6" checked="checked" id="row-6-radio-1">
 											<label for="row-6-radio-1" style="width: 50px;"></label>
-											<img class="weights imgg " src="images/booking/5kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 10px 0;" alt="5kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/10kgicon%20.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="10kg">
+												<div class="content-space">
+													<p class="weights-content">10kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" name="row-6" id="row-6-radio-2">
 											<label for="row-6-radio-2"></label>
-											<img class="weights imgg" src="images/booking/10kgicon.png" height="20" width="20" style="float: right;  padding: 2px 20px 0 0;" alt="10kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/15kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="15kg">
+												<div class="content-space">
+													<p class="weights-content">15kg</p>
+												</div>
 											</div>
 										</div>
 
 										<div style="padding-bottom: 8px; clear: both">
 											<input style="float:left;" type="radio" id="row-6-radio-3" name="row-6" style="float: right;  padding-top: 2px;">
 											<label for="row-6-radio-3"></label>
-											<img class="weights img" src="images/booking/20kgicon.png" style="float: right;  padding: 2px 20px 0 0;" alt="20kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div class="img-space">
+												<img class="weights  " src="images/booking/23kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="23kg">
+												<div class="content-space">
+													<p class="weights-content">23kg</p>
+												</div>
 											</div>
-										</div>
 
-										<div style="padding-bottom: 0px; clear: both">
-											<input style="float:left;" type="radio" name="row-6" id="row-6-radio-4">
-											<label for="row-6-radio-4"></label>
-											<img class="weights  imgg" src="images/booking/30kgicon.png" style="float: right;  padding: 2px 20px 0 0; width: 20px; height: 20px" alt="30kg">
-											<div id=modal class=modal-Image>
-												<span class="close">&times;</span>
-												<img class=modal id="img01">
-												<div id="captionn"></div>
+											<div style="padding-bottom: 0px; clear: both">
+												<input style="float:left;" type="radio" name="row-6" id="row-6-radio-4">
+												<label for="row-6-radio-4"></label>
+												<div class="img-space">
+													<img class="weights  " src="images/booking/32kgicon.png" height="20" width="20" style="float: right; padding: 2px 20px 10px 0;" alt="32kg">
+													<div class="content-space">
+														<p class="weights-content">32kg</p>
+													</div>
+												</div>
 											</div>
-										</div>
 									</form>
 								</div>
 							</td>
@@ -786,21 +777,14 @@
 								<p style="float: left; padding-right:25px ">Children</p>
 								<form>
 									<div class="form-group">
-										<input type="number" class="tickets-number child6" min="0" name="number" style="padding-bottom: 0;">
+										<input type="number" class="tickets-number child6" min="0" name="number" style="padding-bottom: 0;" disabled>
 									</div>
 								</form>
 							</td>
 						</tr>
 						<!-- Thirteenth row -->
 						<tr>
-							<td></td>
-							<td>
-							</td>
-							<td>
-							</td>
-							<td>
-							</td>
-							<td></td>
+							<td colspan="5"></td>
 							<td style="padding: 0"><button class="tabbtn">Pay</button></td>
 							<td rowspan="2">
 								<div class="table-form">
@@ -817,26 +801,27 @@
 	</section>
 	<hr>
 	<section class=" fphoto">
-		<h2> Cars</h2>
+		<br>
+		<h2>Rent a car</h2>
 		<div class="lphoto"></div>
 		<div class="row">
 			<figure class="col span1-5">
 				<img class=imgg src="images/booking/car1.jpg" alt="Name:BMW<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
 
-				<div id=modal class=modal-Image>
+				<div class="mImage">
 					<span class="close">&times;</span>
-					<img class=modal id="img01">
-					<div id="captionn"></div>
+					<img class="modals">
+					<div class="modal-caption"></div>
 				</div>
 				<figcaption>BMW</figcaption>
 			</figure>
 			<figure class="col span1-5 ">
 				<img class=" imgg" src="images/booking/car2.jpg" alt="name:Mahindra KUV100 NXT
                 <br><br>Petrol:Gasoline <br><br> Transmission:Automatic <br><br> Number of Gears:7 " style="width: 100%; height: 100%;">
-				<div id=modal class=modal-Image>
+				<div class="mImage">
 					<span class="close">&times;</span>
-					<img class=modal id="img01">
-					<div id="captionn"></div>
+					<img class="modals">
+					<div class="modal-caption"></div>
 				</div>
 
 				<figcaption>Mahindra KUV100 NXT</figcaption>
@@ -844,28 +829,28 @@
 			<figure class="col span1-5">
 				<img class=imgg src="images/booking/car3.jpg" alt="Name:2017 Jeep Compass Petrol Automatic
                 <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
-				<div id=modal class=modal-Image>
+				<div class="mImage">
 					<span class="close">&times;</span>
-					<img class=modal id="img01">
-					<div id="captionn"></div>
+					<img class="modals">
+					<div class="modal-caption"></div>
 				</div>
 				<figcaption>Jeep Compass</figcaption>
 			</figure>
 			<figure class="col span1-5">
 				<img class=imgg src="images/booking/car.jpg" alt="Name:Mercedes Benz GLE450 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:7" style="width: 100%">
-				<div id=modal class=modal-Image>
+				<div class="mImage">
 					<span class="close">&times;</span>
-					<img class=modal id="img01">
-					<div id="captionn"></div>
+					<img class="modals">
+					<div class="modal-caption"></div>
 				</div>
 				<figcaption>Mercedes Benz GLE450</figcaption>
 			</figure>
 			<figure class="col span1-5">
 				<img class=imgg src="images/booking/car4.jpg" alt="Name:Volvo XC40 <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
-				<div id=modal class=modal-Image>
+				<div class="mImage">
 					<span class="close">&times;</span>
-					<img class=modal id="img01">
-					<div id="captionn"></div>
+					<img class="modals">
+					<div class="modal-caption"></div>
 				</div>
 				<figcaption>Volvo XC40</figcaption>
 			</figure>
@@ -874,48 +859,48 @@
 				<div class="row">
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car5.jpg" alt="Name:Tata Tigor <br><br> Petrol:Disel <br><br> Transsmision:Manual <br><br> Number of Gears:5" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Tata Tigor</figcaption>
 					</figure>
 					<figure class="col span1-5 ">
 						<img class=imgg src="images/booking/car6.jpg" alt="Name:BMW X6 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:6" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>BMW X6 </figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car7.jpg" alt="Name:Mercedes-Benz CLA 45 AMG       
 						<br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
-						<figcaption>Mercedes-Benz CLA 45 AMG</figcaption>
+						<figcaption><abbr title="Mercedes-Benz CLA 45 AMG">MCB</abbr></figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car8.jpg" alt="Name:Audi A8L <br><br> Petrol:Gasoline <br><br> Transsmision:Manual <br><br> Number of Gears:5" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Audi A8L</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car9.jpg" alt="Name:Jaguar XFR-S SportBrake
                          <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:6" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Jaguar XFR-S SportBrake</figcaption>
 					</figure>
@@ -923,46 +908,46 @@
 				<div class="row">
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car10.jpg" alt="Name:BMW M5 <br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:7" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>BMW M5</figcaption>
 					</figure>
 					<figure class="col span1-5 ">
 						<img class=imgg src="images/booking/car11.jpg" alt="Name:Audi Q7<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Audi Q7</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car12.jpg" alt="Name:Mercedes-AMG G 63 <br><br> Petrol:Disel <br><br> Transsmision:Automatic <br><br> Number of Gears:9" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Mercedes-AMG G 63</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car13.jpg" alt="Name:Audi RS5 Coupe<br><br> Petrol:Gasoline <br><br> Transsmision:Automatic <br><br> Number of Gears:8" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Audi RS5 Coupe</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/car14.jpg" alt="Name:Hyundai Santa Fes<br><br> Petrol:Disel <br><br> Transsmision:Manual <br><br> Number of Gears:6" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Hyundai Santa Fe</figcaption>
 					</figure>
@@ -975,146 +960,147 @@
 	</section>
 	<section class="fphoto">
 		<br>
-		<h2> Apartaments</h2>
+		<h2> Check out some of our top apartments</h2>
 		<div class="row">
 			<div class="appartaments">
 				<figure class="col span1-5">
 					<img class=imgg src="images/booking/Apartament1.jpg" alt=" FAM Living - City Walk <br><br>The units come with parquet flooring and feature a fully equipped kitchen (a dishwasher, an oven and a coffee machine etc) a flat-screen TV with cable channels, and all en suite private bathrooms with towels. " style="width: 100%">
-					<div id=modal class=modal-Image>
+					<div class="mImage">
 						<span class="close">&times;</span>
-						<img class=modal id="img01">
-						<div id="captionn"></div>
+						<img class="modals">
+						<div class="modal-caption"></div>
 					</div>
 					<figcaption>FAM Living - City Walk</figcaption>
 				</figure>
 				<figure class="col span1-5 ">
 					<img class=" imgg" src="images/booking/apartament2.jpg" alt=" Résidence Palais Étoile <br><br> Located in Paris, Résidence Palais Étoile offers self-catering apartments opposite Porte Maillot Palais de Congrès Exhibition Centre. Porte Maillot Metro Station is 20 metres away and leads directly to La Défense business district and the Champs-Elysées Avenue.
                     Each apartment includes 1 bedroom, a living room with a sofa and a flat-screen TV." style=" width: 100%">
-					<div id=modal class=modal-Image>
+					<div class="mImage">
 						<span class="close">&times;</span>
-						<img class=modal id="img01">
-						<div id="captionn"></div>
+						<img class="modals">
+						<div class="modal-caption"></div>
 					</div>
 					<figcaption>Résidence Palais Étoile</figcaption>
 				</figure>
 				<figure class="col span1-5">
-					<img class=imgg src="images/booking/Apartament3.jpg" alt="Rome as you feel - Navona Apartments offers luxurious self-catering accommodation in the historic centre of Rome. All apartments are located in different buildings around Piazza Navona square." style="width: 100%">
-					<div id=modal class=modal-Image>
+					<img class=imgg src="images/booking/Apartament3.jpg" alt="Navona Apartmentsf <br><br> Rome as you feel - Navona Apartments offers luxurious self-catering accommodation in the historic centre of Rome. All apartments are located in different buildings around Piazza Navona square." style="width: 100%">
+					<div class="mImage">
 						<span class="close">&times;</span>
-						<img class=modal id="img01">
-						<div id="captionn"></div>
+						<img class="modals">
+						<div class="modal-caption"></div>
 					</div>
 					<figcaption>Navona Apartmentsf</figcaption>
 				</figure>
 				<figure class="col span1-5">
 					<img class=" imgg" src="images/booking/Apartament4.jpg" alt="The Old Brompton Boutique <br><br> The Old Brompton Boutique offers accommodation in London, 1.5 km from Stamford Bridge - Chelsea FC and 1.6 km from Natural History Museum. This property offers access to free WiFi.
                     This apartment comes with a kitchen, a seating area, a dining area and a satellite flat-screen TV." style="width: 100%">
-					<div id=modal class=modal-Image>
+					<div class="mImage">
 						<span class="close">&times;</span>
-						<img class=modal id="img01">
-						<div id="captionn"></div>
+						<img class="modals">
+						<div class="modal-caption"></div>
 					</div>
 					<figcaption>The Old Brompton Boutique</figcaption>
 				</figure>
 				<figure class="col span1-5">
 					<img class=imgg src="images/booking/apartament5.jpg" alt="The Fulham Mirabel Gem <br><br> Set in London, The Fulham Mirabel Gem provides accommodation with a TV and a kitchen. Free WiFi is featured.
                     " style="width: 100%">
-					<div id=modal class=modal-Image>
+					<div class="mImage">
 						<span class="close">&times;</span>
-						<img class=modal id="img01">
-						<div id="captionn"></div>
+						<img class="modals">
+						<div class="modal-caption"></div>
 					</div>
 					<figcaption>The Fulham Mirabel Gem</figcaption>
 				</figure>
 				<div class="showmore1" style="display:none">
 					<figure class="col span1-5 ">
 						<img class=" imgg" src="images/booking/apartament6.jpg" alt=" JW Marriott Hotel Hong Kong <br><br> Sitting atop the prestigious Pacific Place Complex, the JW Marriott Hotel Hong Kong has direct access to the Admiralty MTR Subway Station and Pacific Place Shopping Mall." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>JW Marriott Hotel Hong Kong</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/apartament7.jpg" alt="SACO Holborn <br><br> ituated in Bloomsbury area, SACO London boasts 32 award-winning serviced apartments with easy access to London’s West End, the City, and Tottenham Court Road, all within 1 mile radius." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>SACO Holborn</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=" imgg" src="images/booking/apartament8.jpg" alt="Teva's Apt <br><br> Set in Punaauia, Teva's Apt features accommodation with a private pool and free WiFi. Housed in a building dating from 2008, this apartment is 3.7 km from the Museum of Tahiti." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Teva's Apt</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=imgg src="images/booking/appartament9.jpg" alt="Arlo SoHo <br><br>ocated close to SoHo, Tribeca and West Village neighborhoods, guests at Arlo Soho will find many dining and shopping destinations within easy reach. One World Trade Centre is 1.6 km from Arlo Soho." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Arlo SoHo</figcaption>
 					</figure>
 					<figure class="col span1-5 ">
 						<img class=" imgg" src="images/booking/apartament10.jpg" alt="Capri by Fraser Barcelona <br><br>This motorcycle-friendly hotel is 3 Metro stops from Plaza Catalunya and 15 minutes’ walk from the Barcelona’s beaches. There is free WiFi available throughout." style="width: 100%; height: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Capri by Fraser Barcelona</figcaption>
 					</figure>
 					<figure class="col span1-5">
-						<img class=imgg src="images/booking/apartament11.jpg" alt="Dunes Hotel Apartments Oud Metha<br><br>" style="width: 100%">
-						<div id=modal class=modal-Image>
+						<img class=imgg src="images/booking/apartament11.jpg" alt="Dunes Hotel Apartments Oud Metha<br><br>Featuring a pool with panoramic views over Dubai, this hotel offers self-catering apartments with wall-mounted flat-screen TVs. It is located right across from Dubai’s American Hospital." style="width: 100%">
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Dunes Hotel Apartments Oud Metha</figcaption>
 					</figure>
 					<figure class="col span1-5">
 						<img class=" imgg" src="images/booking/apartament12.jpg" alt="Habitat Apartments Bailén<br><br> Habitat Apartments Bailén is a modern apartment located in Barcelona, 5 minutes' walk from Arc de Triomf and 280 metres from Tetuan Square. Free WiFi access is available." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>Habitat Apartments Bailén</figcaption>
 					</figure>
 					<figure class="col span1-5">
-						<img class=imgg src="images/booking/apartament14.jpg" alt="<br><br>Located in Dubai, FAM Living - City Walk Dubai has well-equipped accommodation boasting free WiFi. City Walk Mall is 500 metres away." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<img class=imgg src="images/booking/apartament14.jpg" alt="FAM Living - City Walk Dubai<br><br>Located in Dubai, FAM Living - City Walk Dubai has well-equipped accommodation boasting free WiFi. City Walk Mall is 500 metres away." style="width: 100%">
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 						<figcaption>FAM Living - City Walk Dubai </figcaption>
 					</figure>
 					<figure class="col span1-5 ">
 						<img class=" imgg" src="images/booking/apartament13.jpg" alt="Sagrada Familia Sun <br><br> Located in Barcelona, Sagrada Familia Sun consists of a modern-style apartment with free WiFi. The Sagrada Familia is just a 10-minute walk away." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
 						</div>
 
 						<figcaption>Sagrada Familia Sun</figcaption>
 					</figure>
 					<figure class="col span1-5">
-						<img class=imgg src="images/booking/apartament15.jpg" alt="Fraser Residence City<br><br> Situated 2 minutes’ walk from Monument tube station, Fraser Residence City offers air-conditioned apartments with city views, fully equipped kitchens and an iPod docking station." style="width: 100%">
-						<div id=modal class=modal-Image>
+						<img class=imgg src="images/booking/apartament15.jpg" alt="Fraser Residence Citys <br><br> Fraser Residence City Situated 2 minutes’ walk from Monument tube station, Fraser Residence City offers air-conditioned apartments with city views, fully equipped kitchens and an iPod docking station." style="width: 100%">
+						<div class="mImage">
 							<span class="close">&times;</span>
-							<img class=modal id="img01">
-							<div id="captionn"></div>
+							<img class="modals">
+							<div class="modal-caption"></div>
+
 						</div>
 						<figcaption>Fraser Residence City</figcaption>
 					</figure>
@@ -1125,31 +1111,10 @@
 	</section>
 	<script>
 		$(document).ready(function() {
-
-			$("#btn1").click(function() {
-				$("#Showmore").hide("Show less");
-			});
-			$("#btn1").click(function() {
-				$("#Showmore").show();
-			});
-			$("#btn1").click(function() {
-				$("#btn1").text($("#btn1").text() === 'Show more' ? 'Show less' : 'Show more');
-			});
-
-			$("#btn2").click(function() {
-				$(".showmore1").hide("Show less");
-			});
-			$("#btn2").click(function() {
-				$(".showmore1").show();
-			});
-			$("#btn2").click(function() {
-				$("#btn2").text($("#btn2").text() === 'Show more' ? 'Show less' : 'Show more');
-			});
-			var modal = document.getElementById('modal');
+			var modal = document.querySelector(".mImage");
 			var img = $('.imgg');
-			var modalImg = $("#img01");
-
-			var captionText = document.getElementById("captionn");
+			var modalImg = $(".modals");
+			var captionText = document.querySelector(".modal-caption");
 			$('.imgg').click(function() {
 				modal.style.display = "block";
 				var newSrc = this.src;
@@ -1160,21 +1125,21 @@
 			span.onclick = function() {
 				modal.style.display = "none";
 			}
-
-
 			$('.form-group').on('input', '.tickets-number', function() {
 				var totalSum = 0;
 				$('.form-group .adult1').each(function() {
-					var inputVal = $(".adult1").val() * 200 + $(".child1").val() * 50;
+
+					var inputVal = $(".adult1").val() * 157.647 + $(".child1").val() * 54.5;
+
 					var n = document.getElementById("row-1-radio-3").checked;
 
 					var m = document.getElementById("row-1-radio-4").checked;
 
 
-
 					if (n == 1) {
 
 						totalSum = totalSum + parseFloat(inputVal) + 200;
+
 						if ($('.adult1').val() == 0 && $('.child1').val() == 0) {
 							totalSum = 0;
 						}
@@ -1182,6 +1147,7 @@
 					} else if (m == 1) {
 
 						totalSum = totalSum + parseFloat(inputVal) + 400;
+
 						if ($('.adult1').val() == 0 && $('.child1').val() == 0) {
 							totalSum = 0;
 
@@ -1194,10 +1160,11 @@
 					};
 
 				});
-				$('#result').val(totalSum / 2);
+
+				$('#result').val((totalSum / 2).toFixed(2) + " $");
 				var totalSum2 = 0
 				$('.form-group .adult2').each(function() {
-					var inputVal = $(".adult2").val() * 100 + $(".child2").val() * 30;
+					var inputVal = $(".adult2").val() * 99 + $(".child2").val() * 3;
 					var n2 = document.getElementById("row-2-radio-3").checked;
 					var m2 = document.getElementById("row-2-radio-4").checked;
 
@@ -1224,10 +1191,10 @@
 					};
 
 				});
-				$('#result2').val(totalSum2 / 2);
+				$('#result2').val((totalSum2 / 2).toFixed(2) + " $");
 				var totalSum3 = 0;
 				$('.form-group .adult3').each(function() {
-					var inputVal = $(".adult3").val() * 40 + $(".child3").val() * 20;
+					var inputVal = $(".adult3").val() * 43.5 + $(".child3").val() * 21;
 					var n3 = document.getElementById("row-3-radio-3").checked;
 					var m3 = document.getElementById("row-3-radio-4").checked;
 					if (n3 == 1) {
@@ -1252,10 +1219,10 @@
 					};
 
 				});
-				$('#result3').val(totalSum3 / 2);
+				$('#result3').val((totalSum3 / 2).toFixed(2) + " $");
 				var totalSum4 = 0;
 				$('.form-group .adult4').each(function() {
-					var inputVal = $(".adult4").val() * 150 + $(".child4").val() * 80;
+					var inputVal = $(".adult4").val() * 154 + $(".child4").val() * 81;
 					var n4 = document.getElementById("row-4-radio-3").checked;
 					var m4 = document.getElementById("row-4-radio-4").checked;
 
@@ -1282,10 +1249,10 @@
 					};
 
 				});
-				$('#result4').val(totalSum4 / 2);
+				$('#result4').val((totalSum4 / 2).toFixed(2) + " $");
 				var totalSum5 = 0;
 				$('.form-group .adult5').each(function() {
-					var inputVal = $(".adult5").val() * 40 + $(".child5").val() * 20;
+					var inputVal = $(".adult5").val() * 39.5 + $(".child5").val() * 20;
 					var n5 = document.getElementById("row-5-radio-3").checked;
 					var m5 = document.getElementById("row-5-radio-4").checked;
 
@@ -1312,10 +1279,12 @@
 					};
 
 				});
-				$('#result5').val(totalSum5 / 2);
+				$('#result5').val((totalSum5 / 2).toFixed(2) + " $");
 				var totalSum6 = 0;
+
+
 				$('.form-group .adult6').each(function() {
-					var inputVal = $(".adult6").val() * 100 + $(".child6").val() * 30;
+					var inputVal = $(".adult6").val() * 99 + $(".child6").val() * 30;
 					var n6 = document.getElementById("row-6-radio-3").checked;
 					var m6 = document.getElementById("row-6-radio-4").checked;
 
@@ -1337,14 +1306,13 @@
 					} else {
 						{
 							totalSum6 = totalSum6 + parseFloat(inputVal);
+
 						}
 
 					};
 
 				});
-				$('#result6').val(totalSum6 / 2);
-
-
+				$('#result6').val((totalSum6 / 2).toFixed(2) + " $");
 
 				var totarray = [];
 				var x1 = document.getElementById("check").checked;
@@ -1379,15 +1347,74 @@
 				}
 
 
-				$("#totali").val(tot);
-
-
+				$("#totali").val(tot.toFixed(2) + " $");
 
 			});
 
-		});
+			$('#check').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult1 ').attr('disabled', false);
+					$('.child1').attr('disabled', false);
+				} else {
+					$('.adult1').attr('disabled', true);
+					$('.child1').attr('disabled', true);
+				}
+			});
+			$('#check1').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult2').attr('disabled', false);
+					$('.child2').attr('disabled', false);
+				} else {
+					$('.adult2').attr('disabled', true);
+					$('.child2').attr('disabled', true);
+				}
+			});
 
-	</script>
+			$('#check2').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult3').attr('disabled', false);
+					$('.child3').attr('disabled', false);
+				} else {
+					$('.adult3').attr('disabled', true);
+					$('.child3').attr('disabled', true);
+				}
+			});
+			$('#check3').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult4').attr('disabled', false);
+					$('.child4').attr('disabled', false);
+				} else {
+					$('.adult4').attr('disabled', true);
+					$('.child4').attr('disabled', true);
+				}
+			});
+			$('#check4').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult5').attr('disabled', false);
+					$('.child5').attr('disabled', false);
+				} else {
+					$('.adult5').attr('disabled', true);
+					$('.child5').attr('disabled', true);
+				}
+			});
+			$('#check5').on('click', function() {
+				if ($(this).is(':checked')) {
+					$('.adult6').attr('disabled', false);
+					$('.child6').attr('disabled', false);
+				} else {
+					$('.adult6').attr('disabled', true);
+					$('.child6').attr('disabled', true);
+				}
+			});
+
+			*/
+			$(".child1 , .adult1,.child2 , .adult2 , .child3 , .adult3 , .child4 , .adult4 , .child5 , .adult5 ,.child6 , .adult6").keypress(function(e) {
+				if (e.which != 7 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+					alert("Digits only")
+					return false;
+				}
+			});
+		});
 
 	</script>
 	<footer>

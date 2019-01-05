@@ -6,14 +6,10 @@ section {
 	margin: 0;
 }
 
-.hphotos {
-	padding-left: 2.65%;
-}
-
 .client-photo {
+	margin-right: 1%;
 	border-radius: 50px;
 	vertical-align: middle;
-	margin-right: 1%;
 }
 
 .client {
@@ -21,47 +17,52 @@ section {
 }
 
 h2 {
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	word-spacing: 0.2%;
 	font-size: 180%;
-	text-align: center;
+	font-weight: 300;
 	margin-bottom: 2%;
+	word-spacing: 0.2%;
+	text-align: center;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 
 }
 
-/* Showslides Galery css code */
+/******************************************************************************
+                       Slideshow gallery css code
+*******************************************************************************/
+
 .places {
 	margin: 0;
 	border: 0;
 }
 
-.container {
+.photos > img {
+	width: 75%;
+	resize: vertical;
+	color: #ccc;
+}
+
+.slideShow {
 	position: relative;
+
 }
 
-.slides {
+.photos {
 	display: none;
-}
-
-.cursor {
-	cursor: pointer;
 }
 
 .prev,
 .next {
-	cursor: pointer;
-	position: absolute;
 	top: 40%;
 	width: auto;
-	padding: 16px;
-	margin-top: -50px;
 	color: white;
-	font-weight: bold;
+	padding: 16px;
 	font-size: 20px;
+	cursor: pointer;
+	margin-top: -50px;
+	font-weight: bold;
+	position: absolute;
 	border-radius: 0 3px 3px 0;
-	-webkit-user-select: none;
 }
 
 .next {
@@ -74,19 +75,9 @@ h2 {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.numbertext {
-	color: #f2f2f2;
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-}
-
-
 .row:after {
-	content: "";
-	display: table;
 	clear: both;
+	display: table;
 }
 
 .column {
@@ -95,8 +86,9 @@ h2 {
 }
 
 .small-photo {
-	opacity: 0.6;
 	width: 100%;
+	opacity: 0.6;
+	cursor: pointer;
 }
 
 .active,
@@ -104,29 +96,17 @@ h2 {
 	opacity: 1;
 }
 
-.caption-container {
-	text-align: center;
-	background-color: #222;
-	padding: 9.5px 16px;
-	background-image: linear-gradient(to right, #100e0e, #454444, #100e0e);
-}
 
-#caption {
-	color: #f8f4f4;
-}
-
-div > .slides {
-	height: 425px;
+.photos {
+	height: 470px;
 	width: 100%;
 	text-align: center;
 	background-color: #171515;
-	background-image: linear-gradient(to right, #100e0e, #454444, #100e0e);
-}
-
-.slides > img {
-	width: 75%;
-	resize: vertical;
-	color: #454444
+	background: rgb(44, 44, 44);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(44, 44, 44, 1) 0%, rgba(71, 71, 71, 1) 20%, rgba(71, 71, 71, 1) 26%, rgba(28, 25, 18, 1) 84%, rgba(17, 17, 17, 1) 89%, rgba(19, 19, 19, 1) 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(44, 44, 44, 1) 0%, rgba(71, 71, 71, 1) 20%, rgba(71, 71, 71, 1) 26%, rgba(28, 25, 18, 1) 84%, rgba(17, 17, 17, 1) 89%, rgba(19, 19, 19, 1) 100%);
+	background: radial-gradient(ellipse at center, rgba(44, 44, 44, 1) 0%, rgba(71, 71, 71, 1) 20%, rgba(71, 71, 71, 1) 26%, rgba(28, 25, 18, 1) 84%, rgba(17, 17, 17, 1) 89%, rgba(19, 19, 19, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2c2c2c', endColorstr='#131313', GradientType=1);
 }
 
 .large-photos {
@@ -138,23 +118,42 @@ div > .slides {
 	margin: 0 -5.55%;
 }
 
-/*Table css format code */
 
 
+/******************************************************************************
+                       Table css code
+*******************************************************************************/
 table {
 	margin-left: 1%;
 	text-align: center;
 	border: solid 1pt black;
 }
 
+table tr:nth-child(2n) {
+	background-color: rgba(206, 205, 205, 0.74);
+}
+
+table tr:nth-child(2n+1) {
+	background-color: rgba(236, 236, 236, 0.74);
+}
+
 tr {
 	padding: 0;
 }
 
+table tbody tr td:nth-child(6) {
+	padding-top: 4px;
+}
+
 td {
+	padding: 0 7px 0px 7px;
+
 	border: solid 1px black;
-	padding: 7px;
-	padding-bottom: -2px;
+}
+
+table tbody tr td:nth-child(2) {
+	padding: 0;
+
 }
 
 th {
@@ -164,6 +163,10 @@ th {
 
 dl {
 	text-align: center;
+}
+
+table img {
+	display: block;
 }
 
 input[type=checkbox] + label {
@@ -177,44 +180,29 @@ input[type=checkbox] {
 
 input[type=checkbox] + label:before {
 	content: "\2714";
-	border: 2px solid #000;
-	border-radius: 3.2px;
 	padding: 4px 8px;
-	color: transparent;
 	transition: 0.2s;
+	color: transparent;
+	border-radius: 3.2px;
+	border: 2px solid #000;
 }
 
 input[type=checkbox]:checked + label:before {
-	background-color: #999;
-	border-color: #000;
 	color: #000;
+	border-color: #000;
+	background-color: #999;
 }
 
 .table1 {
 	margin: 1%;
 }
 
-.table-form input[type=checkbox] + label:before {
-	content: "\2714";
-	border: 2px solid #000;
-	border-radius: 3.2px;
-	padding: 0px 5px;
-	color: transparent;
-	transition: 0.2s;
-}
-
-.table-form input[type=checkbox]:checked + label:before {
-	background-color: #999;
-	border-color: #000;
-	color: #000;
-}
-
 .tickets-number {
-	text-decoration: none;
-	border: 2px solid black;
 	width: 60px;
 	font-size: 15px;
 	padding: 3px 2px 4px;
+	text-decoration: none;
+	border: 2px solid black;
 }
 
 .radio-button-for-weight input[type=radio] {
@@ -224,24 +212,24 @@ input[type=checkbox]:checked + label:before {
 }
 
 .radio-button-for-weight input[type=radio] + label {
+	cursor: pointer;
 	position: relative;
 	padding: 3px 0 0 4px;
-	cursor: pointer;
 }
 
 .radio-button-for-weight input[type=radio] + label:before {
 	content: "\2714";
-	border: 2px solid #000;
-	border-radius: 3.2px;
+	transition: 0.2s;
 	padding: 0px 5px;
 	color: transparent;
-	transition: 0.2s;
+	border-radius: 3.2px;
+	border: 2px solid #000;
 }
 
 .table-form input[type=radio]:checked + label:before {
-	background-color: #999;
-	border-color: #000;
 	color: #000;
+	border-color: #000;
+	background-color: #999;
 }
 
 
@@ -252,12 +240,12 @@ input[type=checkbox]:checked + label:before {
 
 #btn1,
 #btn2 {
+	font-size: 20px;
+	padding: 6px 10px;
 	text-align: center;
 	margin: 20px 497px;
-	padding: 6px 10px;
-	font-size: 20px;
-	border: 2px solid #666666;
 	border-radius: 25px;
+	border: 2px solid #666666;
 }
 
 figure {
@@ -279,9 +267,54 @@ button {
 }
 
 .pay {
-	padding: 10px 0px;
 	margin: 0;
-	background-color: #2f2f2f;
+	padding: 10px 0px;
 	border-radius: 0px;
+	background-color: #2f2f2f;
 
+}
+
+
+.img-space {
+	float: right;
+	position: relative;
+}
+
+
+
+.content-space {
+	opacity: 0;
+	width: 20px;
+	color: #fff;
+	display: flex;
+	padding-top: 2px;
+	position: absolute;
+	visibility: hidden;
+	align-items: center;
+	justify-content: center;
+	-webkit-transition: opacity 0.2s, visibility 0.2s;
+	-o-transition: opacity 0.2s, visibility 0.2s;
+	-moz-transition: opacity 0.2s, visibility 0.2s;
+	-ms-transition: opacity 0.2s, visibility 0.2s;
+}
+
+
+.img-space:hover .content-space {
+	opacity: 1;
+	visibility: visible;
+}
+
+.weights-content {
+	opacity: 1;
+	-webkt-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-webkit-transform: translateX(-27px);
+	-moz-transform: translateX(-27px);
+
+}
+
+figcaption {
+	font-weight: 100;
 }
